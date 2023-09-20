@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Teko&display=swap');
+#content {
+    max-width:      1800px;
+    margin:         0 auto;
+}
+body {
+    font-family:        'Josefin Sans', sans-serif;
+    font-family:        'Teko', sans-serif;
+    font-size:          20px;
+    margin:             0;
+    padding:            0;
+    display:            grid;
+    height:             100vh;
+    grid-template-rows: auto 1fr auto;
+}
+
+.ex4 .parent {
+    display:            grid;
+    grid-template-rows: auto 1fr auto;
+}
+ header {
+
+    background: #8A3914;
+    
+  }
+.container{
+    display:               flex;
+    grid-template-columns: auto auto auto;
+    align-items:           center;
+    justify-content:       center;
+    padding:               10px;
+}
+header ,h1 {
+    color:      white;
+    padding-left: 20px;
+}
+.logo {
+    width:       80px;
+}
+.image {
+  flex-basis: 70%;
+  order:      2;
+}
+/* Navigation*/
+
+nav{
+  display:              grid;
+  /*justify-content:      center;*/
+  /*gap:                  8%;*/
+  background-color:   black;
+  color:              azure;
+  list-style:           none; 
+  /*padding:              5px;*/ 
+}
+nav a {
+  text-decoration:        none;
+  padding:                35px;
+  color:                #fff;
+  transition:             all 1s ease-out;
+  font-family:            'Teko', sans-serif;
+  text-align:              center;
+  padding:  8px;
+  
+}
+nav a:hover{
+  color: 	#FCD83A;
+  
+
+}
+
+
+/*learning section*/
+.learning-card{
+  display:              grid;
+  text-align:           center;
+  border:               5px solid black;
+  background-repeat:    no-repeat;
+  background-position:  50% 50%;
+  background-size:      cover;
+  width:                60%;
+  height:               500px;
+  margin-left:          auto;
+  margin-right:         auto;
+  box-shadow:           14px 16px 12px -3px #929292;
+  border-radius:        15px;
+}
+#bglearn{
+  background-color: #8A3914;
+  color:            #fff ;
+}
+.learning-act{
+  text-align:      left;
+  list-style-type: none;
+}
+
+/* information card*/
+.info-card{
+  display:              grid;
+  text-align:           center;
+  border:               5px solid black;
+  background-repeat:    no-repeat;
+  background-position:  50% 50%;
+  background-size:      cover;
+  width:                60%;
+  height:               300px;
+  margin-left:          auto;
+  margin-right:         auto;
+  box-shadow:           14px 16px 12px -3px #929292;
+  border-radius:        15px;
+  transition:           transform .3s;
+}
+#info-card-title{
+  background-color: #8A3914;
+  color:            #fff ;
+}
+  
+/* foorter section */
+  footer {
+    display:        flex;
+    background:   #8A3914;
+    padding:        2rem;
+    text-align:     center;
+    color:        #fff;
+    flex-direction: column;
+
+  }
+  .footer-properties {
+    border-radius:    4px;
+    display:          flex;
+    flex-direction:   column;
+    justify-content:  center;
+    align-items:      center;
+  
+  }
+  footer p {
+    font-size: 20px;
+  }
+  

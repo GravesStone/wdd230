@@ -37,21 +37,10 @@ header ,h1 {
 .logo {
     width:       80px;
 }
-.image {
-  flex-basis: 70%;
-  order:      2;
-}
+
 /* Navigation*/
 
-nav{
 
-  justify-content:      center;
-  gap:                  8%;
-  background-color:   black;
-  color:              azure;
-  list-style:           none; 
-  padding:              5px;
-}
 nav a {
   text-decoration:        none;
   padding:                35px;
@@ -131,12 +120,26 @@ nav a:hover{
     font-size: 20px;
   }
   
-  @media screen and (min-width: 00px) and (orientation: landscape) {
+  @media screen and (min-width: 700px) and (orientation: landscape) {
     body {
       color: black;
     }
+    .image {
+      flex-basis: 70%;
+    }
     nav{
       display:flex;
+      justify-content:      center;
+      gap:                  8%;
+      background-color:   black;
+      color:              azure;
+      list-style:           none; 
+      padding:              5px;
+    }
+    main,.text {
+      font-size: 20px;
+      display: grid;
+      
     }
     footer {
       display:        flex;
@@ -145,6 +148,7 @@ nav a:hover{
       text-align:     center;
       color:        #fff;
       flex-direction: column;
+      height: 50%;
   
     }
     

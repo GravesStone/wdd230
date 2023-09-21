@@ -120,7 +120,7 @@ nav a:hover{
     font-size: 20px;
   }
   
-  @media screen and (min-width: 700px) and (orientation: landscape) {
+  @media screen and (min-width: 500px) and (orientation: landscape) {
     body {
       color: black;
     }
@@ -128,7 +128,7 @@ nav a:hover{
       flex-basis: 70%;
     }
     nav{
-      display:flex;
+      display:              flex;
       justify-content:      center;
       gap:                  8%;
       background-color:   black;

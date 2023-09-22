@@ -31,23 +31,30 @@ img {
 
 /*Navigation Section*/
 nav {
-  display: flex;
-  margin-top: 0px;
-  background-color: #000;
-  flex-direction: column;
-  padding:  2px;
-  justify-content:      center;
-  
+  display:          flex;
+  margin-top:       0px;
+  background-color:#000;
+  flex-direction:   column;
+  padding:          2px;
+  justify-content:  center;
+ 
 }
 nav a {
-  margin: 20px 0;
-  text-decoration: none;
-  font-size: 1.4rem;
-  display: block;
-  color: whitesmoke;
+  margin:           20px 0;
+  text-decoration:  none;
+  font-size:        1.7rem;
+  display:          block;
+  color:          whitesmoke;
+  
 }
 nav a:hover {
-  color: yellow;
+  color: #FCD83A;
+}
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  margin: 1rem;
 }
 /*Beyond the lines*/
 hr {
@@ -107,9 +114,4 @@ h2 {
   color: black;
 }
 
-main {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 1rem;
-  margin: 1rem;
-}
+

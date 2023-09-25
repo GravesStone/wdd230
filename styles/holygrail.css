@@ -40,12 +40,22 @@ nav {
  
 }
 nav a {
+  float: left;
+  display: block;
   margin:           20px 0;
+  text-align:       center;
+  padding:          14px 16px;
   text-decoration:  none;
   font-size:        1.7rem;
   display:          block;
   color:          whitesmoke;
-  
+}
+nav a:active{
+  background-color: #04AA6D;
+  color: white;
+}
+nav a.icon{
+  display: none;
 }
 nav a:hover {
   color: #FCD83A;
@@ -84,6 +94,11 @@ h3 {
   text-align: center;
   width: 100%;
 }
+iframe{
+  height: 400px;
+  width: 100%;
+
+}
 
 footer {
   background:   #8A3914;
@@ -115,3 +130,25 @@ h2 {
 }
 
 
+/*Navigation Mobile View*/
+@media screen and (max-width: 600px) {
+  .nav a:not(:first-child) {display: none;}
+  .nav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav.responsive {position: relative;}
+  .nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}

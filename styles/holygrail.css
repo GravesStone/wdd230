@@ -20,6 +20,7 @@ header {
   align-items:           center;
   justify-content:       center;
   padding:               10px;
+  gap: 20px;
 }
 h1 {
   font-size:             3.0rem;
@@ -34,10 +35,24 @@ img {
   cursor: pointer;
 }
 .bar {
-  width: 25px;
+  width: 30px;
   height: 3px;
   background-color: #fff;
   margin: 3px 0;
+ 
+}
+.menu {
+  list-style: none;
+  display: flex;
+}
+
+.menu li {
+ text-align: center;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
 }
 /*Navigation Section*/
 nav {
@@ -61,7 +76,7 @@ nav a {
   color:          whitesmoke;
 }
 nav a:active{
-  background-color: #04AA6D;
+  background-color: #FCD83A;
   color: white;
 }
 nav a.icon{
@@ -141,30 +156,33 @@ h2 {
 
 
 /*Navigation Mobile View*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   /*.nav a:not(:first-child) {display: none;}
   .nav a.icon {
     float: right;
     display: block;
   }*/
   .menu-toggle {
-        display: flex; /* Show the hamburger icon */
-    }
+    display: grid; /* Show the hamburger icon */
 }
 
-@media screen and (max-width: 600px) {
-  /*.nav.responsive {position: relative;}
-  .nav.responsive .icon {
-    position: absolute;
+.menu {
+    display: none; /* Hide the menu by default on smaller screens */
+    flex-direction: column;
+    background-color: #000;
+    text-align: center;
+    top: 30px;
     right: 0;
-    top: 0;
-  }
-  .nav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }*/
-  .menu-toggle {
-    display: flex; /* Show the hamburger icon */
+    width: 100%;
 }
+
+.menu.active {
+    display: grid; /* Show the menu when active */
 }
+
+.menu li {
+    margin: 20px 0;
+}
+
+}
+

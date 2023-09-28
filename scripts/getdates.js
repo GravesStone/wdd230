@@ -8,7 +8,6 @@ var dateobj = new Date();{
        };
               
        
-       
        var update = "last update: ";
        const mdates = new Date(document.lastModified);
        document.getElementById("lastModified").innerHTML = update + mdates;

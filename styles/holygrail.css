@@ -28,7 +28,17 @@ h1 {
 img {
   width: 100px;
 }
-
+.menu-toggle {
+  display: none; /* Hide by default on larger screens */
+  flex-direction: column;
+  cursor: pointer;
+}
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 3px 0;
+}
 /*Navigation Section*/
 nav {
   display:          flex;
@@ -96,8 +106,8 @@ h3 {
 }
 iframe{
   height: 400px;
-  width: 100%;
-
+  width: 98%;
+  align-items: stretch;
 }
 
 footer {
@@ -132,15 +142,18 @@ h2 {
 
 /*Navigation Mobile View*/
 @media screen and (max-width: 600px) {
-  .nav a:not(:first-child) {display: none;}
+  /*.nav a:not(:first-child) {display: none;}
   .nav a.icon {
     float: right;
     display: block;
-  }
+  }*/
+  .menu-toggle {
+        display: flex; /* Show the hamburger icon */
+    }
 }
 
 @media screen and (max-width: 600px) {
-  .nav.responsive {position: relative;}
+  /*.nav.responsive {position: relative;}
   .nav.responsive .icon {
     position: absolute;
     right: 0;
@@ -150,5 +163,8 @@ h2 {
     float: none;
     display: block;
     text-align: left;
-  }
+  }*/
+  .menu-toggle {
+    display: flex; /* Show the hamburger icon */
+}
 }

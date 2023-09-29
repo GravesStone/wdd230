@@ -1,8 +1,9 @@
-// Get the menu toggle button and menu
-const menuToggle = document.getElementById("menu-toggle");
-const menu = document.getElementById("menu");
+document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
 
-// Toggle the menu when the button is clicked
-menuToggle.addEventListener("click", () => {
-    menu.classList.toggle("active");
+    menuToggle.addEventListener('click', function () {
+        menuToggle.classList.toggle('open');
+        menu.classList.toggle('open');
+    });
 });

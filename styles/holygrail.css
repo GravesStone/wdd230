@@ -37,6 +37,7 @@ img {
   display: none; /* Hide by default on larger screens */
   flex-direction: column;
   cursor: pointer;
+  align-items: center;
 }
 .bar {
   width: 30px;
@@ -126,8 +127,9 @@ h3 {
 }
 iframe{
   height: 400px;
-  width: 98%;
+  width: 95%;
   align-items: stretch;
+  box-shadow:         14px 16px 12px -3px #929292;
 }
 
 footer {

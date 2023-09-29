@@ -2,11 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 :root {
-    --backgr-main:#181818;
-    --backgr-subheadings: #457B9D;
-    --constrast-backgr-main: #989898;
-    --constrast-backgr-subh: #404040;
-    --distintive-color: #E63946;
+    --backgr-main:#C7945F;
+    --backgr-subheadings: #C2B596;
+    --constrast-backgr-main: #0A0C0B;
+    --constrast-backgr-subh: #39372E;
+    --distintive-color: #51807C;
 }
 
 

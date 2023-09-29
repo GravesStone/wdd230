@@ -2,10 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 :root {
-    --backgr-main:#1D3557;
+    --backgr-main:#181818;
     --backgr-subheadings: #457B9D;
-    --constrast-backgr-main: #51BABD;
-    --constrast-backgr-subh: #F1FAEE;
+    --constrast-backgr-main: #989898;
+    --constrast-backgr-subh: #404040;
     --distintive-color: #E63946;
 }
 

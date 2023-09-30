@@ -5,7 +5,7 @@
     --backgr-main:#C7945F;
     --backgr-subheadings: #C2B596;
     --constrast-backgr-main: #0A0C0B;
-    --constrast-backgr-subh: #39372E;
+    --constrast-backgr-subh: #8573A1;
     --distintive-color: #51807C;
 
 }
@@ -116,7 +116,7 @@ h4 {
 
 .personas {
     padding:1em;
-    border: solid 1.8px var(--backgr-subheadings);
+    border: solid 1.8px var(--constrast-backgr-subh);
     justify-self: center;
     margin: 0em auto;
     max-width: 700px;

@@ -3,9 +3,9 @@
 
 :root {
     --backgr-main:#C7945F;
-    --backgr-subheadings: #C2B596;
+    --backgr-subheadings: #8573A1;
     --constrast-backgr-main: #0A0C0B;
-    --constrast-backgr-subh: #8573A1;
+    --constrast-backgr-subh: #C2B596;
     --distintive-color: #51807C;
 
 }
@@ -53,7 +53,7 @@ nav a {
 }
 
 nav a:hover {
-	color: var(--constrast-backgr-main);
+	color: #fff;
 }
 nav div {
 	flex: 1 1 auto;
@@ -116,7 +116,7 @@ h4 {
 
 .personas {
     padding:1em;
-    border: solid 1.8px var(--constrast-backgr-subh);
+    border: solid 1.8px var(--backgr-subheadings);
     justify-self: center;
     margin: 0em auto;
     max-width: 700px;

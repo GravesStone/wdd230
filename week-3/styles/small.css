@@ -1,5 +1,5 @@
 /* https://coolors.co/palette/e63946-f1faee-51BABD-457b9d-1d3557*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 :root {
     --backgr-main:#C7945F;
@@ -17,7 +17,7 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     margin: 0px auto;
-    font-family: "Roboto Mono", "sans";
+    font-family: 'Raleway', sans-serif;
 }
 
 
@@ -38,7 +38,7 @@ header img {
 
 nav {
     display: flex;
-	flex-direction: column;
+	flex-direction: row;
     background-color: var(--backgr-main);
     text-align: center;  
 }

@@ -1,4 +1,4 @@
-/* https://coolors.co/palette/e63946-f1faee-51BABD-457b9d-1d3557*/
+    
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 :root {
@@ -30,8 +30,8 @@ header {
 
 header img { 
     width: 70%;
-    max-width: 95px;
-    max-height: 95px;
+    max-width: 150px;
+    max-height: 150px;
     margin: 1em;
 }
 

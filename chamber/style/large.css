@@ -1,0 +1,228 @@
+@media screen and (min-width: 64em) {
+  header {
+      column-gap: 1em;
+  }
+
+  main {
+      grid-template-rows: repeat(3, .4fr);
+      grid-template-columns: 1fr 1.3fr 1.3fr 1fr;
+      grid-gap: 0;
+      max-width: 1200px;
+      row-gap: .7rem;
+      justify-self: center;
+
+  }
+
+  nav {
+      grid-row: 1;
+      grid-column: 2/3;
+      background-color: var(--backgr-main);
+      color: white;
+      border: none;
+      align-self: center;
+      font-size: 1em;
+  }
+
+  nav ul li a {
+      color: white;
+  }
+
+  nav ul {
+      display: flex;
+  }
+
+  nav ul.open {
+      display: flex;
+      background-color: var(--backgr-main);
+      align-self: center;
+
+  }
+  .menu-toggle {
+    display: grid; /* Show the hamburger icon */
+}
+
+.menu {
+    display: none; /* Hide the menu by default on smaller screens */
+    flex-direction: column;
+    background-color: #000;
+    text-align: center;
+    top: 30px;
+    width: 100%;
+    left: 0;
+}
+
+.menu.active {
+    display: grid; /* Show the menu when active */
+    color:#FCD83A;
+    
+}
+.menu a:hover {
+  color: #FCD83A;
+}
+
+.menu li {
+    margin: 20px 0;
+}
+
+
+
+  header button {
+      display: none;
+  }
+
+  .join-btn,
+  .welcome-message {
+      font-size: .9em;
+      padding: .5em;
+  }
+
+  .name h1 {
+      font-size: 16px;
+  }
+
+  section:nth-child(1) {
+      grid-column: 2/4;
+      grid-row: 1/3;
+      height: 795px;
+      overflow: hidden;
+  }
+
+  section:nth-child(2) {
+      grid-row: 1/2;
+      grid-column: 1/2;
+  }
+
+  section:nth-child(3) {
+      display: grid;
+      grid-row: 2/3;
+      grid-column: 1/2;
+      font-size: 1em;
+      padding: 2em 0.5em;
+      align-items: center;
+      align-content: center;
+  }
+
+  section:nth-child(4) {
+      grid-row: 3/4;
+      grid-column: 2/4;
+      padding-top: 2em;
+  }
+
+
+  section:nth-child(4) p {
+      grid-row: 3/4;
+      grid-column: 2/4;
+      padding-top: 2em;
+  }
+
+  #spotlights {
+      display: grid;
+      grid-row: 1/4;
+      grid-column: 4/5;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+  }
+
+  .spotlight {
+      width: 85%;
+      margin: 0.5em auto;
+      align-self: center;
+      padding: 1em 0.5em;
+
+  }
+
+  .spotlight:nth-child(3) {
+      display: block;
+
+  }
+
+  section:nth-child(6) {
+      display: grid;
+      grid-row: 3/4;
+      grid-column: 1/2;
+  }
+
+  /*    main {
+      margin-bottom: 5em;
+  } */
+  section,
+  #spotlights {
+      min-height: 225px;
+  }
+
+
+  footer {
+      font-size: 0.9em;
+  }
+
+  .footer-sub {
+      display: flex;
+      justify-content: center;
+  }
+
+
+  /* ====================== DISCOVER PAGE ====================  */
+  .main-discover {
+      grid-template-columns: 1fr;
+  }
+
+  .building {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 1.5em auto;
+      align-items: center;
+      font-size: 17px;
+  }
+
+  /* ======================== JOIN PAGE ======================== */
+  .join-page {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 0 auto;
+      justify-items: center;
+      margin: 0 auto;
+      align-items: start;
+      grid-gap: 2rem;
+
+  }
+
+  form input {
+      width: 85%;
+      background-color: var(--constrast-backgr-subh);
+  }
+
+  /* ================== THANKS PAGE ======================== */
+
+  /* =============== DIRECTORY PAGE =================== */
+  .grid {
+      max-width: 900px;
+
+  }
+
+  .list .company {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+
+  }
+
+  .company p:nth-child(3) {
+      display: block;
+  }
+
+
+  /* ===================== CONTACT PAGE ====================== */
+  .map {
+      grid-column: 1/3;
+
+  }
+
+  iframe {
+      max-width: none;
+      margin: 0 auto;
+
+  }
+
+
+
+}

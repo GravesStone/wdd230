@@ -1,0 +1,267 @@
+@media screen and (min-width: 32em) {
+
+    .name h1 {
+        font-size: 1em;
+    }
+
+
+    .name img {
+        width: 65px;
+        height: 65px;
+    }
+
+    main {
+        /*         grid-template-rows: repeat(5, 1fr); */
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+    .hero-section img {
+        width: 100%;
+        height: auto;
+    }
+
+    header button {
+        font-size: 1.5rem;
+    }
+
+    #meeting-message p {
+        font-size: .8em;
+
+    }
+
+    .join-btn,
+    .welcome-message {
+        font-size: .7em;
+        padding: .5em;
+    }
+
+    section img,
+    #spotlights img {
+        width: 100%;
+        max-height: 100px;
+    }
+    #more-info {
+        border: solid 2px var(--constrast-backgr-main);
+        margin: .3rem;
+    }
+    section:nth-child(1) {
+        grid-column: 1/4;
+    }
+
+    section:nth-child(2) {
+        grid-row: 5/6;
+        grid-column: 1/3;
+        display: grid;
+    }
+
+    section:nth-child(3) {
+        grid-row: 5/6;
+        grid-column: 3/3;
+        font-size: .6em;
+    }
+
+    section:nth-child(3) img {
+        width: 35%;
+        height: 40%;
+    }
+
+
+    section:nth-child(4) {
+        grid-row: 2/3;
+        grid-column: 1/4;
+    }
+
+    #spotlights {
+        grid-row: 3/4;
+        grid-column: 1/4;
+        display: inline-flex;
+    }
+
+    .spotlight {
+        width: 100%;
+    }
+
+
+    section:nth-child(6) {
+        display: grid;
+        grid-row: 4/4;
+        grid-column: 1/4;
+    }
+
+    .btn-2 {
+        margin: 1em;
+        background-color: var(--distintive-color);
+        border: none;
+        color: white;
+        padding: 0.5em;
+        border-radius: .5em;
+    }
+
+    footer {
+        grid-template-rows: 1fr 0.1fr;
+        font-size: 0.8em;
+    }
+
+
+
+    .footer-main {
+        display: grid;
+        grid-template-columns: 0.5fr 0.7fr;
+        justify-content: center;
+
+
+    }
+
+    .footer-left {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+    }
+
+    .footer-info {
+        align-self: center;
+    }
+
+    .footer-image {
+        align-self: center;
+        justify-content: center;
+
+    }
+
+    .footer-image img {
+        margin: .2em;
+
+    }
+
+    .footer-right {
+        justify-content: center;
+        text-align: center;
+        align-self: center;
+    }
+
+
+    .footer-right p:nth-child(2) {
+        margin: 0;
+    }
+
+    .footer-sub {
+        font-size: .75em;
+        align-items: center;
+
+    }
+
+    /* ====================== DISCOVER PAGE ====================  */
+    .main-discover {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 0em;
+    }
+
+    .discover-img {
+        border: solid 1px darkcyan;
+        width: 95%;
+        max-width: 350px;
+        max-height: 350px;
+    }
+
+    .building {
+        text-align: center;
+    }
+
+    /* ============== JOIN PAGE ================ */
+
+
+    .main-join {
+        box-shadow: 1px 5px 10px var(--backgr-main);
+        padding: 1em;
+    }
+
+    .main-join:hover {
+
+        box-shadow: 3px 10px 25px var(--backgr-main);
+        border-radius: .3em;
+        transition: .5s;
+    }
+
+    .membership-div {
+        max-width: 400px;
+        margin: 2rem auto;
+
+    }
+
+    .membership-div img {
+        width: 100%;
+        height: auto;
+    }
+    form input {
+        width: 90%;
+    }
+
+    form fieldset,
+    select,
+    textarea {
+        width: 400px;
+
+    }
+
+
+    /* ================== THANKS PAGE ======================= */
+
+    .thanks-div {
+        margin: 10em 1em;
+        padding: 3em;
+        box-shadow: 1px 5px 10px var(--backgr-main);
+
+    }
+
+    .thanks-div h1 {
+        margin: 1.5em auto;
+    }
+
+    /* =============== DISCOVERY PAGE ===================== */
+    .list .company {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 100%;
+        align-items: center;
+        width: -webkit-fill-available;
+
+    }
+
+    .list .company img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .company p:nth-child(3) {
+        display: none;
+    }
+
+    .list {
+        align-items: flex-start;
+    }
+
+    .grid {
+        grid-gap: 0.9rem;
+        margin: .5rem auto;
+    }
+
+    .grid .company {
+        margin: 1rem;
+        width: 235px;
+        max-height: 350px;
+        margin: 1rem;
+        display: grid;
+        justify-items: center;
+
+
+    }
+
+    iframe {
+        max-width: 480px;
+        margin: 1rem auto;
+    }
+
+}

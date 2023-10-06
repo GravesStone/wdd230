@@ -170,6 +170,7 @@ main {
     color: var(--constrast-backgr-main);
     text-align: center;
     padding: 100px 0;
+    box-shadow: 5px 10px var(--backgr-subheadings);
 }
 
 /* Style the hero content */

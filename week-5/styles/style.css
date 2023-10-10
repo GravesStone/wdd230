@@ -11,26 +11,25 @@ body {
 	justify-content: center;
 	font-size: 18px;
 	font-family: 'Playfair Display', serif;
-    background-image: url(/week-5/images/jesuschrist.jpg);
+    background-image: url(/week-5/images/default.jpg);
     background-repeat: no-repeat;
     background-size: cover; /* Scale the image to cover the entire element */
-    background-position: center ; /* Center the image horizontally and vertically */
-
+    background-position: center	 ; /* Center the image horizontally and vertically */
+	background-size: 64em;
 }
 
 h1 {
 	font-size: 1.5rem;
-    color: #fff;
+    color:#fff;
 }
 
 main {
-	margin: 0.5rem auto;
-	border: 1px solid rgba(0, 0, 0, 0.2);
-	padding: 0.5rem;
-	background-color: bisque;
-	display: grid;
-	grid-template-columns: 1fr;
-	width: 95%;
+	margin: 1rem auto;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 1rem;
+	background-color: #ddd;
+	display: flex;
+	flex-direction: column;
     
 }
 

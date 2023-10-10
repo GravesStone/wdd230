@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 :root {
-    --backgr-main:#C7945F;
-    --backgr-subheadings: #8573A1;
-    --constrast-backgr-main: #0A0C0B;
-    --constrast-backgr-subh: #C2B596;
-    --distintive-color:     ;
+    --backgr-main:          #C7945F;
+    --backgr-subheadings:   #8573A1;
+    --constrast-backgr-main:#0A0C0B;
+    --constrast-backgr-subh:#C2B596;
+    --distintive-color:     #51807c;
 
 }
 
 /* ================ Body ================================= */
 body {
-    display: grid;
+    display:               grid;
     grid-template-columns: 1fr;
-    margin: 0px auto;
-    font-family: 'Raleway', sans-serif;
-    padding: 0px;
+    margin:                0px auto;
+    font-family:           'Raleway', sans-serif;
+    padding:               0px;
 
 
 }
@@ -371,7 +371,7 @@ footer img {
 }
 
 footer a {
-    color: var(--constrast-backgr-subh);
+    color: var();
     text-decoration: revert;
     font-size: 15px;
 }

@@ -4,7 +4,7 @@
     --backgr-subheadings: #8573A1;
     --constrast-backgr-main: #0A0C0B;
     --constrast-backgr-subh: #C2B596;
-    --distintive-color: #51807C;
+    --distintive-color:     ;
 
 }
 
@@ -162,7 +162,7 @@ main {
 }
 
 .hero {
-    background-image: url('/chamber/images/hero.jpg');
+    background-image: url('/chamber/images/hero.jpeg');
     background-size: cover;
     background-position: center;
     color: var(--constrast-backgr-main);

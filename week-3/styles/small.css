@@ -17,7 +17,6 @@ html {
 
 body {
     display: grid;
-    grid-template-columns: 1fr;
     margin: 0px auto;
     font-family: 'Raleway', sans-serif;
     color: var(--constrast-backgr-main)
@@ -117,55 +116,28 @@ main {
     padding-inline-start: 10px;
 }
 .color-sch-main{
-    background-color: var(--backgr-main);
-    box-shadow: 7px 10px var(--distintive-color);
+    display: block;
+    background-color: #fff;
+    border: 3px solid #000;
+    color: var(--constrast-backgr-main);
+    padding-inline-start: 10px;
+}
+.target-audience{
+    display: block;
+    background-color: var(--backgr-subheadings);
+    box-shadow: 7px 10px var(--backgr-main);
     color: #fff;
     padding-inline-start: 10px;
 }
 
-
-
-.personas {
-    padding:1em;
-    border: solid 1.8px var(--backgr-subheadings);
-    justify-self: center;
-    margin: 0em auto;
-    max-width: 700px;
-    border-radius: .2em;
+.scenarios{
+    display: block;
+    background-color: var(--distintive-color);
+    box-shadow: 7px 10px var(--backgr-subheadings);
+    color: #fff;
+    padding-inline-start: 10px;
 }
 
-
-
-.personas h5 {
-    font-size: 1.2em;
-    color: var(--backgr-subheadings);
-    margin-left: .7em;
-}
-
-.personas img {
-    text-align: center;
-    max-width: 120px;
-    max-height: 180px;
-    border-radius: .3em;
-    margin-left: .7em;
-}
-
-.description {
-    border: solid 2px var(--backgr-main);
-    color: var(--backgr-main);
-    padding: .5em;
-    border-radius: .3em;
-}
-
-ul {
-    list-style: none;
-    padding-left: 0.5em;
-}
-
-li {
-    padding: .25em;
-
-}
 
 footer {
     display:flex;
@@ -177,7 +149,7 @@ footer {
 }                                                                   
 
 table {
-    border:solid 1px var(--backgr-main);
+
     display: flex;
     text-align: center;
     align-items: center;
@@ -204,21 +176,8 @@ tr , td ,th {
 }
 #accent2 {
   background-color: var(--distintive-color);
-  color: #000;
+  color: #fff;
 }
-
-
-
-.color-sch-main img {
-    width: 100%;
-    margin: 1em auto;
-    align-self: center;
-    display: flex;
-    
-}
-
-
-/* Typography  */
 
 
 

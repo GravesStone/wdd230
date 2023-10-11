@@ -37,46 +37,34 @@ header img {
     margin: 1em;
 }
 
-
 nav {
-    display: flex;
-	flex-direction: row;
     background-color: var(--backgr-main);
-    text-align: center;  
+    color: #fff;
+    display: flex; /* Center horizontally using flexbox */
+    align-items: center; /* Center vertically within the nav element */
+    justify-content: center; /* Center horizontally within the nav element */
 }
 
-nav a {
-	display: block;
-	color: #fff;
-	text-align: center;
-	padding: 15px;
-	text-decoration: none;
-	font-size: 0.9rem;
+.navlist {
+    list-style: none;
+    display: flex; /* Use flexbox to create a horizontal layout */
+    padding: 0;
 }
 
-nav a:hover {
-	color: #fff;
-}
-nav ul {
-	flex: 1 1 auto;
+nav li {
+    margin: 0 20px; /* Adjust the margin to create spacing between menu items */
 }
 
-nav ul:hover {
-	background-color: var(--backgr-subheadings);
-	color: var(--constrast-backgr-main);
+.navlist a {
+    text-decoration: none;
+    color: #fff;
 }
 
-nav p {
-    text-align: center;
-    padding: 0.5em;
-}
-
-nav p:hover {
+.navlist a:hover {
     background-color: var(--backgr-subheadings);
-}
-nav li{
     list-style-type: none;
 }
+
 .name {
     font-size:65%;
 }

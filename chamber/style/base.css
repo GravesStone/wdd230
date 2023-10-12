@@ -192,7 +192,6 @@ main {
     border: none;
     border-radius: 4px;
     font-weight: bold;
-    transition: var(--backgr-subheadings) 0.3s;
 }
 
 .btn:hover {

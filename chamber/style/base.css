@@ -168,7 +168,7 @@ main {
     color: var(--constrast-backgr-main);
     text-align: center;
     padding: 100px 0;
-    box-shadow: 5px 10xpx var(--backgr-subheadings);
+    box-shadow: 5px 10px var(--backgr-subheadings);
 }
 
 /* Style the hero content */
@@ -371,7 +371,7 @@ footer img {
 }
 
 footer a {
-    color: var();
+    color: #fff;
     text-decoration: revert;
     font-size: 15px;
 }

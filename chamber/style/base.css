@@ -183,7 +183,7 @@ main {
     font-size: 25px;
 }
 /* Style the button */
-.btn {
+.btnjoin {
     display: inline-block;
     padding: 10px 20px;
     background-color: #007BFF;
@@ -194,7 +194,7 @@ main {
     font-weight: bold;
 }
 
-.btn:hover {
+.btnjoin:hover {
     background-color: var(--backgr-subheadings);
 }
 

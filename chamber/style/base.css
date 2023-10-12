@@ -166,7 +166,7 @@ main {
 /* Hero */
 /* Apply styles to the hero section with a background image */
 .hero {
-    background-image: url('/chamber/images/QC-Memorial-Circle.jpg'); /* Set the background image */
+    background-image: url("../images/QC-Memorial-Circle.jpg"); /* Set the background image */
     background-size: cover; /* Cover the entire container */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Prevent image repetition */

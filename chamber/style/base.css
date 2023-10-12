@@ -166,12 +166,12 @@ main {
 /* Hero */
 /* Apply styles to the hero section with a background image */
 .hero {
-    background-image: url('/chamber/images/hero.jpg'); /* Set the background image */
+    background-image: url('/chamber/images/QC-Memorial-Circle.jpg'); /* Set the background image */
     background-size: cover; /* Cover the entire container */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Prevent image repetition */
     height: 100vh; /* Set the height to the viewport height */
-    color: #0A0C0B; /* Text color for content on top of the hero image */
+    color: #fff; /* Text color for content on top of the hero image */
     text-align: center; /* Center the content horizontally */
     display: flex; /* Enable content centering */
     flex-direction: column; /* Stack content vertically */

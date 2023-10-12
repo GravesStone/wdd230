@@ -162,7 +162,7 @@ main {
 }
 
 .hero {
-    background-image: url('/chamber/images/hero.jpeg');
+    background-image: url('/chamber/images/hero.jpg');
     background-size: cover;
     background-position: center;
     color: var(--constrast-backgr-main);

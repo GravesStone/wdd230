@@ -164,46 +164,42 @@ main {
 
 
 /* Hero */
-/* Apply styles to the hero section with a background image */
-.hero {
-    background-image: url('/chamber/images/QC-Memorial-Circle.jpg'); /* Set the background image */
-    background-size: cover; /* Cover the entire container */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Prevent image repetition */
-    height: 100vh; /* Set the height to the viewport height */
-    color: #fff; /* Text color for content on top of the hero image */
-    text-align: center; /* Center the content horizontally */
-    display: flex; /* Enable content centering */
-    flex-direction: column; /* Stack content vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-}
-.hero p {
-    max-width: 80%; /* Limit width */
-    font-size: 25px;
-}
-/* Style the button */
-.btnjoin {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: #fff;
-    text-decoration: none;
-    border: none;
-    border-radius: 4px;
-    font-weight: bold;
-}
-
-.btnjoin:hover {
-    background-color: var(--backgr-subheadings);
-}
-
-
-.hero h1 {
-    font-size: 3.0rem;
-    margin-bottom: 20px;
+.hero-section img {
+    width: 100%;
+    min-height: 226px;
 
 }
+
+.hero-section {
+    position: relative;
+    border-radius: 0;
+}
+
+.welcome-message {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    color: var(--constrast-backgr-main);
+    padding: .5rem;
+    opacity: 0.9;
+    font-size: .5em;
+    text-shadow: 1px 1px var(--constrast-backgr-subh);
+}
+
+.join-btn {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    background: var(--distintive-color);
+    border-radius: .7em;
+    border: 1px solid rgba(0, 0, 0, .1);
+    padding: .1rem;
+    box-shadow: 0 0 30px #333;
+    opacity: 0.9;
+    font-size: .5em;
+    cursor: pointer;
+}
+
 
 
 

@@ -15,13 +15,13 @@ body {
     margin:                0px auto;
     font-family:           'Raleway', sans-serif;
     padding:               0px;
-
+    
 
 }
 /* ================ Header ================================= */
 header {
     display: grid;
-    grid-template-columns: 60% 1fr 1fr;
+    grid-template-columns: 60% 1fr 60%;
     z-index: 0;
     background: var(--backgr-main);
 
@@ -46,7 +46,7 @@ header {
 
 .name h1 {
     font-size: 0.75em;
-    color: white;
+    color: #0A0C0B;
     margin: 1em;
 }
 
@@ -62,41 +62,32 @@ header {
     width: 25px;
 }
 
-.current-date {
-    display: inline-flex;
-    grid-row: 3/3;
-    grid-column: 1/5;
-    justify-content: space-around;
-    color: white;
-    background-color: var(--backgr-subheadings);
-    font-size: 13px;
-    height: 40px;
-    align-items: center;
 
-}
+
 
 nav {
     display: block;
-    background-color: white;
+    background-color: #000;
     font-size: .8em;
     background-color: var(--constrast-backgr-subh);
     justify-content: center;
     align-items: center;
     grid-row: 2/3;
     grid-column: 1/5;
+
 }
 
 .btn {
     display: flex;
     justify-content: center;
-    
+    color:#000;
 }
 
 header button {
     background: transparent;
     border: none;
     font-size: 1.5rem;
-    color: white
+    color: #000;
 }
 
 
@@ -110,14 +101,10 @@ nav ul li a {
     display: block;
     padding: .8rem 2vw;
     text-decoration: none;
-    color: var(--backgr-subheadings);
+    color: #000;
 }
 
-nav ul li.active a {
-    background-color: var(--distintive-color);
-    color: white;
 
-}
 
 nav ul li a:hover {
     background-color: var(--constrast-backgr-main);
@@ -139,6 +126,7 @@ nav ul.open {
 
 #hamburger-btn span:nth-child(1) {
     display: block;
+
 }
 
 #hamburger-btn span:nth-child(2) {
@@ -162,11 +150,17 @@ main {
 }
 
 
+.diamond-shack h2{
+   color:var(--constrast-backgr-main);
+}
+.diamond-shack p{
+    color: var(--constrast-backgr-main);
+}
 
 /* Hero */
 /* Apply styles to the hero section with a background image */
 .hero {
-    background-image: url("../images/QC-Memorial-Circle.jpg"); /* Set the background image */
+    background-image: url("../images/QC-Memorial-Circle.webp"); /* Set the background image */
     background-size: cover; /* Cover the entire container */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Prevent image repetition */
@@ -177,17 +171,21 @@ main {
     flex-direction: column; /* Stack content vertically */
     justify-content: center; /* Center content vertically */
     align-items: center; /* Center content horizontally */
+
 }
+
+
 .hero p {
-    max-width: 80%; /* Limit width */
+    max-width: 60%; /* Limit width */
     font-size: 25px;
+    color: #fff;
 }
 /* Style the button */
 .btnjoin {
     display: inline-block;
     padding: 10px 20px;
     background-color: var(--backgr-main);
-    color: #fff;
+    color: #000;
     text-decoration: none;
     border: none;
     border-radius: 4px;
@@ -205,12 +203,41 @@ main {
 
 }
 
+.weather {
+    display: flex;
+    font-size: 1.5em;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
+.spinning-text {
+    animation: spin 1s linear infinite, textAnimation 3s ease-in-out forwards;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes textAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 section,
 #spotlights {
     background-color: var(--backgr-main);
-    border: solid 1px gray;
+    border: 2px solid #0A0C0B;
     border-radius: 60%;
     margin: .3em .6em;
     color: white;
@@ -226,9 +253,7 @@ section,
     border: solid 2px var(--constrast-backgr-main);
 }
 
-p {
-    font-size: 13px;
-}
+
 
 .spotlight p {
     font-size: 11px;
@@ -344,7 +369,8 @@ footer {
 footer img {
     width: 95px;
     height: 95px;
-    margin-top: 1em
+    margin-top: 1em;
+    border-radius: 60%;
 }
 
 footer a {

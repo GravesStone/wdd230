@@ -1,4 +1,4 @@
-@media screen and (min-width: 64em) {
+@media screen and (min-width: 75em) {
   header {
       column-gap: 1em;
   }
@@ -39,7 +39,7 @@
   }
   .menu-toggle {
     display: grid; /* Show the hamburger icon */
-}
+    }
 
 .menu {
     display: none; /* Hide the menu by default on smaller screens */

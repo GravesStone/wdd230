@@ -1,8 +1,4 @@
-@media screen and (min-width: 32em) {
-
-    .name h1 {
-        font-size: 1em;
-    }
+@media screen and (min-width: 25em) {
 
 
     .name img {

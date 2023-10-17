@@ -10,7 +10,7 @@
         Idaho. In this project is applied the principle of responsiveness, white spaces, good contrast, and consistency 
         in design and layout. It contains multiple pages, utilizing HTML, CSS, and Javascript. ">
    
-    <link rel="icon" href="/wdd230/chamber/favicon.ico">
+    <link rel="icon" href="images/main-logo.webp">
     <link rel="stylesheet" href="style/normalize.css">
     <link rel="stylesheet" href="style/base.css">
     <link rel="stylesheet" href="style/medium.css">
@@ -25,7 +25,7 @@
         <div class="name">
             
             <h1>Quezon City Chamber of Commerce</h1>
-            <a href="index.html"> <img src="images/main-logo.png" alt="Chamber logo"></a>
+            <a href="index.html"> <img src="images/main-logo.webp" alt="Chamber logo"></a>
         </div>
         <nav>
             <ul id="primary-nav">
@@ -48,43 +48,63 @@
     </header>
     <main>
         <section class="hero">
-                <h2>Welcome to Quezon</h2>
+            <picture>
+                <!-- WebP image for mobile view (up to 400px) -->
+                <source srcset="../chamber/images/QC-Memorial-Circle.webp" media="(max-width: 75em)" type="image/webp" />
+                
+                <!-- WebP image for larger view (above 400px) -->
+                <source srcset="../chamber/images/QC-Memorial-Circle.webp" media="(max-width: 25em)" type="image/webp" />
+                <!-- fallback if browser doesn't support webp images-->
+            </picture>
+            
+                <h2>Welcome to Quezon City</h2>
                 <p>Makes you happy</p>
                 <a class="btnjoin" href="#">Join Us</a>
         </section>
 
-        <section>
-            <h2>Layout 2</h2>
-            
+        <section class="diamond-shack">
+            <h2>Upcoming Event</h2>
+            <h3>RIBBON CUTTING - THE DIAMOND SHACK</h3>
+            <p>"Join us for the grand opening of The Diamond Shack"</p>
+            <p> Thursday at 1:00 p.m.</p>
             <a href="contact.html" id="more-info">
                 <p>more info...</p>
             </a>
         </section>
         <section class="weather-section">
-            <h3>Weather Section</h3>
+            <h2>Weather</h2>
+            <div class="weather">
+                <img id="weather-img">
+                <div class="temp"><span id="my-temp"></span>
+                &deg;C</div>
+            </div>
+            <h3 id="weather-descrip"></h3>
+            <p>Wind Speed: <span id="my-wind" class="spinning-text"></span></p>
+            <p>Wind Chill: <span id="wind-chill" class="spinning-text"></span></p>
+            <p>Humidity: <span id="humidity" class="spinning-text"></span></p>
         </section>
         <section>
-            <h3>Layout 3</h3>
-            <p></p>
+            <h3>Unleash Your Potential</h3>
+            <p>"Join our Chamber and unlock fantastic advantages tailored to small and medium-sized enterprises. We're introducing a fresh program that includes extra training for the upcoming generation of businesses, e-commerce guidelines, and proven strategies to help your business flourish and become an integral part of our supportive community."</p>
         </section>
         <div id="spotlights">
-            <h2>layout 1</h2>
+            <h2></h2>
         </div>
         <section class="join-us">
             <div>
-                <h3>sample heading</h3>
-                <a class="btn-2">Join Us!</a>
+                <h3>Empower Your Journey</h3>
+                <p>Explore the process of becoming a part of the Chamber of Commerce and understand the advantages it can bring to your organization!</p>
             </div>
         </section>
     </main>
     <div class="theme-toggle" id="themeToggle">
-        <img src="images/sun-and-moon-icon-isolated-on-white-background-vector.jpg" alt="Toggle Icon" id="icon">
+        <img src="/chamber/images/sun-and-moon-icon-isolated-on-white-background-vector.webp" alt="Toggle Icon" id="icon">
     </div>
     <footer>
         <div class="footer-main">
             <div class="footer-left">
                 <div class="footer-image">
-                    <a href="index.html"><img src="images/logo/main-logo.png" alt="Chamber logo"></a>
+                    <a href="index.html"><img src="images/main-logo.webp" alt="Chamber logo"></a>
                 </div>
                 <div class="footer-info">
                     <p><strong>Quezon City Chamber of Commerce </strong></p>
@@ -94,7 +114,7 @@
                 </div>
             </div>
             <div class="footer-right">
-                <p></p>
+                <p>Contact us</p>
                 <p></p>
                 <a href="">
                     <p></p>
@@ -108,7 +128,7 @@
         </div>
     </footer>
     <script src="scripts/hamburger.js"></script>
-    <script src="/wdd230/chamber/js/windchill.js"></script>
+    <script src="/chamber/scripts/windchill.js"></script>
     <script src="scripts/transition.js"></script>
 </body>
 

@@ -278,8 +278,8 @@ h2 {
 
 .card-container {
   display: inline; /* On mobile, allow cards to take the full width of the container */
-  max-width: 100%; /* Remove the maximum width for full-width cards */
-  margin: 5px; /* Reduce the margin for better spacing on small screens */
+  max-width: none; /* Remove the maximum width for full-width cards */
+ 
 }
 .card2{
   text-align: center;

@@ -1,12 +1,9 @@
 @media screen and (min-width: 800px) {
   main {
-    display: grid;
+    display: block;
     grid-template-columns: 1fr auto;
   }
-  .hero {
-    padding-bottom: 33.75%; /* Adjust the aspect ratio for smaller screens if needed */
-    padding: 300px;
-  }
+
   nav {
     display: flex;
     flex-direction: row;

@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport"     content="width=device-width, initial-scale=1.0"/>
-    <meta name="author"       content="Mark augustine estimada"/>
+    <meta charset="UTF-8">
+    <meta name="viewport"     content="width=device-width, initial-scale=1.0">
+    <meta name="author"       content="Mark augustine estimada">
     <meta name="description"  content="I'm Mark augustine g.estimada the developer of this page for the WDD 230 (Web Frontend Development) Course at Brigham Young University - Idaho. This is the WDD 230 assignment portal that will link to all 
     assignments that need to complete the Web & Computer Programming certificate ">
     <title>Mark Augustine Estimada -  WDD 230 - Web Frontend Development</title>
     <link rel="icon" type="image/x-icon" href="images/mypic (2).ico">
-    <link rel="stylesheet" href="styles/normalize.css"/>
-    <link rel="stylesheet" href="styles/holygrail.css"/>
-    <link rel="stylesheet" href="styles/larger.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/holygrail.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
  
   <body>
@@ -39,34 +39,36 @@
           <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/12?lang=eng" target="_blank">Scripture</a></li>
       </ul>
   </nav>
-  <div class="hero">
-    <picture>
-      <!-- WebP image for mobile view (up to 400px) -->
-      <source srcset="../images/small-temple.webp" media="(max-width: 400px)" type="image/webp" />
-      
-      <!-- WebP image for larger view (above 400px) -->
-      <source srcset="./images/large-temple.webp" type="image/webp" />
-      
-      <!-- Fallback image for browsers that don't support WebP -->
-    </picture>
-    
-    <div class="hero-content">
-      <h4>Manila Philippines Temple</h4>
-      <p>Among the marvelous habits that should be normal for members of the Church: Frequent participation in
-        temple and family history work. This work is the means
-        of uniting and sealing families for eternity.</p>
-      <p>Elder Rafael E. Pino</p>
-    </div>
-  </div>
+
 
     <main>
+      
+      <section class="hero">
+        <picture>
+            <!-- Source for large screens (min-width: 1200px) -->
+            <source media="(min-width: 1200px)" srcset="./images/large-temple.webp">
+      
+
+            <!-- Default source for small screens -->
+            <img src="./images/small.jpg" alt="Hero Image">
+        </picture>
+        <div class="hero-content">
+            <h2>Philippines Manila Temple</h2>
+            <p><b>President Gordon B. Hinckley (1910–2008) dedicated  September 1984.</b></p>
+            <p><i>"Among the marvelous habits that should be normal for members of the Church: Frequent participation in temple and family history work. This work is the means of uniting and sealing families for eternity."</i></p>
+            <p>Elder Rafael E. Pino</p>
+          </div>
+    </section>
      <hr>
        
       <h2>WDD 230: Web Frontend Development</h2>
-      <hr/>
-      <!--Cards-->
-      <section class="card" id="lessons">
-        <h3>Learning Activities</h3>
+      <hr>
+
+    <section>
+      <div class="card-container">
+          <div class="card">
+              <!-- Card 1 Content -->
+              <h3>Learning Activities</h3>
             <ul>
                 <li>1.<a href="#">Holy Layout </a>| <a href="#"> JS Pen</a></li>
                 <li>2.<a href="#">Media Query</a> |<a href="week-2/Design-principles.html"> Design Principles Document </a></li>
@@ -79,14 +81,16 @@
                 <li>9.
                 <li>10.
             </ul>
-        </section>
-
-      <section class="card" id="information">
-        <h3>Information</h3>
-            <p>Philippines,Quezon City</p>
-                <p>Today's weather:---- <span id="weather"></span></p>
-                    <p>Number of visits:<span id="visits"></span></p>
-      </section>
+          </div>
+          <div class="card2">
+              <!-- Card 2 Content -->
+                <h3>Information</h3>
+                    <p>Philippines,Quezon City</p>
+                        <p>Today's weather:---- <span id="weather"></span></p>
+                            <p>Number of visits:<span id="visits"></span></p>
+          </div>
+      </div>
+  </section>
     </main>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123504.11642678935!2d120.9797877008451!3d14.684087284668824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397ba0942ef7375%3A0x4a9a32d9fe083d40!2sQuezon%20City%2C%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1697440468872!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     <footer>

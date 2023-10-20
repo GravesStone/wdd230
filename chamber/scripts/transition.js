@@ -11,3 +11,7 @@ themeToggle.addEventListener('click', () => {
         document.body.style.color = '#333'; /* Light mode text color */
     }
 });
+document.getElementById('linkbtn').addEventListener('click', function() {
+    // Redirect to the specified URL when the button is clicked
+    window.location.href = 'https://gravesstone.github.io/wdd230/';
+  });

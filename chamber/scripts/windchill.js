@@ -1,4 +1,7 @@
 let windChill = document.getElementById("wind-chill")
+
+
+
 // select HTML elements in the document
 
 const url = "https://api.openweathermap.org/data/2.5/weather?id=1692193&appid=15afb914adc211c491651741ae88beb9";
@@ -37,11 +40,15 @@ function displayResults(weatherData, temp, wind) {
     const iconsrc = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
     const desc = weatherData.weather[0].description.toUpperCase();
     const humidity = weatherData.main.humidity
+    
+    
+    
+    
     // Displaying the Weather information
     document.getElementById("weather-descrip").textContent = desc
     document.getElementById("weather-img").src = iconsrc
     document.getElementById("weather-img").alt = desc
-    document.getElementById("humidity").innerHTML = `${humidity}`
+    document.getElementById("humidity").innerHTML = `${humidity}%`
     document.getElementById("my-temp").innerHTML = temp
     document.getElementById("my-wind").innerHTML = wind
 }   
@@ -49,10 +56,10 @@ function displayResults(weatherData, temp, wind) {
 
 const tempConversor = (temp, windSpeed) => {
     if (temp <= 50 && windSpeed > 3.0) {
-        let temperature = (35.74 + 0.6215 * temp - 35.75 * windSpeed ** 0.16 + 0.4275 * temp * windSpeed ** 0.16).toFixed(2)
+        let temperature = (35.74 +  0.6215 * temp - 35.75 * windSpeed ** 0.16 + 0.4275 * temp * windSpeed ** 0.16).toFixed(2)
         return `${temperature}Fº`
-        } 
-        else {
+        } else {
         return `N/A`
     }
 }
+

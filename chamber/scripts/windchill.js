@@ -1,7 +1,7 @@
 let windChill = document.getElementById("wind-chill")
 // select HTML elements in the document
 
-const url = "https://api.openweathermap.org/data/2.5/weather?q=Resistencia&appid=204dc8a602f98f1e1149ad7c488a52f4&units=imperial";
+const url = "https://api.openweathermap.org/data/2.5/weather?id=1692193&appid=15afb914adc211c491651741ae88beb9";
 
 async function weaterMain() {
     try {

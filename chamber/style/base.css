@@ -150,49 +150,50 @@ main {
 }
 
 
-.diamond-shack h2{
+.diamond-shack {
    color:var(--constrast-backgr-main);
 }
-.diamond-shack p{
-    color: var(--constrast-backgr-main);
-}
+
 
 /* Hero */
 /* Apply styles to the hero section with a background image */
-.hero {
-    background-image: url("../images/QC-Memorial-Circle.webp"); /* Set the background image */
-    background-size: cover; /* Cover the entire container */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Prevent image repetition */
-    height: 50vh; /* Set the height to the viewport height */
-    color: #fff; /* Text color for content on top of the hero image */
-    text-align: center; /* Center the content horizontally */
-    display: flex; /* Enable content centering */
-    flex-direction: column; /* Stack content vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
+.hero-section img {
+    width: 100%;
+    min-height: 226px;
 
 }
 
-
-.hero p {
-    max-width: 60%; /* Limit width */
-    font-size: 25px;
-    color: #fff;
+.hero-section {
+    position: relative;
+    border-radius: 0;
 }
+.hero-content {
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+  }
+
 /* Style the button */
 .hero-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: var(--backgr-main); /* Background color of the button */
+    background-color: var(--backgr-subheadings); /* Background color of the button */
     color: #fff; /* Text color */
     border: none;
     border-radius: 4px;
     position: relative;
     overflow: hidden;
     transition: background-color 0.3s ease-in-out;
+    text-decoration: none;
   }
-
+  
+  .hero-content h2{
+    font-size: 30px;
+  }
+  
   .hero-button::before {
     content: "";
     position: absolute;
@@ -203,6 +204,7 @@ main {
     left: -100%;
     transform: rotate(20deg);
     animation: none; /* Disable animation by default */
+   
   }
 
   .hero-button:hover {
@@ -211,7 +213,7 @@ main {
 
   .hero-button:hover::before {
     left: 100%;
-    animation: shimmer 2s infinite; /* Enable animation on hover */
+    animation: shimmer 3s infinite; /* Enable animation on hover */
   }
 
   @keyframes shimmer {
@@ -229,9 +231,10 @@ main {
 
 }
 .shimmering-button {
+    cursor: pointer;
     display: inline-block;
     padding: 10px 20px;
-    background-color: var(--distintive-color); /* Background color of the button */
+    background-color: var(--backgr-subheadings); /* Background color of the button */
     color: #fff; /* Text color */
     border: none;
     border-radius: 4px;
@@ -253,7 +256,7 @@ main {
   }
 
   .shimmering-button:hover {
-    background-color: var(--backgr-subheadings); /* New background color on hover */
+    background-color: var(--distintive-color); /* New background color on hover */
   }
 
   .shimmering-button:hover::before {

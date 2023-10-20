@@ -35,62 +35,58 @@
                 <li><a href="#">Join</a></li>
             </ul>
         </nav>
-        <!--<div class="icons">
-            <a href="https://www.facebook.com/" target="_blank"><img src="/wdd230/chamber/images/facebook.png"
-                    alt="Facebook icon"></a>
-            <a href="https://www.instagram.com/" target="_blank"> <img src="/wdd230/chamber/images/instagram.png"
-                    alt="Instagram icon"></a>
-            <a href="https://www.linkedin.com/in/josuebcenturion/" target="_blank"><img
-                    src="/wdd230/chamber/images/linkedin.png" alt="Linkedin icon"></a>
-        </div>
-      -->
+     
         <div class="btn"> <button id="hamburger-btn"><span>&#9776;</span><span>x</span></button></div>
     </header>
     <main>
-        <section class="hero">
+       <!--Hero Section-->
+        <section class="hero-section">
             <picture>
-                <!-- WebP image for mobile view (up to 400px) -->
-                <source srcset="../chamber/images/QC-Memorial-Circle.webp" media="(max-width: 75em)" type="image/webp">
-                
-                <!-- WebP image for larger view (above 400px) -->
-                <source srcset="../chamber/images/QC-Memorial-Circle.webp" media="(max-width: 25em)" type="image/webp">
-                <!-- fallback if browser doesn't support webp images-->
-                
+                <source media="(min-width: 64em)" srcset="./images/large.webp">
+                <source media="(min-width: 32em)" srcset="./images/medium.webp">
+                <img src="./images/QC-Memorial-CircleJ.jpg" alt="Hero Image">
             </picture>
-            
-                <h2>Welcome to Quezon City</h2>
-                <p>Makes you happy</p>
-                <button class="hero-button">Join Us</button>
+            <div class="hero-content">
+                <h2 class="hero-heading">Welcome to Quezon City</h2>
+                    <p>Make you happy</p>
+                <a class="hero-button" href="#">Join the chamber</a>
+            </div>
         </section>
-
+        <!--diamond-shack-->
         <section class="diamond-shack">
             <h2>Upcoming Event</h2>
-            <h3>RIBBON CUTTING - THE DIAMOND SHACK</h3>
-            <p>"Join us for the grand opening of The Diamond Shack"</p>
-            <p> Thursday at 1:00 p.m.</p>
+            <h3 class="shining-text"><b>RIBBON CUTTING <Br>THE DIAMOND SHACK</b></h3>
+            <p><i>"Join us for the grand opening of The Diamond Shack"</i></p>
+            <p>see you at thursday at 1:00 p.m.</p>
             <a href="contact.html" >
-                <button class="shimmering-button">more</button>
+                <button class="shimmering-button">Join Now!</button>
             </a>
         </section>
+        <!--Weather-->
         <section class="weather-section">
             <h2>Weather</h2>
             <div class="weather">
-                <img id="weather-img">
+                <img src="./images/weather.png" id="weather-img">
                 <div class="temp"><span id="my-temp"></span>
                 &deg;C</div>
             </div>
-            <h3 id="weather-descrip"></h3>
+            <h3 id="weather-descrip">Status</h3>
             <p>Wind Speed: <span id="my-wind" class="spinning-text"></span></p>
             <p>Wind Chill: <span id="wind-chill" class="spinning-text"></span></p>
             <p>Humidity: <span id="humidity" class="spinning-text"></span></p>
         </section>
+        <!--Unleash Section-->
         <section>
             <h3>Unleash Your Potential</h3>
             <p>"Join our Chamber and unlock fantastic advantages tailored to small and medium-sized enterprises. We're introducing a fresh program that includes extra training for the upcoming generation of businesses, e-commerce guidelines, and proven strategies to help your business flourish and become an integral part of our supportive community."</p>
         </section>
-        <div id="spotlights">
-            <h2></h2>
-        </div>
+        <!--Companies-section-->
+        <section id="spotlights">
+            <div>
+                <h2>Companies</h2>
+            </div>
+        </section>
+        <!--Empower-section-->
         <section class="join-us">
             <div>
                 <h3>Empower Your Journey</h3>
@@ -101,6 +97,7 @@
     <div class="theme-toggle" id="themeToggle">
         <img src="../chamber/images/sun-and-moon-icon-isolated-on-white-background-vector.webp" alt="Toggle Icon" id="icon">
     </div>
+    <!--Footer section-->
     <footer>
         <div class="footer-main">
             <div class="footer-left">

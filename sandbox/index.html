@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spinning Weather</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .weather-container {
+            text-align: center;
+        }
+
+        .weather-icon {
+            width: 100px;
+        }
+
+        .spinning-text {
+            font-size: 20px;
+            animation: spin 2s infinite linear;
+        }
+
+        .slot-machine {
+            display: grid;
+
+            align-items: center;
+        }
+
+        .reel {
+            display: flex;
+            gap: 10px;
+        }
+
+        .reel-text {
+            font-size: 48px;
+            padding: 10px;
+            border: 2px solid #000;
+            border-radius: 5px;
+            width: 60px;
+            text-align: center;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Spinning Weather</h1>
+    <div class="weather-container">
+        <div class="reel">
+        <p id="city">City: Your City Name</p>
+        <img id="weather-icon" src="" alt="Weather Icon" class="weather-icon">
+        <p id="temperature" class="spinning-text">Loading...</p>
+        <p id="windChill" class="spinning-text">Wind Chill: Loading...</p>
+        </div>
+
+       
+    </div>
+    <script>
+        let currentIconCode = null;
+        let spinning = false;
+
+        async function getWeatherData() {
+            const apiKey = '15afb914adc211c491651741ae88beb9'; // Replace with your OpenWeatherMap API key
+            const city = 'Quezon City'; // Replace with the desired city name
+            const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+            try {
+                const response = await fetch(weatherUrl);
+                const data = await response.json();
+                const temperature = data.main.temp;
+                const windSpeed = data.wind.speed;
+                const iconCode = data.weather[0].icon;
+
+                if (iconCode !== currentIconCode) {
+                    // If the weather icon has changed, apply the spinning animation to the text
+                    const spinningText = document.querySelectorAll('.spinning-text');
+                    spinningText.forEach(element => {
+                        element.style.animation = 'spin 2s infinite linear';
+                    });
+
+                    currentIconCode = iconCode;
+                }
+
+                const windChillIndex = 5.74 + 0.6215 * temperature - 35.75 * Math.pow(windSpeed, 0.16) + 0.4275 * temperature * Math.pow(windSpeed, 0.16);
+
+                document.getElementById('city').textContent = `City: ${city}`;
+                document.getElementById('temperature').textContent = `${temperature} °C`;
+                document.getElementById('windChill').textContent = `Wind Chill: ${windChillIndex.toFixed(2)} °C`;
+
+                const iconUrl = `http://openweathermap.org/img/wn/${iconCode}.png`;
+                document.getElementById('weather-icon').src = iconUrl;
+            } catch (error) {
+                console.error('Error fetching weather data: ', error);
+                document.getElementById('city').textContent = 'City: N/A';
+                document.getElementById('temperature').textContent = 'Temperature: N/A';
+                document.getElementById('windChill').textContent = 'Wind Chill: N/A';
+                document.getElementById('weather-icon').src = ''; // Clear the icon
+            }
+        }
+
+        // Slot machine text spinning
+        function spinReels() {
+            if (spinning) return;
+
+            spinning = true;
+            const reels = document.querySelectorAll('.reel-text');
+
+            const spinTime = 3000; // Time in milliseconds
+            const endTime = Date.now() + spinTime;
+
+            function spin() {
+                for (const reel of reels) {
+                    const symbols = ['A', 'B', 'C', 'D', 'E']; // Define your symbols here
+                    const randomSymbol = symbols[Math.floor(Math.random() * symbols.length)];
+                    reel.textContent = randomSymbol;
+                }
+
+                if (Date.now() < endTime) {
+                    requestAnimationFrame(spin);
+                } else {
+                    spinning = false;
+                }
+            }
+
+            requestAnimationFrame(spin);
+        }
+
+        // Call the function to fetch weather data and spin the slot machine text when the page loads
+        getWeatherData();
+        spinReels();
+    </script>
+</body>
+</html>

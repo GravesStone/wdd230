@@ -1,65 +1,34 @@
-let windChill = document.getElementById("wind-chill")
+async function getWeatherData() {
+    const apiKey = '15afb914adc211c491651741ae88beb9'; // Replace with your OpenWeatherMap API key
+    const city = 'Quezon City'; // Replace with the desired city name
+    const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-
-
-// select HTML elements in the document
-
-const url = "https://api.openweathermap.org/data/2.5/weather?id=1692193&appid=15afb914adc211c491651741ae88beb9";
-
-async function weaterMain() {
     try {
-        //Fetch the Data from the API 
-        const response = await fetch(url);
-        if (response.ok) {
-           
-            // Make the data in json form
-            const data = await response.json();
-            
-            // Get the wind speed and temperature of the current place
-            const windSpeed = data.wind.speed
-            const temp = data.main.temp.toFixed(0)
+        const response = await fetch(weatherUrl);
+        const data = await response.json();
+        const temperature = data.main.temp;
+        const windSpeed = data.wind.speed;
+        const humidity = data.main.humidity;
+        const iconCode = data.weather[0].icon; // Weather icon code
 
-            // Displaying the Weather information
-            displayResults(data, temp, windSpeed);
-            
-            // Calls the tempConversor Function, Calculates the Wind Chill and Display
-            windChill.innerHTML += tempConversor(temp, windSpeed)
-        
-        } else {
-            throw Error(await response.text());
-        }
+        const windChillIndex = 5.74 + 0.6215 * temperature - 35.75 * Math.pow(windSpeed, 0.16) + 0.4275 * temperature * Math.pow(windSpeed, 0.16);
+
+        document.getElementById('city').textContent = city;
+        document.getElementById('temperature').textContent = `${temperature} °C`;
+        document.getElementById('windChill').textContent = `Chill: ${windChillIndex.toFixed(2)} °C`;
+        document.getElementById('humidity').textContent = `Report: ${humidity}%`;
+
+        const iconUrl = `http://openweathermap.org/img/wn/${iconCode}.png`;
+        document.getElementById('weather-icon').src = iconUrl;
     } catch (error) {
-        console.log(error);
+        console.error('Error fetching weather data: ', error);
+        document.getElementById('city').textContent = 'City: N/A';
+        document.getElementById('temperature').textContent = 'Temperature: N/A';
+        document.getElementById('windChill').textContent = 'Wind Chill: N/A';
+        document.getElementById('humidity').textContent = 'Humidity: N/A';
+        document.getElementById('weather-icon').src = ''; // Clear the icon
     }
 }
 
-weaterMain();
-
-function displayResults(weatherData, temp, wind) {
-
-    const iconsrc = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
-    const desc = weatherData.weather[0].description.toUpperCase();
-    const humidity = weatherData.main.humidity
-    
-    
-    
-    
-    // Displaying the Weather information
-    document.getElementById("weather-descrip").textContent = desc
-    document.getElementById("weather-img").src = iconsrc
-    document.getElementById("weather-img").alt = desc
-    document.getElementById("humidity").innerHTML = `${humidity}%`
-    document.getElementById("my-temp").innerHTML = temp
-    document.getElementById("my-wind").innerHTML = wind
-}   
-
-
-const tempConversor = (temp, windSpeed) => {
-    if (temp <= 50 && windSpeed > 3.0) {
-        let temperature = (35.74 +  0.6215 * temp - 35.75 * windSpeed ** 0.16 + 0.4275 * temp * windSpeed ** 0.16).toFixed(2)
-        return `${temperature}Fº`
-        } else {
-        return `N/A`
-    }
-}
-
+// Call the function to fetch weather data when the page loads
+getWeatherData();

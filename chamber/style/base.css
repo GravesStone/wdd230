@@ -279,9 +279,10 @@ main {
     align-items: center;
 }
 
-.spinning-text {
-    animation: spin 1s linear infinite, textAnimation 3s ease-in-out forwards;
+#weather-info {
+    animation: spin 1s linear infinite, textAnimation 2s ease-in-out forwards;
 }
+
 
 @keyframes spin {
     from {
@@ -302,7 +303,12 @@ main {
         transform: translateY(0);
     }
 }
-
+.unleash{
+    color: var(--constrast-backgr-main);
+}
+.empower{
+    color: var(--constrast-backgr-main);
+}
 section,
 #spotlights {
     background-color: var(--backgr-main);

@@ -170,12 +170,15 @@ main {
 .hero-content {
     width: 200px;
     position: absolute;
-    top: 50%;
-    left: 25%;
+    top: 25%;
+    left: 35%;
     transform: translate(-50%, -50%);
     text-decoration: none;
+    color: var(--constrast-backgr-main);
   }
-
+.hero-content h2{
+    font-size: 30px;
+  }
 /* Style the button */
 .hero-button {
     display: inline-block;
@@ -190,9 +193,7 @@ main {
     text-decoration: none;
   }
   
-  .hero-content h2{
-    font-size: 30px;
-  }
+  
   
   .hero-button::before {
     content: "";

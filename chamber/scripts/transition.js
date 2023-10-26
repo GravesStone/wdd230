@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 	const modeButton = document.querySelector('#mode');
 	const main = document.querySelector('main');
-	const paragraphs = main.querySelectorAll('p,h1,h2,h3,h4');
+	const paragraphs = main.querySelectorAll('p,h1,h3,h4');
 	
 	
 

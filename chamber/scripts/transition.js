@@ -1,17 +1,25 @@
-const themeToggle = document.getElementById('themeToggle');
+document.addEventListener('DOMContentLoaded', function() {
+	const modeButton = document.querySelector('#mode');
+	const main = document.querySelector('main');
+	const paragraphs = main.querySelectorAll('p,h1,h2,h3,h4');
+	
+	
 
-themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-
-    if (document.body.classList.contains('dark')) {
-        document.body.style.backgroundColor = '#333'; /* Dark mode background color */
-        document.body.style.color = '#f5f5f5'; /* Dark mode text color */
-    } else {
-        document.body.style.backgroundColor = '#f5f5f5'; /* Light mode background color */
-        document.body.style.color = '#333'; /* Light mode text color */
-    }
+	modeButton.addEventListener('click', () => {
+		if (modeButton.textContent.includes('🕶️')) {
+			main.style.background = '#000';
+			main.style.color = '#fff';
+			modeButton.textContent = '🔆';
+			paragraphs.forEach(paragraph => {
+				paragraph.style.color = 'white';
+			});
+		} else {
+			main.style.background = '#eee';
+			main.style.color = '#000';
+			modeButton.textContent = '🕶️';
+			paragraphs.forEach(paragraph => {
+				paragraph.style.color = 'black';
+			});
+		}
+	});
 });
-document.getElementById('linkbtn').addEventListener('click', function() {
-    // Redirect to the specified URL when the button is clicked
-    window.location.href = 'https://gravesstone.github.io/wdd230/';
-  });

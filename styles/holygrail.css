@@ -29,14 +29,16 @@ header {
 .hero img{
   width: 100%;
     min-height: 300px;
+    transform: scaleX(-1)
 }
 .hero-content {
-  width: 300px;
+  width: 350px;
   position: absolute;
   top: 35%;
   left: 25%;
   transform: translate(-50%, -50%);
   border: 3px solid #000;
+  
 }
 
 .hero h2 {

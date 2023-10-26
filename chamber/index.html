@@ -9,9 +9,14 @@
         content="This is the Chamber of Commerce Website. It's a project assignment for the WDD230 Course at BYU - 
         Idaho. In this project is applied the principle of responsiveness, white spaces, good contrast, and consistency 
         in design and layout. It contains multiple pages, utilizing HTML, CSS, and Javascript. ">
-   
+        <meta name="author" content="Mark Augustine Estimada">
+        <meta property="og:title" content="Chamber Home Page">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://example.com/images/my-image.jpg">
+        <meta property="og:url" content="">
     <link rel="icon" href="images/main-logo.webp">
     <link rel="stylesheet" href="style/normalize.css">
+
     <link rel="stylesheet" href="style/base.css">
     <link rel="stylesheet" href="style/medium.css">
     <link rel="stylesheet" href="style/large.css">
@@ -33,11 +38,12 @@
                 <li><a href="#">Discover</a></li>
                 <li><a href="#">Directory</a></li>
                 <li><a href="#">Join</a></li>
+                <p id="mode">🕶️</p>
+                
             </ul>
         </nav>
-     
         <div class="btn"> <button id="hamburger-btn"><span>&#9776;</span><span>x</span></button></div>
-    </header>
+    </header>   
     <main>
        <!--Hero Section-->
         <section class="hero-section">
@@ -48,7 +54,6 @@
             </picture>
             <div class="hero-content">
                 <h2 class="hero-heading">Welcome to Quezon City</h2>
-                    <p><b>Make you happy</b></p>
                 <a class="hero-button" href="#">Join the chamber</a>
             </div>
         </section>
@@ -71,7 +76,7 @@
                 <p>Current Temperature: <span id="temperature">Loading...</span></p>
                 <p>Wind <span id="windChill">Loading...</span></p>
                 <p>Humidity <span id="humidity">Loading...</span></p>
-            
+                
             </div>
         </section>
         <!--Unleash Section-->
@@ -93,9 +98,7 @@
             </div>
         </section>
     </main>
-    <div class="theme-toggle" id="themeToggle">
-        <img src="../chamber/images/sun-and-moon-icon-isolated-on-white-background-vector.webp" alt="Toggle Icon" id="icon">
-    </div>
+   
     <!--Footer section-->
     <footer>
         <div class="footer-main">
@@ -126,7 +129,7 @@
     </footer>
     <script src="scripts/hamburger.js"></script>
     <script src="../chamber/scripts/windchill.js"></script>
-    <script src="scripts/transition.js"></script>
+    <script src="../chamber/scripts/transition.js"></script>
 </body>
 
 </html>

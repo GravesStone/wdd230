@@ -86,7 +86,7 @@
   section:nth-child(1) {
       grid-column: 2/4;
       grid-row: 1/3;
-      height: 400px;
+      height: 360px;
       overflow: hidden;
       color: #fff;
   }
@@ -171,7 +171,7 @@
     grid-template-columns: 1fr;
 }
 
-.building {
+.building { 
     display: grid;
     grid-template-columns: 1fr 1fr;
 

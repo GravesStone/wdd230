@@ -1,24 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono:wght@300;400&display=swap');
 
 :root {
     --border-radius: 1rem 1rem 0rem 0rem;
     --margin : 1rem 0.5rem 1rem 0.5rem;
-    --border: solid 0.5px gray;
+    --border: solid 0.1px gray;
 }
 
 body {
-    display: grid;
-    grid-template-rows: 0.2fr 6fr 0.1fr;
-    grid-template-columns: 1fr;
+    display:block;
+   
     text-align: center;
-    font-family: 'Roboto Slab', serif;
+    font-family: "Roboto Mono", "Open Sans","sans";
     margin: 0rem auto;
     font-size: 14px;
 }
 
 main {
-    display: block;
+    display: flex;
+    grid-template-rows: 0.2fr 6fr 0.1fr;
+    grid-template-columns: 1fr;
     margin: var(--margin);
     margin: 0rem auto;
 
@@ -39,8 +39,7 @@ section {
     margin-top: 1rem;
     margin: var(--margin);
     border-radius: var(--border-radius);
-    max-width: 350px;   
-    
+    max-width: 350px;
 }
 
 a {
@@ -52,7 +51,6 @@ a {
     color: white;
     padding-left: 0.5rem;
     border-radius: var(--border-radius);
-    
 }
 
 .principle h3 {
@@ -71,9 +69,11 @@ a {
 }
 
 .mobile-view {
-  
+    background-color: rgb(243, 242, 242);
     padding: 1rem 0rem;
     border: var(--border);
+   /*  margin-bottom: 5rem; */
+
 }
 
 

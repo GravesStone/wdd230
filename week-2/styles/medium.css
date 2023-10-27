@@ -1,4 +1,4 @@
-@media screen and (min-width: 32.5em) {
+@media screen and (min-width: 32em) {
     body {
         display: block;
         text-align: center;
@@ -10,7 +10,6 @@
 
     main {
         display: grid;
-        
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 0.7fr 0.8fr;
         justify-items: center;

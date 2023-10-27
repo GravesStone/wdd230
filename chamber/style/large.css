@@ -167,11 +167,16 @@
   }
 
 /*==Discover==*/
- .discover{
+.main-discover {
     grid-template-columns: 1fr;
- }
+}
 
+.building {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
-
+    align-items: center;
+    font-size: 17px;
+}
 
 }

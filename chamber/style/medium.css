@@ -146,8 +146,19 @@
 }
 /*==Discover==*/
 
-.discover {
+.main-discover {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-gap: 0em;
+}
+
+.discover-img {
+    border: solid 1px darkcyan;
+    width: 95%;
+    max-width: 350px;
+    max-height: 350px;
+}
+
+.building {
+    text-align: center;
 }

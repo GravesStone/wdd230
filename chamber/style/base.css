@@ -15,9 +15,9 @@ body {
     margin:                0px auto;
     font-family:           'Raleway', sans-serif;
     padding:               0px;
-    transition: background-color 0.3s, color 0.3s;
-    background-color: white;
+    transition: background-color 0.5s, color 0.5s;
 }
+
 /* ================ Header ================================= */
 header {
     display: grid;
@@ -154,10 +154,12 @@ nav ul.open {
 main {
     margin: 0;
 	color: #000;
+    transition: background-color 0.5s, color 0.5s;
 }
+p, h1, h3, h4 {
+    transition: color 0.5s;
+  }
 #mode{
-
-
 	font-size: 1rem;
 	cursor: pointer;
     text-align: center;
@@ -451,29 +453,107 @@ footer a {
     padding: 0 4.5em;
 }
 /*=====Discover Section======*/
-
-.discover{
-    display: flex;
-    grid-template-columns: 1fr 1fr;
-    max-width: 1200px;
-    gap: 20px;
+img[data-src] {
+    filter: blur(0.2em);
+    transition: filter 0.2s;
 }
-/* Base styles for the two-layer grid layout */
-.container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+
+.discover-img {
+    border: solid 1px var(--backgr-subheadings);
+    width: 100%;
+    align-self: center;
+    filter: blur(0em);
+    transition: filter 0.1s;
+    margin: .3em auto;
+    border-radius: 0.2em;
+    transition: .8s all ease-in-out;
+}
+
+.discover-img:hover {
+    box-shadow: 8px 7px 9px 2px gray;
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+    transition: .7s ease;
+}
+
+
+
+.building {
+    margin: 0.5em;
+    text-align: center;
+    animation: fadeIn 3s;
+    -webkit-animation: fadeIn 3s;
+    -moz-animation: fadeIn 3s;
+    -o-animation: fadeIn 3s;
+    -ms-animation: fadeIn 3s;
+}
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
   }
-  
-  .sidebar {
-    background-color: #f0f0f0;
-    padding: 20px;
+
+  @-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
   }
-  
-  .main-content {
-    display: grid;
-    grid-template-columns: repeat(auto,1fr);
-    gap: 20px;
-    justify-content: center;
+
+  @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
   }
-  
+
+  @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @-ms-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+.building p {
+    padding: .5em;
+}
+
+.building ul,
+.building p {
+    font-size: .8em;
+    text-align: left;
+    margin: 0 1em;
+    border: solid 1px var(--constrast-backgr-main);
+    border-radius: .3em;
+    margin-top: .3em;
+}
+
+.building li {
+    padding: .7em;
+
+}
+
+.heading-discover {
+    text-align: center;
+    background: var(--distintive-color);
+    border-radius: .3em;
+    opacity: .9;
+    margin: 3em 1.5em 0em 1.5em;
+    color: var(--color-white);
+    font-size: .8em;
+    border-radius: 100px;
+}
+.left-welcome{
+    background-color: #C7945F;
+    padding: 1rem;
+    width: 90%;
+    grid-template-rows: 40px;
+    border-radius: 50px;
+    margin: 0.5em;
+    text-align: center;
+}
+
+#message{
+    text-align: center;
+}
+
+
+

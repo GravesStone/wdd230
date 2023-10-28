@@ -1,48 +1,18 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Check if the user has visited the page before
-    if (localStorage.getItem("lastVisitDate")) {
-      const lastVisitDate = new Date(localStorage.getItem("lastVisitDate"));
-      const currentDate = new Date();
-  
-      // Calculate the time difference between visits in milliseconds
-      const timeDifference = currentDate - lastVisitDate;
-      
-      // Calculate the number of days
-      const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-  
-      if (daysDifference === 0) {
-        // Less than a day
-        document.getElementById("message").textContent = "Back so soon! Awesome!";
-      } else {
-        // More than a day
-        document.getElementById("message").textContent = `You last visited ${daysDifference} ${daysDifference === 1 ? 'day' : 'days'} ago.`;
-      }
+const messageElement = document.querySelector(".messagev");
+    const currentDate = new Date().getTime();
+    const lastVisit = localStorage.getItem("last-visited");
+
+    if (!lastVisit) {
+        messageElement.textContent = "Welcome! Let us know if you have any questions.";
     } else {
-      // First visit
-      document.getElementById("message").textContent = "Welcome! Let us know if you have any questions.";
-    }
-  
-    // Store the current date in localStorage for the next visit
-    localStorage.setItem("lastVisitDate", new Date().toString());
-  });
-  // Assuming you have the previous visit date stored in a variable
-        // For example, let's use a static date for demonstration purposes
-        const previousVisitDate = new Date('2023-10-24');
+        const daysPassed = Math.round((currentDate - Number(lastVisit)) / (24 * 60 * 60 * 1000));
 
-        // Get the current date
-        const currentDate = new Date();
-
-        // Calculate the number of days between visits
-        const timeDifference = currentDate - previousVisitDate;
-        const daysBetweenVisits = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-
-        // Check if it's just one day or more
-        let messagev;
-        if (daysBetweenVisits === 1) {
-            messagev = "You last visited 1 day ago.";
+        if (daysPassed == 0) {
+            messageElement.textContent = "You already visited us Today";
+        } else if (daysPassed == 1) {
+            messageElement.textContent = "Back so soon! Awesome!";
         } else {
-            messagev = `You last visited ${daysBetweenVisits} days ago.`;
+            messageElement.textContent = `You last visited ${daysPassed} day${daysPassed === 1 ? '' : 's'} ago. 📅`;
         }
-
-        // Update the content of the 'messagev' element with the calculated message
-        document.getElementById("message-visit").textContent = messagev;
+    }
+    localStorage.setItem("last-visited", currentDate);

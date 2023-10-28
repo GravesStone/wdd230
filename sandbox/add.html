@@ -1,50 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Discover</title>
   <style>
-    body {
-      transition: background-color 0.5s, color 0.5s;
-    }
-    main {
-      transition: background-color 0.5s, color 0.5s;
-    }
-    p, h1, h3, h4 {
-      transition: color 0.5s;
+    /* Add your CSS styles here */
+    .messagev {
+      font-size: 18px;
+      margin: 20px;
     }
   </style>
 </head>
 <body>
-  <main>
-    <p>This is a paragraph.</p>
-    <h1>This is a heading 1.</h1>
-    <h3>This is a heading 3.</h3>
-    <h4>This is a heading 4.</h4>
-  </main>
-  <button id="mode">🕶️</button>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const modeButton = document.querySelector('#mode');
-      const main = document.querySelector('main');
-      const paragraphs = main.querySelectorAll('p,h1,h3,h4');
+  <div id="sidebar">
+    <p class="messagev">Loading...</p>
+  </div>
 
-      modeButton.addEventListener('click', () => {
-        if (modeButton.textContent.includes('🕶️')) {
-          main.style.background = '#000';
-          main.style.color = '#fff';
-          modeButton.textContent = '🔆';
-          paragraphs.forEach(paragraph => {
-            paragraph.style.color = 'white';
-          });
+  <script>
+    const title = document.title;
+    const messageElement = document.querySelector(".messagev");
+    const currentDate = new Date().getTime();
+    const lastVisit = localStorage.getItem("last-visited");
+
+    if (title === "Join") {
+        // Replace 'd' with the date value you want to display.
+        document.querySelector("#date").innerHTML = "Your date here";
+    } else if (title === "Discover") {
+        if (!lastVisit) {
+            messageElement.textContent = "Welcome 🤵, This is your first visit!";
         } else {
-          main.style.background = '#eee';
-          main.style.color = '#000';
-          modeButton.textContent = '🕶️';
-          paragraphs.forEach(paragraph => {
-            paragraph.style.color = 'black';
-          });
+            const daysPassed = Math.round((currentDate - Number(lastVisit)) / (24 * 60 * 60 * 1000));
+
+            if (daysPassed === 0) {
+                messageElement.textContent = "You already visited us Today 🥇";
+            } else if (daysPassed === 1) {
+                messageElement.textContent = "Your last visit was Yesterday";
+            } else {
+                messageElement.textContent = `It's been ${daysPassed} day${daysPassed === 1 ? '' : 's'} since your last visit! 📅`;
+            }
         }
-      });
-    });
+        localStorage.setItem("last-visited", currentDate);
+    }
+
+    // Rest of your code here...
+
   </script>
 </body>
 </html>

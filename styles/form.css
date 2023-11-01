@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+}
+:root{
+    --color-background: #ccc;
+
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: var(--color-background);
+    padding: 40px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="range"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 100%;;
+    
+}
+
+.error {
+    display: none;
+    color: red;
+    margin-top: 5px;
+}
+
+output {
+    display: inline-block;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+
+
+
+#r {
+	width: 400px;
+	margin-bottom: 0;
+}
+
+#rangevalue {
+	font-size: 2rem;
+	color: navy;
+}
+
+#rangevalues {
+	display: flex;
+	margin: 0 0 0 25px;
+	width: 415px;
+}
+
+#rangevalues option {
+	flex: 1 1 auto;
+}

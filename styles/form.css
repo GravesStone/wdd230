@@ -18,7 +18,7 @@ body {
 main {
     max-width: 600px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px;
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -32,14 +32,19 @@ form {
 label {
     margin-bottom: 10px;
 }
-
-input {
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="range"],
+input[type="submit"] {
+    width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    height: 100%;;
+    
 }
-
 button {
     padding: 10px 20px;
     color: black;
@@ -74,6 +79,6 @@ button:hover {
 }
 
 .eye{
-    position: relative;
+    position: block;
     color: black;
 }

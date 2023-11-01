@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission Confirmation</title>
+</head>
+<body>
+    <main>
+        <h1>Form Submission Confirmation</h1>
+        <p>Thank you for submitting the form.</p>
+        <p>Your username is: 
+        <span id="username-value"></span>
+        <span id="password-value"></span>
+        <span id="email-value"></span>
+        <span id="range-value"></span>
+        
+        </p>
+    </main>
+    
+    <script>
+        // JavaScript code to retrieve and display the username from the query parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const username = urlParams.get('username');
+        const password = urlParams.get('password');
+        const email = urlParams.get('email');
+        const rangevalue = urlParams.get('rangevalue');
+        
+        document.getElementById('usernameValue').textContent = username;
+        document.getElementById('password-value').textContent = username;
+        document.getElementById('email-value').textContent = username;
+        document.getElementById('range-value').textContent = username;
+        document.getElementById('usernameValue').textContent = username;
+    </script>
+</body>
+</html>

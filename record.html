@@ -3,16 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Page</title>
+    <title>Form Submission Confirmation</title>
 </head>
 <body>
-    <main>
-        <h1>Form Page</h1>
-        <form action="record.html" method="get">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" required>
-            <input type="submit" value="Submit">
-        </form>
-    </main>
+    <h1>Form Submission Confirmation</h1>
+    <p>Your form has been submitted successfully. Thank you for your submission!</p>
+
+    <script>
+        // Get the username from the URL query parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const username = urlParams.get("username");
+
+        // Display the username on the confirmation page
+        if (username) {
+            document.write(`<p>Your username: ${username}</p>`);
+        } else {
+            document.write("<p>No username provided.</p>");
+        }
+    </script>
+
 </body>
 </html>

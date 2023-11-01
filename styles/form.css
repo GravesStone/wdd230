@@ -1,54 +1,60 @@
-body {
-    font-family: Arial, sans-serif;
-}
-:root{
-    --color-background: #ccc;
+/* styles/form.css */
 
+/* Use CSS variables for common property settings */
+:root {
+    --font-family: Arial, sans-serif;
+    --text-color: #333;
+    --form-background: #f7f7f7;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--form-background);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 form {
-    max-width: 400px;
-    margin: 0 auto;
-    background-color: var(--color-background);
-    padding: 40px;
+    display: flex;
+    flex-direction: column;
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="range"],
-input[type="submit"] {
-    width: 100%;
+input {
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    height: 100%;;
-    
 }
 
-.error {
-    display: none;
-    color: red;
-    margin-top: 5px;
+button {
+    padding: 10px 20px;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid #333;
 }
 
-output {
-    display: inline-block;
-    margin-left: 10px;
-    font-weight: bold;
+button:hover {
+    background-color: #ccc;
 }
-
-
-
 
 #r {
-	width: 400px;
+	width: 570px;
 	margin-bottom: 0;
 }
 
@@ -59,10 +65,15 @@ output {
 
 #rangevalues {
 	display: flex;
-	margin: 0 0 0 25px;
-	width: 415px;
+	margin: 0 0 0 20px;
+	width: 600px;
 }
 
 #rangevalues option {
 	flex: 1 1 auto;
+}
+
+.eye{
+    position: relative;
+    color: black;
 }

@@ -18,13 +18,15 @@
     <main>
         <h1>Form Page</h1>
         <form action="record.html" method="get">
-            <label for="login">Login Register</label>
+            <label for="username">username</label>
             <input type="text" id="username" name="username" required placeholder="username">
-            <div class="password">
+            
+            <label for="username">password</label>
+
             <input type="password" id="password" name="password" pattern="[A-Za-z]{8}" title="A longer password is generally stronger. Aim for at least 8 characters, but use letters only"placeholder="password">
             <input type="password" id="confirm_password" name="confirm_password" pattern="[A-Za-z]{8}" title="your password doesn't match" placeholder="Confirm password">
-        </div>
-            <label for="email">email us</label>
+       
+            <label for="email">email</label>
             <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" title="Please enter a valid email address" placeholder="Your Email">
 
             <label for="r">Rate</label>

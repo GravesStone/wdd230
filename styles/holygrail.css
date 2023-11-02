@@ -121,7 +121,7 @@ nav {
   background-color:#000;
   flex-direction:   column;
   padding:          2px;
-  justify-content:  center;
+  place-items: center;
  
 }
 nav a {
@@ -236,11 +236,7 @@ h2 {
 
 /*Navigation Mobile View*/
 @media screen and (max-width: 768px) {
-  /*.nav a:not(:first-child) {display: none;}
-  .nav a.icon {
-    float: right;
-    display: block;
-  }*/ main {
+ main {
     display: grid;
     grid-template-columns: 1fr ;
   }

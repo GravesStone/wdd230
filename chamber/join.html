@@ -1,30 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="author" content="Josue Centurion">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="This is the Join page of the project chamber of commerce for the course WDD230 (BYU - Idaho). It presents a form that the user can submit to apply and be part of this organization">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono:wght@300;400&display=swap"
-        rel="stylesheet">
-    <link rel="icon" href="/wdd230/chamber/favicon.ico">
-       
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="/wdd230/chamber/css/base.css">
-    <link rel="stylesheet" href="/wdd230/chamber/css/medium.css">
-    <link rel="stylesheet" href="/wdd230/chamber/css/large.css">
-    <script src="/wdd230/chamber/js/scripts.js" defer></script>
-    <script src="/wdd230/chamber/js/general.js" ></script>
-    <title>Join</title>
+        content="This is the Chamber of Commerce Website. It's a project assignment for the WDD230 Course at BYU - 
+        Idaho. In this project is applied the principle of responsiveness, white spaces, good contrast, and consistency 
+        in design and layout. It contains multiple pages, utilizing HTML, CSS, and Javascript. ">
+        <meta name="author" content="mark augustine estimada">
+        <meta property="og:title" content="Chamber Home Page Mark estimada - WDD 230 Front-end Development 1">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://gravesstone.github.io/wdd230/images/mypic.webp">
+        <meta property="og:url" content="https://gravesstone.github.io/wdd230/chamber/index.html">
+    <link rel="icon" href="images/main-logo.webp">
+    <link rel="stylesheet" href="style/normalize.css">
 
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/medium.css">
+    <link rel="stylesheet" href="style/large.css">
+    <title>Quezon City Chamber of Commerce</title>
 
 </head>
 
 <body>
+
     <header>
         <div class="name">
             
@@ -41,112 +42,117 @@
             </ul>
         </nav>
         <div class="btn"> <button id="hamburger-btn"><span>&#9776;</span><span>x</span></button></div>
-    </header>
-    <div class="join-page">
-        <div class="membership-div">
-            <h2 class="heading-join">Membership Levels</h2>
-            <h3>1. NP Membership</h3>
-            <ul>
-                <li>Cost: <strong>Free</strong></li>
-                <li>Discounts of
-                    up 50% in Marketing Campaigns</li>
-                <li>Internal Promoting between businesses associated</li>
-                <li>2% Refferal couta </li>
-            </ul>
-            <h3>2. Bronze Membership.</h3>
-            <ul>
-                <li>Cost: $500  /Month</li>
-                <li>Discounts in all our associated businesses (20% - 40%).</li>
-                <li>Refferal assistance (Project Manager Tutoring)</li>
-                <li>50% Discount on training events and workshops</li>
-
-            </ul>
-            <h3>3. Silver Membership</h3>
-            <ul>
-                <li>Cost: $750 /Month</li>
-                <li> Semi-annual Participation in the Chamber Conference</li>
-                <li>Your business becomes part of our branding campaign </li>
-                <li>Referrals Bonuses of 5% of monthly quota </li>
-            </ul>
-            <h3>4. Golden Membership</h3>
-            <ul>
-                <li>Cost: $1050 /Month</li>
-                <li>Opinion in general councils and decision making for spreading opportunities </li>
-                <li>60% discounts buying in all associated commerces</li>
-                <li>Includes all Bronze and Silver benefits</li>
-             
-
-            </ul>
-        </div>
-        <main class="main-join">
-            <div class="heading-join">
-                <h2>Membership Application</h2>
-            </div>
-            <div class="form-join">
-                <form method="get" action="thanks.html">
-                    <fieldset>
-                        <label class="top">First Name*<input autofocus type="text" name="fname" required></label>
-                        <label class="top">Last Name*<input type="text" name="lname" required></label>
-                        <label class="top">Phone*<input type="tel" name="phone"></label>
-                        <label class="top">Email*<input type="email" name="email" required
-                                placeholder="mypersonal@email.com"></label>
-                        <label class="top"> Business Name/Title<input type="text" name="businessname" required></label>
-                        <label class="top"> Business Position<input type="text" name="businessposition"
-                                pattern="[A-Za-z- ]{6,}"></label>
-
-                    </fieldset>
-                    <fieldset>
-
-                        <label class="top"> Membership Level
-                            <select name="subject" required>
-                                <option value="">Please Select </option>
-                                <option value="software">
-                                    1. NP Membership is for non
-                                    profit organizations and there is no fee.
-                                </option>
-                                <option value="creative">2. Bronze Membership.</option>
-                                <option value="info">3. Silver Membership</option>
-                                <option value="data">4. Gold Membership</option>
-                            </select>
-                        </label>
-                        <label> Describe your Business <textarea name="businessDescription" rows="4" cols="50">
-                </textarea></label>
-                        <input type="hidden" name="date" id="date">
-                    </fieldset>
-                    <label><input type="submit" name="submitBtn" value="Send my Application" class="submit-btn"></label>
-                </form>
-            </div>
-        </main>
-
-    </div>
-
+    </header>   
+    <main class="join-page">
+        
+        <section>
+            <div class="membership-div">
+                <h2 class="heading-join">Membership Levels</h2>
+                <h3>1. NP Membership</h3>
+                <ul>
+                    <li>Cost: <strong>Free</strong></li>
+                    <li>Discounts of
+                        up 50% in Marketing Campaigns</li>
+                    <li>Internal Promoting between businesses associated</li>
+                    <li>2% Refferal couta </li>
+                </ul>
+                <h3>2. Bronze Membership.</h3>
+                <ul>
+                    <li>Cost: $500  /Month</li>
+                    <li>Discounts in all our associated businesses (20% - 40%).</li>
+                    <li>Refferal assistance (Project Manager Tutoring)</li>
+                    <li>50% Discount on training events and workshops</li>
+    
+                </ul>
+                <h3>3. Silver Membership</h3>
+                <ul>
+                    <li>Cost: $750 /Month</li>
+                    <li> Semi-annual Participation in the Chamber Conference</li>
+                    <li>Your business becomes part of our branding campaign </li>
+                    <li>Referrals Bonuses of 5% of monthly quota </li>
+                </ul>
+                <h3>4. Golden Membership</h3>
+                <ul>
+                    <li>Cost: $1050 /Month</li>
+                    <li>Opinion in general councils and decision making for spreading opportunities </li>
+                    <li>60% discounts buying in all associated commerces</li>
+                    <li>Includes all Bronze and Silver benefits</li>
+                 
+    
+                </ul>
+            </section>
+            <section class="main-join">
+                <div class="heading-join">
+                    <h2>Membership Application</h2>
+                </div>
+                <div class="form-join">
+                    <form method="get" action="thanks.html">
+                        <fieldset>
+                            <label class="top">First Name*<input autofocus type="text" name="fname" required></label>
+                            <label class="top">Last Name*<input type="text" name="lname" required></label>
+                            <label class="top">Phone*<input type="tel" name="phone"></label>
+                            <label class="top">Email*<input type="email" name="email" required
+                                    placeholder="mypersonal@email.com"></label>
+                            <label class="top"> Business Name/Title<input type="text" name="businessname" required></label>
+                            <label class="top"> Business Position<input type="text" name="businessposition"
+                                    pattern="[A-Za-z- ]{6,}"></label>
+    
+                        </fieldset>
+                        <fieldset>
+    
+                            <label class="top"> Membership Level
+                                <select name="subject" required>
+                                    <option value="">Please Select </option>
+                                    <option value="software">
+                                        1. NP Membership is for non
+                                        profit organizations and there is no fee.
+                                    </option>
+                                    <option value="creative">2. Bronze Membership.</option>
+                                    <option value="info">3. Silver Membership</option>
+                                    <option value="data">4. Gold Membership</option>
+                                </select>
+                            </label>
+                            <label> Describe your Business <textarea name="businessDescription" rows="4" cols="50">
+                    </textarea></label>
+                            <input type="hidden" name="date" id="date">
+                        </fieldset>
+                        <label><input type="submit" name="submitBtn" value="Send my Application" class="submit-btn"></label>
+                    </form>
+                </div>
+            </section>
+    </main>
+   
+    <!--Footer section-->
     <footer>
         <div class="footer-main">
             <div class="footer-left">
                 <div class="footer-image">
-                    <a href="index.html"><img src="/wdd230/lesson3/images/logo-red.webp" alt="Chamber logo"></a>
+                    <a href="index.html"><img src="images/main-logo.webp" alt="Chamber logo"></a>
                 </div>
                 <div class="footer-info">
-                    <p><strong> Argentine Chamber of Commerce </strong></p>
-                    <a href="contact.html#contact-form"><p>info</p></a>
+                    <p><strong>Quezon City Chamber of Commerce </strong></p>
+                    <a href="contact.html#contact-form">
+                        <p>info</p>
+                    </a>
                 </div>
             </div>
             <div class="footer-right">
-                <p>www.argchamber.org</p>
-                <p>+(54) 9 3624 000000</p>
-                <a href="contact.html#maps"><p>📍 location Map </p></a>
+                <p>Contact us</p>
+                <p></p>
+                <a href="">
+                    <p></p>
+                </a>
             </div>
         </div>
         <hr>
         <div class="footer-sub">
-            <p>&copy;<span id="year"></span> Argentine Chamber |<strong> Josue Benjamin Centurion | </strong> WDD230
-                Project |
-            <p id="updated"></p>
-
-
+            <p><span id="copyright"></span>Quezon City Chamber of Commerce|<strong> Mark Augustine Estimada  </strong>| wdd230 Project | 
+                <strong id="lastModified"> </strong>
         </div>
     </footer>
-
+    <script src="scripts/hamburger.js"></script>
+    <script src="../chamber/scripts/windchill.js"></script>
+    <script src="../chamber/scripts/transition.js"></script>
 </body>
 
 </html>

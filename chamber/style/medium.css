@@ -162,3 +162,36 @@
 .building {
     text-align: center;
 }
+/*========== Join page ==========*/
+.main-join {
+    box-shadow: 1px 5px 10px var(--backgr-main);
+    padding: 1em;
+}
+
+.main-join:hover {
+
+    box-shadow: 3px 10px 25px var(--backgr-main);
+    border-radius: .3em;
+    transition: .5s;
+}
+
+.membership-div {
+    max-width: 400px;
+    margin: 2rem auto;
+
+}
+
+.membership-div img {
+    width: 100%;
+    height: auto;
+}
+form input {
+    width: 90%;
+}
+
+form fieldset,
+select,
+textarea {
+    width: 400px;
+
+}

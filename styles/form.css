@@ -84,11 +84,6 @@ input[type="submit"] {
 #rangevalues option {
 	flex: 1 1 auto;
 }
-
-.eye{
-    position: block;
-    color: black;
-}
 footer{
     display: block;
     text-align: center;

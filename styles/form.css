@@ -28,6 +28,10 @@ form {
     display: flex;
     flex-direction: column;
 }
+.password{
+    display: flex;
+    gap: 10px;
+}
 
 label {
     margin-bottom: 10px;

@@ -49,17 +49,20 @@ input[type="submit"] {
     height: 100%;;
     
 }
-button {
-    padding: 10px 20px;
-    color: black;
+/* Add some basic styling to the submit button */
+.custom-submit-button {
+    background-color: #3498db;
+    color: white;
     border: none;
-    border-radius: 5px;
+    padding: 10px 20px;
     cursor: pointer;
-    border: 2px solid #333;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
-button:hover {
-    background-color: #ccc;
+/* Style the button on hover to give user feedback */
+.custom-submit-button:hover {
+    background-color: #2980b9;
 }
 
 #r {

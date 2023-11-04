@@ -5,10 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="This is the Chamber of Commerce Website. It's a project assignment for the WDD230 Course at BYU - 
-        Idaho. In this project is applied the principle of responsiveness, white spaces, good contrast, and consistency 
-        in design and layout. It contains multiple pages, utilizing HTML, CSS, and Javascript. ">
+    <meta name="description" content="Get to know quzon city chamber commerce, an esteemed member of the [Your City] Chamber of Commerce. Learn about their journey, achievements, and how they benefit from chamber membership.">
         <meta name="author" content="mark augustine estimada">
         <meta property="og:title" content="Chamber Home Page Mark estimada - WDD 230 Front-end Development 1">
         <meta property="og:type" content="website">
@@ -20,7 +17,7 @@
     <link rel="stylesheet" href="style/base.css">
         <link rel="stylesheet" href="style/medium.css">
     <link rel="stylesheet" href="style/large.css">
-    <title>Quezon City Chamber of Commerce</title>
+    <title>Join</title>
 
 </head>
 
@@ -38,7 +35,7 @@
                 <li><a href="./discover.html">Discover</a></li>
                 <li><a href="#">Directory</a></li>
                 <li><a href="#">Join</a></li>
-                <p id="mode">🕶️</p>
+                <li id="mode">🕶️</li>
             </ul>
         </nav>
         <div class="btn"> <button id="hamburger-btn"><span>&#9776;</span><span>x</span></button></div>
@@ -110,7 +107,6 @@
                     </tr>
                    
                 </table>
-            </div>
         </div>
         
         <div class="form-join">
@@ -119,11 +115,12 @@
                 <fieldset>
                     <h2>Your Personal Information</h2>
                     <label class="top">Fullname<input autofocus="" type="text" id="fullname" name="fname" required="" placeholder="Mang Juan Delacruz"></label>
-                    <label class="top">Phone Number<input type="tel" name="phone" placeholder="+99-023212-1234"></label>
-                    <label class="top">Your Email<input type="email" name="email" required="" placeholder="mypersonal@email.com"></label>
+                    <label class="top">Phone Number<input type="tel" name="phone" title="Please put your number"placeholder="+99-023212-1234"></label>
+                    <label class="top">Address<input type="email" name="email" required="" title="Please put your address" placeholder="mypersonal@email.com"></label>
+                    <label class="top">Your Email<input type="email" name="email" title="Please enter a valid email address" placeholder="mypersonal@email.com"></label>
                     <h2>Company</h2>
                     <label class="top"> Business Name/Title<input type="text" name="businessname" required=""></label>
-                    <label class="top"> Business Position<input type="text" name="businessposition" pattern="[A-Za-z- ]{6,}"></label>
+                    <label class="top"> Business Position<input type="text" name="businessposition" required=""></label>
 
                 </fieldset>
                 <fieldset class="membership-section">
@@ -145,8 +142,8 @@
                 </fieldset>
                 <button type="submit" name="submitBtn" value="Send my Application" class="submit-btn">Submit</button>
             </form>
-        </div>
-    </div>  
+        </div> 
+    </div>
 </main>
             
     

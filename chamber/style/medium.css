@@ -164,6 +164,7 @@
 }
 /*========== Join page ==========*/
 .main-join {
+    font-family:           'Raleway', sans-serif;
     width: 100%;
     max-width: 100%; /* Adjust the max-width as per your design */
     margin: 0 auto;

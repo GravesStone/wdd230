@@ -188,7 +188,7 @@
     justify-items: center;
     margin: 0 auto;
     grid-gap: 3rem;
-
+    font-family:           'Raleway', sans-serif;
 }
 
 form input {

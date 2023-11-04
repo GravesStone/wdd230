@@ -560,7 +560,7 @@ img[data-src] {
 
 /*======== Join Section ======*/
 .join{
-
+    font-family:           'Raleway', sans-serif;
     justify-items: center;
 }
 
@@ -686,7 +686,7 @@ th, td {
 }
 
 th {
-    background-color: var(--backgr-main); /* Header background color */
+    background-color: #C7945F; /* Header background color */
     font-weight: bold; /* Make headers bold */
     font-size: 25px; /* Adjust header font size */
     text-transform: uppercase; /* Uppercase text */

@@ -47,55 +47,90 @@
     <main class="main-join">
         <div class="join">
             <div class="membership-div">
-                <h2 class="heading-join">Membership Levels</h2>
-                <h3>1. NP Membership</h3>
-                <ul>
-                    <li>Cost: <strong>Free</strong></li>
-                    <li>Discounts of
-                        up 50% in Marketing Campaigns</li>
-                    <li>Internal Promoting between businesses associated</li>
-                    <li>2% Refferal couta </li>
-                </ul>
-                <h3>2. Bronze Membership.</h3>
-                <ul>
-                    <li>Cost: $500  /Month</li>
-                    <li>Discounts in all our associated businesses (20% - 40%).</li>
-                    <li>Refferal assistance (Project Manager Tutoring)</li>
-                    <li>50% Discount on training events and workshops</li>
-    
-                </ul>
-                <h3>3. Silver Membership</h3>
-                <ul>
-                    <li>Cost: $750 /Month</li>
-                    <li> Semi-annual Participation in the Chamber Conference</li>
-                    <li>Your business becomes part of our branding campaign </li>
-                    <li>Referrals Bonuses of 5% of monthly quota </li>
-                </ul>
-                <h3>4. Golden Membership</h3>
-                <ul>
-                    <li>Cost: $1050 /Month</li>
-                    <li>Opinion in general councils and decision making for spreading opportunities </li>
-                    <li>60% discounts buying in all associated commerces</li>
-                    <li>Includes all Bronze and Silver benefits</li>
-                </ul>
+                <table>
+                    <tr class="">
+                        <th class="heading-join">Membership Levels</th>
+                        <th>NP Membership</th>
+                        <th>Bronze Membership</th>
+                        <th>Silver Membership</th>
+                        <th>Gold Membership</th>
+                        
+                    </tr>
+                    <!--Titles-->
+                    <tr>
+                        <td>Details</td>
+                        <td>Cost:Free</td>
+                        <td>Cost: $500 /Month</td>
+                        <td>Cost: $750 /Month</td>
+                        <td>Cost: $1050 /Month</td>
+                    </tr>
+                    <tr>
+                        <td><!--Row 1 Description-->
+                            <ul>
+                                <li>Discounts of up 50% in Marketing Campaigns<br>Internal Promoting between businesses associated.<br>2% Refferal couta.</li>
+                                <li>Discounts in all our associated businesses (20% - 40%).<BR>Referral assistance (Project Manager Tutoring).<br>50% Discount on training events and workshops.</li>
+                                <li>Semi-annual Participation in the Chamber Conference<br>Your business becomes part of our branding campaign<br>Referrals Bonuses of 5% of monthly quota.</li>
+                                <li>Opinion in general councils and decision making for spreading opportunities<br>60% discounts buying in all associated commerces<br>Includes all Bronze and Silver benefits</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <!--NP Section-->
+                            <ul class="remove-dot">
+                                <li><img src="./images/check.webp" alt="check"></li>
+                                <li><img src="./images/x.webp" alt="check"></li>
+                                <li><img src="./images/x.webp" alt="check"></li>
+                                <li><img src="./images/x.webp" alt="check"></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <!--Silver Section-->
+                            <ul class="remove-dot">
+                                <li><img src="./images/check.webp" alt="check"></li>
+                                <li><img src="./images/check.webp" alt="check"></li>
+                                <li><img src="./images/x.webp" alt="check"></li>
+                                <li><img src="./images/x.webp" alt="check"></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul class="remove-dot">
+                                <li><img src="./images/check.webp" alt="check"></li>
+                                <li><img src="./images/check.webp" alt="check"></li>
+                                <li><img src="./images/check.webp" alt="check"></li>
+                                <li><img src="./images/x.webp" alt="check"></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul class="remove-dot">
+                                <li><img src="./images/check.webp" alt="check"></li>
+                                <li><img src="./images/check.webp" alt="check"></li>
+                                <li><img src="./images/check.webp" alt="check"></li>
+                                <li><img src="./images/check.webp" alt="check"></li>
+                            </ul>
+                        </td>
+                    </tr>
+                   
+                </table>
             </div>
+        </div>
         
         <div class="form-join">
-            <h2>Membership Application</h2>
+            <h1>Membership Application</h1>
             <form method="get" action="thankyou.html" id="nameInput">
                 <fieldset>
-                    <label class="top" for="fullname">Fullname*<input autofocus="" type="text" id="fullname" name="fname" required=""></label>
-                    <label class="top">Phone*<input type="tel" name="phone"></label>
-                    <label class="top">Email*<input type="email" name="email" required="" placeholder="mypersonal@email.com"></label>
+                    <h2>Your Personal Information</h2>
+                    <label class="top">Fullname<input autofocus="" type="text" id="fullname" name="fname" required="" placeholder="Mang Juan Delacruz"></label>
+                    <label class="top">Phone Number<input type="tel" name="phone" placeholder="+99-023212-1234"></label>
+                    <label class="top">Your Email<input type="email" name="email" required="" placeholder="mypersonal@email.com"></label>
+                    <h2>Company</h2>
                     <label class="top"> Business Name/Title<input type="text" name="businessname" required=""></label>
                     <label class="top"> Business Position<input type="text" name="businessposition" pattern="[A-Za-z- ]{6,}"></label>
 
                 </fieldset>
-                <fieldset>
-
+                <fieldset class="membership-section">
+                    <h2>Choose Membership Package</h2>
                     <label class="top"> Membership Level
                         <select name="subject" required="">
-                            <option value="">Please Select </option>
+                            <option value="">Choose a package </option>
                             <option value="software">
                                 1. NP Membership is for non
                                 profit organizations and there is no fee.

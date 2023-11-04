@@ -576,8 +576,10 @@ img[data-src] {
 
 .form-join {
     align-self: center;
-    margin: 2em auto;
+    margin: 3rem auto;
     font-weight: bold;
+
+    max-width: 30%;
 }
 
 form input {
@@ -587,7 +589,7 @@ form input {
 }
 
 .submit-btn {
-    width: 95%;
+    width: 30%;
     margin: .5em;
     transition: 0.7s;
     color: white;
@@ -603,7 +605,7 @@ a {
 }
 
 .submit-btn:hover {
-    width: 100%;
+    width: 30%;
     transition: 0.7s;
     box-shadow: 1px 1px 1px black;
     margin: 1em 0;
@@ -666,8 +668,38 @@ label.top {
     color: var(--backgr-subheadings);
     opacity: 1;
 }
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid #000; /* Table border color */
+}
 
+th, td {
+    border: 1px solid #000; /* Cell border color */
+    padding: 3px;
+    text-align: left;
+    font-size: 15px;
+}
+.remove-dot {
+    list-style-type: none; /* Set list style type to dots */
+    font-size: 15px;
+}
 
+th {
+    background-color: var(--backgr-main); /* Header background color */
+    font-weight: bold; /* Make headers bold */
+    font-size: 25px; /* Adjust header font size */
+    text-transform: uppercase; /* Uppercase text */
+    text-align: center; /* Center-align headers */
+    color: var(); /* Header text color */
+    padding: 10px; /* Increase padding for a fancy look */
+}
+.form-join h2{
+    text-align: left;
+}
+.form-join h1{
+    text-align: center;
+}
 /*===Thanks You section =====*/
 .main-thanks{
     display: block;

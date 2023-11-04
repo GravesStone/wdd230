@@ -691,7 +691,7 @@ th {
     font-size: 25px; /* Adjust header font size */
     text-transform: uppercase; /* Uppercase text */
     text-align: center; /* Center-align headers */
-    color: var(); /* Header text color */
+    color: #000; /* Header text color */
     padding: 10px; /* Increase padding for a fancy look */
 }
 .form-join h2{

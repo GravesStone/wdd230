@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="This is the Chamber of Commerce Website. It's a project assignment for the WDD230 Course at BYU - 
+        Idaho. In this project is applied the principle of responsiveness, white spaces, good contrast, and consistency 
+        in design and layout. It contains multiple pages, utilizing HTML, CSS, and Javascript. ">
+        <meta name="author" content="mark augustine estimada">
+        <meta property="og:title" content="Chamber Home Page Mark estimada - WDD 230 Front-end Development 1">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://gravesstone.github.io/wdd230/images/mypic.webp">
+        <meta property="og:url" content="https://gravesstone.github.io/wdd230/chamber/index.html">
+    <link rel="icon" href="images/main-logo.webp">
+    <link rel="stylesheet" href="style/normalize.css">
+
+            <link rel="stylesheet" href="style/base.css">
+        <link rel="stylesheet" href="style/medium.css">
+    <link rel="stylesheet" href="style/large.css">
+    <title>Quezon City Chamber of Commerce</title>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="name">
+            
+            <h1>Quezon City Chamber of Commerce</h1>
+            <a href="index.html"> <img src="images/main-logo.webp" alt="Chamber logo"></a>
+        </div>
+        <nav>
+            <ul id="primary-nav">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="./discover.html">Discover</a></li>
+                <li><a href="#">Directory</a></li>
+                <li><a href="#">Join</a></li>
+                <p id="mode">🕶️</p>
+            </ul>
+        </nav>
+        <div class="btn"> <button id="hamburger-btn"><span>&#9776;</span><span>x</span></button></div>
+    </header>   
+
+    <main class="main-thanks">
+        
+        <div class="thanks-div">
+            <p id="success-msg">Application Successfully Submitted</p>           
+            <h1 id="message">Thanks for Applying</h1>
+            <p id="information">We will let you know our decision. We <strong> highly appreciate your interest</strong>  </p>
+        <a href="./index.html" > Go back Home </a> 
+      </div>
+      </main>
+      <footer>
+        <div class="footer-main">
+            <div class="footer-left">
+                <div class="footer-image">
+                    <a href="index.html"><img src="images/main-logo.webp" alt="Chamber logo"></a>
+                </div>
+                <div class="footer-info">
+                    <p><strong>Quezon City Chamber of Commerce </strong></p>
+                    <a href="contact.html#contact-form">
+                        <p>info</p>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <p>Contact us</p>
+                <p></p>
+                <a href="">
+                    <p></p>
+                </a>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-sub">
+            <p><span id="copyright"></span>Quezon City Chamber of Commerce|<strong> Mark Augustine Estimada  </strong>| wdd230 Project | 
+                <strong id="lastModified"> </strong>
+        </div>
+    </footer>
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/thankyou.js"></script>
+    <script src="../chamber/scripts/transition.js"></script>
+</body>
+
+</html>

@@ -1,74 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Page</title>
-    <link rel="stylesheet" href="styles/form.css">
-</head>
-<body>
-    <!-- Include the header and navigation from your course homepage -->
-    <!-- Header -->
-    <header>
-        <!-- Your header content goes here -->
-    </header>
-
-    <!-- Navigation -->
-    <nav>
-        <!-- Your navigation menu goes here -->
-    </nav>
-
-    <!-- Main content area for the form -->
-    <main>
-        <h1>Form Page</h1>
-        <form action="record.html" method="get" onsubmit="return checkPassword()">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" required>
-
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required pattern="^[a-zA-Z0-9]+$" title="Password must be alphanumeric">
-
-            <label for="confirm_password">Confirm Password</label>
-            <input type="password" id="confirm_password" name="confirm_password" required pattern="^[a-zA-Z0-9]+$" title="Password must be alphanumeric">
-
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" title="Please enter a valid email address">
-
-            <label for="rating">Page Rating</label>
-            <input type="range" id="rating" name="rating" min="1" max="10" step="1" oninput="updateRatingValue(this)">
-            <span id="ratingValue">1</span>
-
-            <button type="submit">Submit</button>
-        </form>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <!-- Your footer content goes here -->
-    </footer>
-
-    <script>
-        // JavaScript function to update the displayed rating value
-        function updateRatingValue(input) {
-            document.getElementById("ratingValue").textContent = input.value;
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* Common styles for all screen sizes */
+        .main-join {
+            width: 100%;
+            max-width: 800px; /* Adjust the max-width as per your design */
+            margin: 0 auto;
+            padding: 20px;
         }
 
-        // JavaScript function to check if passwords match
-        function checkPassword() {
-            const password = document.getElementById("password").value;
-            const confirm_password = document.getElementById("confirm_password").value;
+        .membership-div {
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
 
-            if (password !== confirm_password) {
-                alert("Passwords do not match. Please try again.");
-                document.getElementById("username").value = "";
-                document.getElementById("password").value = "";
-                document.getElementById("confirm_password").value = "";
-                document.getElementById("username").focus();
-                return false; // Prevent form submission
+        .heading-join {
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        /* Flex layout for mobile screens (max-width: 32em or 512px) */
+        @media screen and (max-width: 32em) {
+            .membership-div {
+                display: flex;
+                flex-direction: column;
             }
 
-            return true; // Allow form submission
+            h3 {
+                font-size: 1.2em;
+            }
         }
-    </script>
+
+        /* Flex layout for larger screens (min-width: 64em or 1024px) */
+        @media screen and (min-width: 64em) {
+            .membership-div {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            ul {
+                flex: 1;
+                margin: 0 20px;
+            }
+
+            h3 {
+                font-size: 1.5em;
+            }
+        }
+
+        /* Additional CSS for form and other elements as needed */
+    </style>
+</head>
+<body>
+    <main class="main-join">
+        <div class="join-page">
+            <div class="membership-div">
+                <h2 class="heading-join">Membership Levels</h2>
+                <h3>1. NP Membership</h3>
+                <ul>
+                    <li>Cost: <strong>Free</strong></li>
+                    <li>Discounts of up to 50% in Marketing Campaigns</li>
+                    <li>Internal Promoting between businesses associated</li>
+                    <li>2% Referral quota</li>
+                </ul>
+                <h3>2. Bronze Membership</h3>
+                <ul>
+                    <li>Cost: $500  /Month</li>
+                    <li>Discounts in all our associated businesses (20% - 40%).</li>
+                    <li>Referral assistance (Project Manager Tutoring)</li>
+                    <li>50% Discount on training events and workshops</li>
+                </ul>
+                <h3>3. Silver Membership</h3>
+                <ul>
+                    <li>Cost: $750 /Month</li>
+                    <li> Semi-annual Participation in the Chamber Conference</li>
+                    <li>Your business becomes part of our branding campaign</li>
+                    <li>Referral Bonuses of 5% of monthly quota</li>
+                </ul>
+                <h3>4. Golden Membership</h3>
+                <ul>
+                    <li>Cost: $1050 /Month</li>
+                    <li>Opinion in general councils and decision making for spreading opportunities</li>
+                    <li>60% discounts buying in all associated commerces</li>
+                    <li>Includes all Bronze and Silver benefits</li>
+                </ul>
+            </div>
+            <div class="heading-join">
+                <h2>Membership Application</h2>
+                <div class="form-join">
+                    <form method="get" action="thanks.html">
+                        <fieldset>
+                            <label class="top">First Name*<input autofocus="" type="text" name="fname" required=""></label>
+                            <label class="top">Last Name*<input type="text" name="lname" required=""></label>
+                            <label class="top">Phone*<input type="tel" name="phone"></label>
+                            <label class="top">Email*<input type="email" name="email" required="" placeholder="mypersonal@email.com"></label>
+                            <label class="top"> Business Name/Title<input type="text" name="businessname" required=""></label>
+                            <label class="top"> Business Position<input type="text" name="businessposition" pattern="[A-Za-z- ]{6,}"></label>
+                        </fieldset>
+                        <fieldset>
+                            <label class="top"> Membership Level
+                                <select name="subject" required="">
+                                    <option value="">Please Select</option>
+                                    <option value="software">1. NP Membership is for non-profit organizations and there is no fee.</option>
+                                    <option value="creative">2. Bronze Membership.</option>
+                                    <option value="info">3. Silver Membership</option>
+                                    <option value="data">4. Gold Membership</option>
+                                </select>
+                            </label>
+                            <label> Describe your Business <textarea name="businessDescription" rows="4" cols="50"></textarea></label>
+                            <input type="hidden" name="date" id="date">
+                        </fieldset>
+                        <label><input type="submit" name="submitBtn" value="Send my Application" class="submit-btn"></label>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>

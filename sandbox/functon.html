@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission Confirmation</title>
+</head>
+<body>
+    <h1>Form Submission Confirmation</h1>
+    <p>Your form has been submitted successfully. Thank you for your submission!</p>
+
+    <!-- Form to capture username -->
+    <form id="usernameForm">
+        <label for="usernameInput">Username:</label>
+        <input type="text" id="usernameInput" name="username">
+        <input type="submit" value="Submit">
+    </form>
+
+    <p id="confirmationParagraph"></p>
+
+    <script>
+        // Get the form element
+        const usernameForm = document.getElementById("usernameForm");
+
+        // Add a form submission event listener
+        usernameForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+            const usernameInput = document.getElementById("usernameInput");
+            const username = usernameInput.value;
+            const confirmationParagraph = document.getElementById("confirmationParagraph");
+
+            if (username) {
+                confirmationParagraph.textContent = `Thank you, ${username}, for your submission!`;
+            } else {
+                confirmationParagraph.textContent = "No username provided error 404.";
+            }
+        });
+    </script>
+</body>
+</html>

@@ -181,18 +181,16 @@
 
 }
 /*================Join Page =======*/
-.join-page {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.join{
+    display:grid;
+    grid-template-columns: 1fr;
     margin: 0 auto;
     justify-items: center;
     margin: 0 auto;
-    align-items: start;
-    grid-gap: 2rem;
+    grid-gap: 3rem;
 
 }
 
 form input {
     width: 85%;
-    background-color: var(--constrast-backgr-subh);
 }

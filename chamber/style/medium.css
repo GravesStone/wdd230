@@ -164,21 +164,17 @@
 }
 /*========== Join page ==========*/
 .main-join {
-    box-shadow: 1px 5px 10px var(--backgr-main);
-    padding: 1em;
+    width: 100%;
+    max-width: 100%; /* Adjust the max-width as per your design */
+    margin: 0 auto;
+
 }
 
-.main-join:hover {
 
-    box-shadow: 3px 10px 25px var(--backgr-main);
-    border-radius: .3em;
-    transition: .5s;
-}
 
 .membership-div {
-    max-width: 400px;
-    margin: 2rem auto;
-
+    max-width: 100%;
+    
 }
 
 .membership-div img {
@@ -186,7 +182,7 @@
     height: auto;
 }
 form input {
-    width: 90%;
+    width: 100%;
 }
 
 form fieldset,
@@ -194,4 +190,15 @@ select,
 textarea {
     width: 400px;
 
+}
+/*====== Thank your section======*/
+.thanks-div {
+    margin: 10em 1em;
+    padding: 3em;
+    box-shadow: 1px 5px 10px var(--backgr-main);
+
+}
+
+.thanks-div h1 {
+    margin: 1.5em auto;
 }

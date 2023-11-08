@@ -6,89 +6,13 @@
         {
           "url": "path/to/lesson1.html",
           "title": "Lesson 1 - Introduction"
-        }
-      ]
-    },
-    {
-      "lesson": "02",
-      "links": [
+        },
         {
           "url": "path/to/lesson2.html",
-          "title": "Lesson 2 - HTML Basics"
-        }
-      ]
-    },
-    {
-      "lesson": "03",
-      "links": [
-        {
-          "url": "path/to/lesson3.html",
-          "title": "Lesson 3 - CSS Styling"
-        }
-      ]
-    },
-    {
-      "lesson": "04",
-      "links": [
-        {
-          "url": "path/to/lesson4.html",
-          "title": "Lesson 4 - JavaScript Fundamentals"
-        }
-      ]
-    },
-    {
-      "lesson": "05",
-      "links": [
-        {
-          "url": "path/to/lesson5.html",
-          "title": "Lesson 5 - DOM Manipulation"
-        }
-      ]
-    },
-    {
-      "lesson": "06",
-      "links": [
-        {
-          "url": "path/to/lesson6.html",
-          "title": "Lesson 6 - Event Handling"
-        }
-      ]
-    },
-    {
-      "lesson": "07",
-      "links": [
-        {
-          "url": "path/to/lesson7.html",
-          "title": "Lesson 7 - Responsive Design"
-        }
-      ]
-    },
-    {
-      "lesson": "08",
-      "links": [
-        {
-          "url": "path/to/lesson8.html",
-          "title": "Lesson 8 - Ajax and APIs"
-        }
-      ]
-    },
-    {
-      "lesson": "09",
-      "links": [
-        {
-          "url": "path/to/lesson9.html",
-          "title": "Lesson 9 - Building a Website"
-        }
-      ]
-    },
-    {
-      "lesson": "10",
-      "links": [
-        {
-          "url": "path/to/lesson10.html",
-          "title": "Lesson 10 - Deployment and Final Thoughts"
+          "title": "Lesson 1 - Introduction"
         }
       ]
     }
+
   ]
 }

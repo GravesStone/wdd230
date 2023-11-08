@@ -74,7 +74,7 @@
             },
             {
                 "url": "https://codepen.io/soulxmark/pen/xxMqpWx",
-                "title": "🔒 CSS Pseudo-classes"
+                "title": "CSS Pseudo-classes"
             }
         ]
       },
@@ -100,12 +100,12 @@
         "lesson": "Lesson 6",
         "links": [
             {
-                "url": "lesson02/mediaquery.html",
-                "title": "Media Queries"
+                "url": "https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types",
+                "title": "webp picture format docs"
             },
             {
-                "url": "lesson02/design-principles.html",
-                "title": "Design Principles Document"
+                "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#art_direction",
+                "title": "Responsive Images docs"
             }
         ]
       },
@@ -113,43 +113,44 @@
         "lesson": "Lesson 7",
         "links": [
             {
-                "url": "lesson02/mediaquery.html",
-                "title": "Media Queries"
+                "url": "https://developer.mozilla.org/en-US/docs/Web/Performance/Lazy_loading",
+                "title": "lazy loading docs"
             },
             {
-                "url": "lesson02/design-principles.html",
-                "title": "Design Principles Document"
+                "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API",
+                "title": "Web Storage API - localStorage docs"
+            },
+            {
+                "url": "https://codepen.io/soulxmark/pen/PoVpQwR",
+                "title": "number of visit (localStorage)"
             }
+            
         ]
       },
       {
         "lesson": "Lesson 8",
         "links": [
             {
-                "url": "lesson02/mediaquery.html",
-                "title": "Media Queries"
+                "url": "https://codepen.io/soulxmark/pen/xxMqYGV",
+                "title": "Table sample"
             },
             {
-                "url": "lesson02/design-principles.html",
-                "title": "Design Principles Document"
+                "url": "/wdd230/form.html",
+                "title": "Forms"
+            },
+            {
+                "url": "https://codepen.io/soulxmark/pen/ExrWQPP",
+                "title": "Forms input pattern testing"
+            },
+            {
+                "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form",
+                "title": "<form>:The form element docs"
             }
+            
         ]
       },
       {
         "lesson": "Lesson 9",
-        "links": [
-            {
-                "url": "lesson02/mediaquery.html",
-                "title": "Media Queries"
-            },
-            {
-                "url": "lesson02/design-principles.html",
-                "title": "Design Principles Document"
-            }
-        ]
-      },
-      {
-        "lesson": "Lesson10",
         "links": [
             {
                 "url": "lesson02/mediaquery.html",

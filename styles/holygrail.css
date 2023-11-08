@@ -159,7 +159,7 @@ hr {
 }
 /*Card Section*/
 li {
-  list-style-type: none;
+  list-style-type: decimal;
 }
 .card-container {
   display: flex;
@@ -172,6 +172,7 @@ li {
   text-align: center;
   background-color: #8A3914;
   color: #fff;
+  list-style-type: disc;
 }
 .card {
   width: 70%;

@@ -1,30 +1,30 @@
 {
   "lessons": [
-    {
-      "lesson 01": "main",
-      "links": [
-        {
-          "url": "wdd230/index.html",
-          "title": "Media Query"
-        },
-        {
-          "url": "wdd230/lesson02/design-principles.html",
-          "title": "Design and Principles"
-        }
-      ]
-    },
-    {
-      "lesson 02": "layouts",
-      "links": [
-        {
-          "url": "wdd230/index.html",
-          "title": "Media Query"
-        },
-        {
-          "url": "wdd230/lesson02/design-principles.html",
-          "title": "Design and Principles"
-        }
-      ]
-    }
+      {
+          "lesson": "01",
+          "links": [
+          {
+                  "url": "lesson02/mediaquery.html",
+                  "title": "Media Queries"
+              },
+              {
+                  "url": "lesson02/design-principles.html",
+                  "title": "Design Principles Document"
+              }
+          ]
+      },
+      {
+          "lesson": "02",
+          "links": [
+              {
+                  "url": "lesson02/mediaquery.html",
+                  "title": "Media Queries"
+              },
+              {
+                  "url": "lesson02/design-principles.html",
+                  "title": "Design Principles Document"
+              }
+          ]
+      }
   ]
 }

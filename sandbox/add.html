@@ -1,75 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>WDD230 Activity Links</title>
-    <style>
-        .card {
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 10px;
-            width: 300px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-        }
-
-        .card-header {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .card-content {
-            font-size: 16px;
-        }
-    </style>
+    <title>Dynamic Links Example</title>
 </head>
 <body>
-    <h1>Activity Links</h1>
-    <div id="links-container" class="card">
-        <div class="card-header">WDD230 Activity Links</div>
-        <div class="card-content">
-            Loading links...
-        </div>
-    </div>
-    <script>
-        const baseURL = "https://gravesstone.github.io/wdd230/"; // Replace with your actual GitHub Pages URL
-        const linksURL = `${baseURL}data/links.json`;
+    <div id="links-container"></div>
 
-        async function getLinks() {
-            const response = await fetch(linksURL);
-            const data = await response.json();
-            displayLinks(data);
-        }
+    <script>
+        const baseURL = "https://yourgithubusername.github.io/wdd230/"; // Replace with your actual GitHub pages URL
+
+        // Define the JSON data as a JavaScript object
+        const jsonData = {
+            "lessons": [
+                {
+                    "lesson": "01",
+                    "links": [
+                    {
+                            "url": "lesson02/mediaquery.html",
+                            "title": "Media Queries"
+                        },
+                        {
+                            "url": "lesson02/design-principles.html",
+                            "title": "Design Principles Document"
+                        }
+                    ]
+                },
+                {
+                    "lesson": "02",
+                    "links": [
+                        {
+                            "url": "lesson02/mediaquery.html",
+                            "title": "Media Queries"
+                        },
+                        {
+                            "url": "lesson02/design-principles.html",
+                            "title": "Design Principles Document"
+                        }
+                        // Add similar entries for weeks 3 to 10
+                    ]
+                }
+            ]
+        };
 
         function displayLinks(weeks) {
-            const linksContainer = document.getElementById('links-container');
+            const linksContainer = document.getElementById("links-container");
 
-            for (const week of weeks.lessons) {
-                const weekTitle = `Week ${week.lesson}`;
-                const linksList = document.createElement('ul');
+            weeks.lessons.forEach((week) => {
+                const weekElement = document.createElement("div");
+                weekElement.classList.add("week");
 
-                for (const link of week.links) {
-                    const listItem = document.createElement('li');
-                    const anchor = document.createElement('a');
-                    anchor.href = link.url;
-                    anchor.textContent = link.title;
-                    listItem.appendChild(anchor);
-                    linksList.appendChild(listItem);
-                }
+                const weekTitle = document.createElement("h2");
+                weekTitle.textContent = "Week " + week.lesson;
+                weekElement.appendChild(weekTitle);
 
-                const weekContainer = document.createElement('div');
-                weekContainer.className = 'week-container';
-                weekContainer.innerHTML = `<h2>${weekTitle}</h2>`;
-                weekContainer.appendChild(linksList);
+                const linksList = document.createElement("ul");
 
-                linksContainer.appendChild(weekContainer);
-            }
+                week.links.forEach((link) => {
+                    const linkItem = document.createElement("li");
+                    const linkAnchor = document.createElement("a");
+                    linkAnchor.href = baseURL + link.url;
+                    linkAnchor.textContent = link.title;
+                    linkItem.appendChild(linkAnchor);
+                    linksList.appendChild(linkItem);
+                });
+
+                weekElement.appendChild(linksList);
+                linksContainer.appendChild(weekElement);
+            });
         }
 
-        getLinks();
+        displayLinks(jsonData); // Call the function with the embedded data directly
     </script>
 </body>
 </html>

@@ -1,35 +1,31 @@
 const baseURL = "https://gravesstone.github.io/wdd230/"; // Replace with your actual GitHub Pages URL
         const linksURL = `${baseURL}data/links.json`;
-
-        async function getLinks() {
-            const response = await fetch(linksURL);
-            const data = await response.json();
-            displayLinks(data);
-        }
-
+        
         function displayLinks(weeks) {
-            const linksContainer = document.getElementById('links-container');
+            const linksContainer = document.getElementById("links-container");
 
-            for (const week of weeks.lessons) {
-                const weekTitle = ` ${week.lesson}`;
-                const linksList = document.createElement('ul');
+            weeks.lessons.forEach((week) => {
+                const weekElement = document.createElement("div");
+                weekElement.classList.add("week");
 
-                for (const link of week.links) {
-                    const listItem = document.createElement('li');
-                    const anchor = document.createElement('a');
-                    anchor.href = link.url;
-                    anchor.textContent = link.title;
-                    listItem.appendChild(anchor);
-                    linksList.appendChild(listItem);
-                }
+                const weekTitle = document.createElement("h2");
+                weekTitle.textContent = "Week " + week.lesson;
+                weekElement.appendChild(weekTitle);
 
-                const weekContainer = document.createElement('div');
-                weekContainer.className = 'week-container';
-                weekContainer.innerHTML = `<h2>${weekTitle}</h2>`;
-                weekContainer.appendChild(linksList);
+                const linksList = document.createElement("ul");
 
-                linksContainer.appendChild(weekContainer);
-            }
+                week.links.forEach((link) => {
+                    const linkItem = document.createElement("li");
+                    const linkAnchor = document.createElement("a");
+                    linkAnchor.href = baseURL + link.url;
+                    linkAnchor.textContent = link.title;
+                    linkItem.appendChild(linkAnchor);
+                    linksList.appendChild(linkItem);
+                });
+
+                weekElement.appendChild(linksList);
+                linksContainer.appendChild(weekElement);
+            });
         }
 
-        getLinks();
+        displayLinks(jsonData); // Call the function with the embedded data directly

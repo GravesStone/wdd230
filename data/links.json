@@ -29,7 +29,7 @@
                   "title": "Flex Navigation"
               },
               {
-                "url": "/wdd230/lesson02/design-principles.html",
+                "url": "./lesson02/design-principles.html",
                 "title": "design principles"
                 },
                 {
@@ -135,7 +135,7 @@
                 "title": "Table sample"
             },
             {
-                "url": "/wdd230/form.html",
+                "url": "wdd230/form.html",
                 "title": "Forms"
             },
             {

@@ -1,35 +1,40 @@
 const baseURL = "https://gravesstone.github.io/wdd230/"; // Replace with your actual GitHub Pages URL
-        const linksURL = `${baseURL}data/links.json`;
+const linksURL = `${baseURL}data/links.json`;
 
-        async function getLinks() {
-            const response = await fetch(linksURL);
-            const data = await response.json();
-            displayLinks(data);
-        }
+async function getLinks() {
+  const response = await fetch(linksURL);
+  const data = await response.json();
 
-        function displayLinks(weeks) {
-            const linksContainer = document.getElementById('links-container');
+  // Extract the value associated with "lesson 01" and log it
+  const lesson01Value = data["lesson 01"];
+  console.log(lesson01Value);
 
-            for (const week of weeks.lessons) {
-                const weekTitle = ` ${week.lesson}`;
-                const linksList = document.createElement('ul');
+  displayLinks(data);
+}
 
-                for (const link of week.links) {
-                    const listItem = document.createElement('li');
-                    const anchor = document.createElement('a');
-                    anchor.href = link.url;
-                    anchor.textContent = link.title;
-                    listItem.appendChild(anchor);
-                    linksList.appendChild(listItem);
-                }
+function displayLinks(weeks) {
+  const linksContainer = document.getElementById('links-container');
 
-                const weekContainer = document.createElement('div');
-                weekContainer.className = 'week-container';
-                weekContainer.innerHTML = `<h3>${weekTitle}</h3>`;
-                weekContainer.appendChild(linksList);
+  for (const week of weeks.lessons) {
+    const weekTitle = ` ${week.lesson}`;
+    const linksList = document.createElement('ul');
 
-                linksContainer.appendChild(weekContainer);
-            }
-        }
+    for (const link of week.links) {
+      const listItem = document.createElement('li');
+      const anchor = document.createElement('a');
+      anchor.href = link.url;
+      anchor.textContent = link.title;
+      listItem.appendChild(anchor);
+      linksList.appendChild(listItem);
+    }
 
-        getLinks();
+    const weekContainer = document.createElement('div');
+    weekContainer.className = 'week-container';
+    weekContainer.innerHTML = `<p>${weekTitle}</p>`;
+    weekContainer.appendChild(linksList);
+
+    linksContainer.appendChild(weekContainer);
+  }
+}
+
+getLinks();

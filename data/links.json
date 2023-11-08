@@ -1,7 +1,7 @@
 {
   "lessons": [
     {
-      "lesson 01": "main",
+      "lesson01": "main",
       "links": [
         {
           "url": "wdd230/index.html",

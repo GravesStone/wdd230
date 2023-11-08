@@ -153,12 +153,12 @@
         "lesson": "Lesson 9",
         "links": [
             {
-                "url": "lesson02/mediaquery.html",
-                "title": "Media Queries"
+                "url": "/wdd230/data/links.json",
+                "title": "json data"
             },
             {
-                "url": "lesson02/design-principles.html",
-                "title": "Design Principles Document"
+                "url": "/wdd230/lesson09/prophets.html",
+                "title": "json data (prophets lds)"
             }
         ]
       }

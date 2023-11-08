@@ -288,7 +288,11 @@ h2 {
   max-width: none; /* Remove the maximum width for full-width cards */
  
 }
-
+.card {
+  display: grid;
+  grid-template-columns:1fr; 
+  font-size: 1rem;
+}
 .card2{
   text-align: center;
   width: 72%;

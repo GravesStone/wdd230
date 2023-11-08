@@ -25,7 +25,7 @@ const baseURL = "https://gravesstone.github.io/wdd230/"; // Replace with your ac
 
                 const weekContainer = document.createElement('div');
                 weekContainer.className = 'week-container';
-                weekContainer.innerHTML = `<p>${weekTitle}</p>`;
+                weekContainer.innerHTML = `<h2>${weekTitle}</h2>`;
                 weekContainer.appendChild(linksList);
 
                 linksContainer.appendChild(weekContainer);

@@ -178,7 +178,7 @@ li {
 }
 .card {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Set 2 columns */
+  grid-template-columns: repeat(auto-fit, minmax(2fr, 1fr)); /* Set 2 columns */
   width: 70%;
   padding: 30px;
   margin: 10px;

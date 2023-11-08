@@ -29,7 +29,7 @@
                   "title": "Flex Navigation"
               },
               {
-                "url": "/lesson02/design-principles.html",
+                "url": "./lesson02/design-principles.html",
                 "title": "design principles"
                 },
                 {
@@ -59,7 +59,7 @@
                 "title": "css combinator docs"
             },
             {
-                "url": "/wdd230/lesson03/chamber-site-plan.html",
+                "url": "/lesson03/chamber-site-plan.html",
                 "title": "chamber site plan"
             }
 
@@ -69,7 +69,7 @@
         "lesson": "Lesson 4",
         "links": [
             {
-                "url": "/wdd230/chamber/index.html",
+                "url": "./chamber/index.html",
                 "title": "Chamber of Commerce"
             },
             {
@@ -82,7 +82,7 @@
         "lesson": "Lesson 5",
         "links": [
             {
-                "url": "/wdd230/lesson05/bom.html",
+                "url": "./wdd230/lesson05/bom.html",
                 "title": "the book of mormon chapters using API"
             },
             {
@@ -135,7 +135,7 @@
                 "title": "Table sample"
             },
             {
-                "url": "/wdd230/form.html",
+                "url": "./wdd230/form.html",
                 "title": "Forms"
             },
             {
@@ -153,11 +153,11 @@
         "lesson": "Lesson 9",
         "links": [
             {
-                "url": "/wdd230/data/links.json",
+                "url": "./wdd230/data/links.json",
                 "title": "json data"
             },
             {
-                "url": "/wdd230/lesson09/prophets.html",
+                "url": "./wdd230/lesson09/prophets.html",
                 "title": "json data (prophets lds)"
             }
         ]

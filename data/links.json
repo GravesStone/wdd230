@@ -1,74 +1,132 @@
 {
   "lessons": [
     {
-      "lesson 01": "Holy Layout | Media Query",
+      "lesson 01": "main",
       "links": [
         {
-          "url": "wdd230/holy-layout-media-query.html",
-          "title": "Holy Layout | Media Query"
+          "url": "wdd230/index.html",
+          "title": "Media Query"
+        },
+        {
+          "url": "wdd230/lesson02/design-principles.html",
+          "title": "Design and Principles"
         }
       ]
     },
     {
-      "lesson 02": "Web Design Principles | Design Principles",
+      "lesson 02": "layouts",
       "links": [
         {
-          "url": "wdd230/web-design-principles-design-principles.html",
-          "title": "Web Design Principles | Design Principles"
+          "url": "wdd230/index.html",
+          "title": "Media Query"
+        },
+        {
+          "url": "wdd230/lesson02/design-principles.html",
+          "title": "Design and Principles"
         }
       ]
     },
     {
-      "lesson 03": "CSS Combinator | Pseudo CodePen | Hamburger",
+      "lesson 03": "responsive design",
       "links": [
         {
-          "url": "wdd230/css-combinator-pseudo-codepen-hamburger.html",
-          "title": "CSS Combinator | Pseudo CodePen | Hamburger"
+          "url": "wdd230/index.html",
+          "title": "Media Query"
+        },
+        {
+          "url": "wdd230/lesson03/grid-system.html",
+          "title": "Grid System"
         }
       ]
     },
     {
-      "lesson 04": "BOM Chapters AppPseudo-class Activity",
+      "lesson 04": "typography",
       "links": [
         {
-          "url": "wdd230/bom-chapters-app-pseudo-class-activity.html",
-          "title": "BOM Chapters AppPseudo-class Activity"
+          "url": "wdd230/index.html",
+          "title": "Media Query"
+        },
+        {
+          "url": "wdd230/lesson04/typography.html",
+          "title": "Typography"
         }
       ]
     },
     {
-      "lesson 05": "WebP | BOM w/ Webstorage API",
+      "lesson 05": "color theory",
       "links": [
         {
-          "url": "wdd230/webp-bom-webstorage-api.html",
-          "title": "WebP | BOM w/ Webstorage API"
+          "url": "wdd230/index.html",
+          "title": "Media Query"
+        },
+        {
+          "url": "wdd230/lesson05/color-theory.html",
+          "title": "Color Theory"
         }
       ]
     },
     {
-      "lesson 06": "Forms",
+      "lesson 06": "images and multimedia",
       "links": [
         {
-          "url": "wdd230/forms.html",
-          "title": "Forms"
+          "url": "wdd230/index.html",
+          "title": "Media Query"
+        },
+        {
+          "url": "wdd230/lesson06/images-multimedia.html",
+          "title": "Images and Multimedia"
         }
       ]
     },
     {
-      "lesson 07": "JSON File | Prophets using JSON",
+      "lesson 07": "navigation",
       "links": [
         {
-          "url": "wdd230/json-file-prophets-using-json.html",
-          "title": "JSON File | Prophets using JSON"
+          "url": "wdd230/index.html",
+          "title": "Media Query"
+        },
+        {
+          "url": "wdd230/lesson07/navigation.html",
+          "title": "Navigation"
         }
       ]
     },
     {
-      "lesson 08": "HTML Tables",
+      "lesson 08": "forms and user input",
       "links": [
         {
-          "url": "wdd230/html-tables.html",
-          "title": "HTML Tables"
+          "url": "wdd230/index.html",
+          "title": "Media Query"
+        },
+        {
+          "url": "wdd230/lesson08/forms-user-input.html",
+          "title": "Forms and User Input"
+        }
+      ]
+    },
+    {
+      "lesson 09": "interactivity",
+      "links": [
+        {
+          "url": "wdd230/index.html",
+          "title": "Media Query"
+        },
+        {
+          "url": "wdd230/lesson09/interactivity.html",
+          "title": "Interactivity"
+        }
+      ]
+    },
+    {
+      "lesson 10": "final project",
+      "links": [
+        {
+          "url": "wdd230/index.html",
+          "title": "Media Query"
+        },
+        {
+          "url": "wdd230/lesson10/final-project.html",
+          "title": "Final Project"
         }
       ]
     }

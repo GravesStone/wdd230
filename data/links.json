@@ -1,26 +1,76 @@
 {
   "lessons": [
     {
-      "lesson 01": "main",
+      "lesson 01": "Holy Layout | Media Query",
       "links": [
         {
-          "url": "wdd230/index.htmll",
-          "title": "Media Query"
-        },
-        {
-          "url": "wdd230/lesson02/design-principles.html",
-          "title": "Design and principles"
-        },
-        {
-          "url": "wdd230/lesson03/chamber-site-plan.html",
-          "title": "Chamber of Commerce site plan"
-        },
-        {
-          "url": "wdd230/lesson04/css-selectors.html",
-          "title":"Hamburger Navigation"
+          "url": "wdd230/holy-layout-media-query.html",
+          "title": "Holy Layout | Media Query"
         }
       ]
-    } 
+    },
+    {
+      "lesson 02": "Web Design Principles | Design Principles",
+      "links": [
+        {
+          "url": "wdd230/web-design-principles-design-principles.html",
+          "title": "Web Design Principles | Design Principles"
+        }
+      ]
+    },
+    {
+      "lesson 03": "CSS Combinator | Pseudo CodePen | Hamburger",
+      "links": [
+        {
+          "url": "wdd230/css-combinator-pseudo-codepen-hamburger.html",
+          "title": "CSS Combinator | Pseudo CodePen | Hamburger"
+        }
+      ]
+    },
+    {
+      "lesson 04": "BOM Chapters AppPseudo-class Activity",
+      "links": [
+        {
+          "url": "wdd230/bom-chapters-app-pseudo-class-activity.html",
+          "title": "BOM Chapters AppPseudo-class Activity"
+        }
+      ]
+    },
+    {
+      "lesson 05": "WebP | BOM w/ Webstorage API",
+      "links": [
+        {
+          "url": "wdd230/webp-bom-webstorage-api.html",
+          "title": "WebP | BOM w/ Webstorage API"
+        }
+      ]
+    },
+    {
+      "lesson 06": "Forms",
+      "links": [
+        {
+          "url": "wdd230/forms.html",
+          "title": "Forms"
+        }
+      ]
+    },
+    {
+      "lesson 07": "JSON File | Prophets using JSON",
+      "links": [
+        {
+          "url": "wdd230/json-file-prophets-using-json.html",
+          "title": "JSON File | Prophets using JSON"
+        }
+      ]
+    },
+    {
+      "lesson 08": "HTML Tables",
+      "links": [
+        {
+          "url": "wdd230/html-tables.html",
+          "title": "HTML Tables"
+        }
+      ]
+    }
   ]
 }
-

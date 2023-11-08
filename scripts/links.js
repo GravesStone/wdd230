@@ -11,6 +11,7 @@ const baseURL = "https://gravesstone.github.io/wdd230/"; // Replace with your ac
             const linksContainer = document.getElementById('links-container');
 
             for (const week of weeks.lessons) {
+                const weekTitle = ` ${week.lesson}`;
                 const linksList = document.createElement('ul');
 
                 for (const link of week.links) {
@@ -24,7 +25,7 @@ const baseURL = "https://gravesstone.github.io/wdd230/"; // Replace with your ac
 
                 const weekContainer = document.createElement('div');
                 weekContainer.className = 'week-container';
-            
+                weekContainer.innerHTML = `<h3>${weekTitle}</h3>`;
                 weekContainer.appendChild(linksList);
 
                 linksContainer.appendChild(weekContainer);

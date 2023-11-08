@@ -56,7 +56,11 @@
             },
             {
                 "url": "https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators",
-                "title": "css combinator doc"
+                "title": "css combinator docs"
+            },
+            {
+                "url": "wdd230/lesson03/chamber-site-plan.html",
+                "title": "chamber site plan"
             }
 
         ]
@@ -65,12 +69,12 @@
         "lesson": "Lesson 4",
         "links": [
             {
-                "url": "lesson02/mediaquery.html",
-                "title": "The Book of mormon chapters"
+                "url": "/wdd230/chamber/index.html",
+                "title": "Chamber of Commerce"
             },
             {
-                "url": "lesson02/design-principles.html",
-                "title": "Design Principles Document"
+                "url": "https://codepen.io/soulxmark/pen/xxMqpWx",
+                "title": "🔒 CSS Pseudo-classes"
             }
         ]
       },
@@ -78,13 +82,18 @@
         "lesson": "Lesson 5",
         "links": [
             {
-                "url": "lesson02/mediaquery.html",
-                "title": "Media Queries"
+                "url": "/wdd230/lesson05/bom.html",
+                "title": "the book of mormon chapters using API"
             },
             {
-                "url": "lesson02/design-principles.html",
-                "title": "Design Principles Document"
+                "url": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents",
+                "title": "JavaScript: DOM Manipulation docs"
+            },
+            {
+                "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/position",
+                "title": "position docs"
             }
+            
         ]
     },
     {

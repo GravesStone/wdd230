@@ -1,33 +1,94 @@
 {
   "lessons": [
       {
-          "lesson": "Week 1",
+          "lesson": "Lesson 1",
           "links": [
           {
-                  "url": "lesson02/mediaquery.html",
-                  "title": "Media Queries"
+                  "url": "https://codepen.io/soulxmark/pen/GRzWZez",
+                  "title": "holy grail"
               },
               {
-                  "url": "lesson02/design-principles.html",
-                  "title": "Design Principles Document"
-              }
+                  "url": "https://byui-cse.github.io/wdd230-course/resources/dev-standards.html",
+                  "title": "development standards checklist"
+              },
+              {
+                "url": "https://codepen.io/soulxmark/pen/ExrWbbL",
+                "title": "media query"
+            }
           ]
       },
       {
-          "lesson": "week2",
+          "lesson": "Lesson 2",
           "links": [
               {
-                  "url": "lesson02/mediaquery.html",
-                  "title": "Media Queries"
+                  "url": "https://codepen.io/soulxmark/pen/wvNJPmG",
+                  "title": "web design principles"
               },
               {
-                  "url": "lesson02/design-principles.html",
-                  "title": "Design Principles Document"
-              }
+                  "url": "https://codepen.io/soulxmark/pen/eYxvery",
+                  "title": "Flex Navigation"
+              },
+              {
+                "url": "/wdd230/lesson02/design-principles.html",
+                "title": "design principles"
+                },
+                {
+                    "url": "https://codepen.io/soulxmark/pen/gOqmXdp",
+                    "title": "CSS Grid Layout using grid-template-areas."
+                },
+                {
+                    "url": "https://codepen.io/soulxmark/pen/eYxvePM",
+                    "title": "Basic Grid Layout Review"
+                }
+
           ]
       },
       {
-        "lesson": "week3",
+        "lesson": "Lesson 3",
+        "links": [
+            {
+                "url": "https://codepen.io/soulxmark/pen/dyavZQE",
+                "title": "css psuedo elements"
+            },
+            {
+                "url": "https://codepen.io/soulxmark/pen/QWYpOzv",
+                "title": "hamburger navigation"
+            },
+            {
+                "url": "https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators",
+                "title": "css combinator doc"
+            }
+
+        ]
+      },
+      {
+        "lesson": "Lesson 4",
+        "links": [
+            {
+                "url": "lesson02/mediaquery.html",
+                "title": "The Book of mormon chapters"
+            },
+            {
+                "url": "lesson02/design-principles.html",
+                "title": "Design Principles Document"
+            }
+        ]
+      },
+      {
+        "lesson": "Lesson 5",
+        "links": [
+            {
+                "url": "lesson02/mediaquery.html",
+                "title": "Media Queries"
+            },
+            {
+                "url": "lesson02/design-principles.html",
+                "title": "Design Principles Document"
+            }
+        ]
+    },
+    {
+        "lesson": "Lesson 6",
         "links": [
             {
                 "url": "lesson02/mediaquery.html",
@@ -40,7 +101,7 @@
         ]
       },
       {
-        "lesson": "week4",
+        "lesson": "Lesson 7",
         "links": [
             {
                 "url": "lesson02/mediaquery.html",
@@ -53,7 +114,7 @@
         ]
       },
       {
-        "lesson": "week5",
+        "lesson": "Lesson 8",
         "links": [
             {
                 "url": "lesson02/mediaquery.html",
@@ -64,6 +125,32 @@
                 "title": "Design Principles Document"
             }
         ]
-    }
+      },
+      {
+        "lesson": "Lesson 9",
+        "links": [
+            {
+                "url": "lesson02/mediaquery.html",
+                "title": "Media Queries"
+            },
+            {
+                "url": "lesson02/design-principles.html",
+                "title": "Design Principles Document"
+            }
+        ]
+      },
+      {
+        "lesson": "Lesson10",
+        "links": [
+            {
+                "url": "lesson02/mediaquery.html",
+                "title": "Media Queries"
+            },
+            {
+                "url": "lesson02/design-principles.html",
+                "title": "Design Principles Document"
+            }
+        ]
+      }
   ]
 }

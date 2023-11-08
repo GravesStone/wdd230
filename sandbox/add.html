@@ -1,75 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Dynamic Links Example</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 2fr)); /* Change to 2fr */
+      gap: 20px;
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  </style>
 </head>
 <body>
-    <div id="links-container"></div>
+  <div class="grid-container" id="card-grid">
+    <!-- Cards will be added here -->
+  </div>
 
-    <script>
-        const baseURL = "https://yourgithubusername.github.io/wdd230/"; // Replace with your actual GitHub pages URL
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const gridContainer = document.getElementById("card-grid");
 
-        // Define the JSON data as a JavaScript object
-        const jsonData = {
-            "lessons": [
-                {
-                    "lesson": "01",
-                    "links": [
-                    {
-                            "url": "lesson02/mediaquery.html",
-                            "title": "Media Queries"
-                        },
-                        {
-                            "url": "lesson02/design-principles.html",
-                            "title": "Design Principles Document"
-                        }
-                    ]
-                },
-                {
-                    "lesson": "02",
-                    "links": [
-                        {
-                            "url": "lesson02/mediaquery.html",
-                            "title": "Media Queries"
-                        },
-                        {
-                            "url": "lesson02/design-principles.html",
-                            "title": "Design Principles Document"
-                        }
-                        // Add similar entries for weeks 3 to 10
-                    ]
-                }
-            ]
-        };
-
-        function displayLinks(weeks) {
-            const linksContainer = document.getElementById("links-container");
-
-            weeks.lessons.forEach((week) => {
-                const weekElement = document.createElement("div");
-                weekElement.classList.add("week");
-
-                const weekTitle = document.createElement("h2");
-                weekTitle.textContent = "Week " + week.lesson;
-                weekElement.appendChild(weekTitle);
-
-                const linksList = document.createElement("ul");
-
-                week.links.forEach((link) => {
-                    const linkItem = document.createElement("li");
-                    const linkAnchor = document.createElement("a");
-                    linkAnchor.href = baseURL + link.url;
-                    linkAnchor.textContent = link.title;
-                    linkItem.appendChild(linkAnchor);
-                    linksList.appendChild(linkItem);
-                });
-
-                weekElement.appendChild(linksList);
-                linksContainer.appendChild(weekElement);
-            });
+      // Sample JSON data (replace with your own data)
+      const jsonData = [
+        {
+          "title": "Card 1",
+          "description": "This is the first card. It contains some information about the first item.",
+          "image": "image1.jpg"
+        },
+        {
+          "title": "Card 2",
+          "description": "This is the second card. It provides details about the second item.",
+          "image": "image2.jpg"
+        },
+        {
+          "title": "Card 3",
+          "description": "This is the third card. It describes the third item in the collection.",
+          "image": "image3.jpg"
         }
+      ];
 
-        displayLinks(jsonData); // Call the function with the embedded data directly
-    </script>
+      jsonData.forEach((card) => {
+        const cardElement = document.createElement("div");
+        cardElement.className = "card";
+
+        const title = document.createElement("h2");
+        title.textContent = card.title;
+
+        const description = document.createElement("p");
+        description.textContent = card.description;
+
+        const image = document.createElement("img");
+        image.src = card.image;
+
+        cardElement.appendChild(title);
+        cardElement.appendChild(description);
+        cardElement.appendChild(image);
+
+        gridContainer.appendChild(cardElement);
+      });
+    });
+  </script>
 </body>
 </html>

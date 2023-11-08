@@ -11,7 +11,7 @@ const baseURL = "https://gravesstone.github.io/wdd230/"; // Replace with your ac
             const linksContainer = document.getElementById('links-container');
 
             for (const week of weeks.lessons) {
-                const weekTitle = `Week ${week.lesson}`;
+                const weekTitle = `${week.lesson}`;
                 const linksList = document.createElement('ul');
 
                 for (const link of week.links) {

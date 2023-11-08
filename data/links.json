@@ -1,18 +1,26 @@
 {
   "lessons": [
     {
-      "lesson": "01",
+      "lesson 01": "main",
       "links": [
         {
-          "url": "path/to/lesson1.html",
-          "title": "Lesson 1 - Introduction"
+          "url": "wdd230/index.htmll",
+          "title": "Media Query"
         },
         {
-          "url": "path/to/lesson2.html",
-          "title": "Lesson 1 - Introduction"
+          "url": "wdd230/lesson02/design-principles.html",
+          "title": "Design and principles"
+        },
+        {
+          "url": "wdd230/lesson03/chamber-site-plan.html",
+          "title": "Chamber of Commerce site plan"
+        },
+        {
+          "url": "wdd230/lesson04/css-selectors.html",
+          "title":"Hamburger Navigation"
         }
       ]
-    }
-
+    } 
   ]
 }
+

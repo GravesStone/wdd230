@@ -170,6 +170,8 @@ li {
 }
 .card-header{
   text-align: center;
+  background-color: #8A3914;
+  color: #fff;
 }
 .card {
   width: 70%;
@@ -181,7 +183,7 @@ li {
   text-align: left;
   border:3px solid #000;
   box-shadow: 5px 10px #808080;
-  font-size: 25px;
+  font-size: 20px;
 }
 .card h3{
     text-align: center;

@@ -153,11 +153,11 @@
         "lesson": "Lesson 9",
         "links": [
             {
-                "url": "./wdd230/data/links.json",
+                "url": "./data/links.json",
                 "title": "json data"
             },
             {
-                "url": "./wdd230/lesson09/prophets.html",
+                "url": "./lesson09/prophets.html",
                 "title": "json data (prophets lds)"
             }
         ]

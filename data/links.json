@@ -25,6 +25,45 @@
                   "title": "Design Principles Document"
               }
           ]
-      }
+      },
+      {
+        "lesson": "week3",
+        "links": [
+            {
+                "url": "lesson02/mediaquery.html",
+                "title": "Media Queries"
+            },
+            {
+                "url": "lesson02/design-principles.html",
+                "title": "Design Principles Document"
+            }
+        ]
+      },
+      {
+        "lesson": "week4",
+        "links": [
+            {
+                "url": "lesson02/mediaquery.html",
+                "title": "Media Queries"
+            },
+            {
+                "url": "lesson02/design-principles.html",
+                "title": "Design Principles Document"
+            }
+        ]
+      },
+      {
+        "lesson": "week5",
+        "links": [
+            {
+                "url": "lesson02/mediaquery.html",
+                "title": "Media Queries"
+            },
+            {
+                "url": "lesson02/design-principles.html",
+                "title": "Design Principles Document"
+            }
+        ]
+    }
   ]
 }

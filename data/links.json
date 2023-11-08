@@ -59,7 +59,7 @@
                 "title": "css combinator docs"
             },
             {
-                "url": "/lesson03/chamber-site-plan.html",
+                "url": "./lesson03/chamber-site-plan.html",
                 "title": "chamber site plan"
             }
 
@@ -82,7 +82,7 @@
         "lesson": "Lesson 5",
         "links": [
             {
-                "url": "./wdd230/lesson05/bom.html",
+                "url": "./lesson05/bom.html",
                 "title": "the book of mormon chapters using API"
             },
             {

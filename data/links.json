@@ -1,7 +1,7 @@
 {
   "lessons": [
     {
-      "lesson01": "main",
+      "lesson 01": "main",
       "links": [
         {
           "url": "wdd230/index.html",
@@ -10,6 +10,14 @@
         {
           "url": "wdd230/lesson02/design-principles.html",
           "title": "Design and Principles"
+        },
+        {
+          "url": "wdd230/lesson01/additional-link-1.html",
+          "title": "Additional Link 1"
+        },
+        {
+          "url": "wdd230/lesson01/additional-link-2.html",
+          "title": "Additional Link 2"
         }
       ]
     },
@@ -23,6 +31,14 @@
         {
           "url": "wdd230/lesson02/design-principles.html",
           "title": "Design and Principles"
+        },
+        {
+          "url": "wdd230/lesson02/additional-link-1.html",
+          "title": "Additional Link 1"
+        },
+        {
+          "url": "wdd230/lesson02/additional-link-2.html",
+          "title": "Additional Link 2"
         }
       ]
     },
@@ -36,6 +52,14 @@
         {
           "url": "wdd230/lesson03/grid-system.html",
           "title": "Grid System"
+        },
+        {
+          "url": "wdd230/lesson03/additional-link-1.html",
+          "title": "Additional Link 1"
+        },
+        {
+          "url": "wdd230/lesson03/additional-link-2.html",
+          "title": "Additional Link 2"
         }
       ]
     },
@@ -49,6 +73,14 @@
         {
           "url": "wdd230/lesson04/typography.html",
           "title": "Typography"
+        },
+        {
+          "url": "wdd230/lesson04/additional-link-1.html",
+          "title": "Additional Link 1"
+        },
+        {
+          "url": "wdd230/lesson04/additional-link-2.html",
+          "title": "Additional Link 2"
         }
       ]
     },
@@ -62,6 +94,14 @@
         {
           "url": "wdd230/lesson05/color-theory.html",
           "title": "Color Theory"
+        },
+        {
+          "url": "wdd230/lesson05/additional-link-1.html",
+          "title": "Additional Link 1"
+        },
+        {
+          "url": "wdd230/lesson05/additional-link-2.html",
+          "title": "Additional Link 2"
         }
       ]
     },
@@ -75,6 +115,14 @@
         {
           "url": "wdd230/lesson06/images-multimedia.html",
           "title": "Images and Multimedia"
+        },
+        {
+          "url": "wdd230/lesson06/additional-link-1.html",
+          "title": "Additional Link 1"
+        },
+        {
+          "url": "wdd230/lesson06/additional-link-2.html",
+          "title": "Additional Link 2"
         }
       ]
     },
@@ -88,6 +136,14 @@
         {
           "url": "wdd230/lesson07/navigation.html",
           "title": "Navigation"
+        },
+        {
+          "url": "wdd230/lesson07/additional-link-1.html",
+          "title": "Additional Link 1"
+        },
+        {
+          "url": "wdd230/lesson07/additional-link-2.html",
+          "title": "Additional Link 2"
         }
       ]
     },
@@ -101,6 +157,14 @@
         {
           "url": "wdd230/lesson08/forms-user-input.html",
           "title": "Forms and User Input"
+        },
+        {
+          "url": "wdd230/lesson08/additional-link-1.html",
+          "title": "Additional Link 1"
+        },
+        {
+          "url": "wdd230/lesson08/additional-link-2.html",
+          "title": "Additional Link 2"
         }
       ]
     },
@@ -114,6 +178,14 @@
         {
           "url": "wdd230/lesson09/interactivity.html",
           "title": "Interactivity"
+        },
+        {
+          "url": "wdd230/lesson09/additional-link-1.html",
+          "title": "Additional Link 1"
+        },
+        {
+          "url": "wdd230/lesson09/additional-link-2.html",
+          "title": "Additional Link 2"
         }
       ]
     },
@@ -127,6 +199,14 @@
         {
           "url": "wdd230/lesson10/final-project.html",
           "title": "Final Project"
+        },
+        {
+          "url": "wdd230/lesson10/additional-link-1.html",
+          "title": "Additional Link 1"
+        },
+        {
+          "url": "wdd230/lesson10/additional-link-2.html",
+          "title": "Additional Link 2"
         }
       ]
     }

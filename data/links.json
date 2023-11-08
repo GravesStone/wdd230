@@ -1,7 +1,7 @@
 {
   "lessons": [
       {
-          "lesson": "01",
+          "lesson": "Week 1",
           "links": [
           {
                   "url": "lesson02/mediaquery.html",
@@ -14,7 +14,7 @@
           ]
       },
       {
-          "lesson": "02",
+          "lesson": "week2",
           "links": [
               {
                   "url": "lesson02/mediaquery.html",

@@ -1,21 +1,85 @@
-[
-    {
-      "name": "Company 1",
-      "address": "123 Main St, City",
-      "phone": "555-123-4567",
-      "website": "http://www.company1.com",
-      "image": "company1.png",
-      "membershipLevel": "Gold",
-      "otherInfo": "Some additional info about Company 1"
-    },
-    {
-      "name": "Company 2",
-      "address": "456 Oak St, Town",
-      "phone": "555-987-6543",
-      "website": "http://www.company2.com",
-      "image": "company2.png",
-      "membershipLevel": "Silver",
-      "otherInfo": "Some additional info about Company 2"
-    }
+{
+  "companies": [
+      {
+          "name": "YPF Inc",
+          "phonenumber": "+54 (11) 5441 2000",
+          "websiteurl": "https://www.ypf.com",
+          "address": "Macacha Guemes 515,Buenos Aires, 1106",
+          "membershiplevel": 4,
+          "industry": "Oil/gas Exploration",
+          "imageurl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMMAAADDCAMAAAAIoVWYAAAAclBMVEX////+/v4AUZIAUJEAUJIAUZH09/r4+vwOWpjJ2uiqxdrB1eQ2danu8/cEVJSVt9JTirU+fKwXYZwiaKC5z+FNhbOwyd1llr2Nsc6cvNXp8PXW4+1bj7mkwdgZYpw4d6qAqMkrbqRzoMOQs8/e6PGDqsqfaYc1AAAMf0lEQVR4nO2bi1rbOBCFZ2QbSNIEcqEUSlvC0vd/xbUuMxrZlmxsxSH9MgUnv63Yus3RQdkFQBeAUP/wWwM1AoO5aEr1AtAtESEPQALgXwgaBvTvLi0ut+Y+5IjYA9LbFjTL9sNcgcHR5jCK2qCHIH9ScKJKyi6VgPLHSQvXnYeKrvDIpMHrVC7AJPwD4TOj4yU8Rxk0CDAvpOLcXXiNRmDrTQtCle2FE9QuoktelpAkhXwTeHvCdkjobwrQPzULgABsAyUQSxmDbxC7QZdrfSBOQRbgjvGezwP3c1MGQJ6D1PkOEJWA7IBNaAlYv6JlUMO8kSvp5osOzTlP12WNT3m+8/nVq+e7hPCz6lyyMjnO3YVniYFZfUKIV2rIiAx/Yu4mXD3fhXg+34pWxkfOQA+APJ0LIAYjPN9ZImU0oRXRvPlMDp4I2slh311+UJsw2vniCgtPH2SPnrngpNO+Z2Bd8sDNDvqgE3ziQUYAfhNC/i47Q4hOvNTcOHcXniXOLa+pSl0939XzXT1fu5ZfVGA/5/myxLyCNW93niS4KYE4kcKwyghx63SDTUHt9o/jQWorQgtIOpEtH3o55SPLFnATE0CKSBXIA1Iqm3Dx4WfVIG39inHuLjxLfEnPd5KYuQmc444QpQwICB1KEqQhyAO+ItLSAQsqkrPjSlAt3FG4FzKoaeiU5kkACfBrAlXfg3dwLSfXB82XHAAxuHq+dJLNBvN250ni6vliAE77rp5vcPhZ1SFJl5Et5+7Cs8TV883h+fDmEgKTnu/2riz0v6Ksf81rCPq1LHuhNHfRXGaCkk8Wxd1t0vPd3qlK/6uUqg86Cg/K/LrzSbCfcR/KBUpZqNuQ9Hz1OFS6I1WpivpQVLp/CWyUfIiD8qCygHm6cqDbIJS1mS23d0VVmsJ17StV6HFg0G816M5Jg6mChSoLVBr0sYaqnkthtjfHQX9OuY/4H/FuEBSVaXdlnp4B+I2eGeE4tDxfnQ9fOUpzdOMQ83z1XBoSVQ9U9rcykzgLuFBuHGg96PJ8ehxK/a9U9mjeOAhOJ8H8Mx2XCdwg6LeFEvkAYT6QttKIBcNn39mKDoGSgDokC7i2tfOhNQ59UZmfXmh2QQ6w0RqHZhvqhha2KwsxTwyUdrVUbt1MgLKvNLGmg3m6Kiz0toF71K6KncAvSaiyQ3QcAs+nvUbdBfVSovSvsouFBf1j1i/VC2Ysda+Z0xmgrkDpHlA4r3H1fFfPN7fn27wvgjhsApt3DK+uHnVPFU+LaByWP173Spq5h3hhF/eTPd97eP01cHbPwbWXrT29x3SsXjfezN3d9JTGw3TP9x7s8/3ciEv7W7nPtz7S+Y+eDTxcHP1NVtFiDg7iiSM9n/ob7PM9eWenvsutvdstX1n17tndbNnMLfv2+Q4DPB+yyDq/ZNdG1+iy3Hz3zURc/3ZXCvUQfE3xVFBH1W3gbzOEdARwczTurX7QMlVMHw6FrY12ZCany2Au0SA4QteGKjCt6u6nnHzflbVeavciT98rNpZqFUzWblhsbBvUMlnM5AN7Jv3HpPB8vDnc7TWCOK7lsv7qFv5f8nOrjbAEq+CWT491vL4twkfhg6vYMji9bsQNwqFVn16/ZJZZvcy7pbl+VPEon/+yM0tocO7jN9k+vZiGbdjb8+pxHZxeWndYhG34tmnE/vWtdH7PLtWlnkvtirvh0LPPjEMl+rQya+SbTx2Epb68+3ALvR7S2z9KmrIV6YX5yJ5OPwglQXjZ8DhQIteHowru1AQ/DjaF6cW2wnu+ut/LyktZae7yXeb+Y33+Geku9euT9olmwuocqlZkJM1t96qwc3nzwqKpZ/HOWsSlK2avHOspXzrzaOa/ADKWpfFL/HTqfhYCN5esfbNez3i5u5/0cDubHkWX4n/KuzR9WAH1kGmDOVlYzRVX9rb4kj2ovnJ0poU/Q6BsdZznQ2pzU5cQvedjk6fc73EttODX3YcQhtXGFCGzWFWBLuHe3qHuyZ+N8+bey+Dkkaey/PvBgZ3XlWr5pWYbTNNV6cy09X8aHmWxhXj/sSupv5xLW0nl03NJ/0FSFPtblv46bjbW2QXa6sbBXqkKAYWAXm2N7fOpt7YY6Lj51trno3xwuuT27Oq1EsBfWSi7m+d1yeTDqH2+dhuMYyh1fUrn7wzoURclKZtedaPtXlCpS+tx4Fvr1735G2SzXZFU2Stvpl6FWR/8lfcHGU8/aqNsi1UVbSQW4u9p5JwWLiu1r1HnddhuDf91FAzXh9WhjsW60WPrnWJtTcR603H/Kft8Oq+lzUO9Pnfs8/V7PsD3YZ5vvRm0z9fn+RSDyWtpAOt8JgOo76+Ge757NczzrclWTfR8BEqv10HcfCObp1e3T3i+N0Vt6PF8vg1uzRvr+XxUh6D0U/c+3wqSgYc/NGQD8mHMPl+X5+NVsnwOSm/Z5pVxzxfWf734e1RiR7Doa4O79XTPx739TDbPFN8GYyR1SXi+x28+jr83zfKh53sVhb9tX/8eNvk8n0mqWvufyeaZw1aRzUt4vl2Xf/PQ4/lUPs9H3uuZR0y/bAvh9WKeb9fybwHM6PkcPAflt2zzEp5v1+nfGOb0fLZfwh2lrdzni3m+Xcu/BTCn57POrqFL3d/thp5vl/4Gd1bPZ5ydb4Nu/pZtXsLz7ZxlU3arrgmh5zvGimXyfEZbZYNDbfURrg+77kIUwfYIHNOFbUz8bvc58HyPbPMSnm+f/tI29Hx/xn23+wnPp4pD4PmelOrwfOoDeQWpD3/4y2KyeQEsApv3ECmW0fM1dqmXqsvzHYMy8Oa/2pT+zcEu1Jj7SDEbWTzfdhnEr7suz/caFhJ/JXV8abu9D+JH1V2sKx9i0ef5hLPrgUJ+1zsZcnq+xB5chzkbXv5Tt53o+YSzS0Ha5o2EXJ5POLteiNq8MZDR8wlnl4K0zRsLmTyfcHYpSNu8MVAImOj5ii/53/O121AkPJ9wdilI27yRkMvzfYn4N/97vk95PrGbl4K0zRsBGT2f3M1LQdLmjYcsns9E19ZeB1AVcoKNq+e7er6ZPN/l/H8occ8nNaoTohdid8oUqeee7skgXyYDJiCpUuOj9d3jHDCoYjgU5D5fPnB3xzYEns+eiLcuY4+MCSFFcc8HcqrZS162bLPFPl8U5D5fPghsXtzz+Wr73bzxANkAAm1sQMPzpQRiXAwU4ykwxyw+e1xIK9F7PlFlly10jVKHcjYJID+VBShf6SUA1wrZ3wwojj73KdcS4ITD3TYDiJ4hr+SBJMpXhYSsoQp0V9HIOHCTuRsmgq86LQICIpoTFYOBkpE9Us893ZO75Hk8YALgNDHQk+SFQRXDoeCTQjxnMri7YxtQ/LoT8dZl7JExIaQoAHY5AGKK2QPwEXmxQOgHQNZDyAekodACVncSM6qCSK6RANkAAm1sgEBoHUMYFwPFeArMMYvPHhfSShQ+wVeZLAoKcLmLfQDyU1mA8pVeAnCtkP3NgOLoc59yLQFOONxtM4DoGfJKHkiifFVIyBqqQHcVjYwDN5m7YSL4qtMiICCiOVExGCgZ2SP13NM9uUuexwMmAE4TAz1JXhhUMRwKPinEcyaDuzu2AcWvOxFvXcYeGRNCigJglwMgppg9AB+RFwuEfgBkPYR8QBoKLWB1JzGjKojkGgmQDSDQxgYIhNYxhHExUIynwByzeKaYPz1HRUN7uqrqs4UBUYIUsxRIH5MF3LwPqiJrDIGk8we5lQwu9ynXEuAe4G6bAUTPkFfyQBLlq0JC1lAFuqtoZBy4ydwNE8FXnRYBAdDM8oQu2Qb6nzjk1x9IAFxj5higS7GT/mJX5ndA9hAigwgtQGi1L16J+Doyy6yMt8FlB0CYvk6XvGzZNcDpRRIAWQ8hH5CGQgtY3UnMqApCl0YCZAOQQtUE8Ke8kErJbQrdZ+UxrtXZoLU+XGB0ZU2m5DsVYAyoLDkp9lYogbAPhF5AFnDzPqiKrDF4OwTig9x+Bpf7lGsJcA9wt80AomfQXfZAEuWrQkLWUAW6q2hkHLjJ3A0TwVedFgEBrZyOy4BroP+Jw+ekawhAAuAaMwdnSguapRK36Mr8DsgeQmQQoQUIrfbFKzFQw08V8Ta47AAI09fpkpctuwY4vUgCIOsh5APSUGgBqzuJGVVB6NJIgGwAUqiaAP6UF1IpuU2h+6w8xrU6G7TWhwuMrqzJlHynAowBlSUnxd4KJRD2gdALyAJu3gdVkTUGb4dAfJDbz+Byn3ItAe4B7rYZQPQMusse/gdFxsDoPiTf7QAAAABJRU5ErkJggg=="
+      },
+      {
+          "name": "Marolio S.A.",
+          "phonenumber": "+ 0800-777-6276",
+          "websiteurl": "https://www.marolio.com.ar/",
+          "address": "La Reja-Moreno - Bs. As. Argentina",
+          "membershiplevel": 3,
+          "industry": "Food Company",
+          "imageurl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-aM8-eUuTmMtiiG8dO8bah_Bj89UgjHY4oNyU1uontA&s"
+      },
+      {
+          "name": "Molinos Rio de la Plata S.A.",
+          "phonenumber": "+54 (11) 4340 1100",
+          "websiteurl": "http://www.molinos.com.ar/",
+          "address": "Uruguay 4075,Victoria, B1644HKG",
+          "membershiplevel": 3,
+          "industry": "Food Company",
+          "imageurl": "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/v1493803268/rlvmqkeglhj1udnkfxdp.png"
+      },
+      {
+          "name": "Grupo Clarín S.A.",
+          "phonenumber": "+54 (11) 4309 7500",
+          "websiteurl": "https://www.grupoclarin.com",
+          "address": "Piedras 1743,Buenos Aires, 1140 Argentina",
+          "membershiplevel": 4,
+          "industry": "Media Company",
+          "imageurl": "https://play-lh.googleusercontent.com/EP1U6E1jbBSEn3eXJz3sL71nfjQcokMf6CyNyQCO4pU8G_60sHcuQzciCARC4XDo3Es=s256-rw"
+      },
+      {
+          "name": "Central Puerto S.A.",
+          "phonenumber": "+54 (11) 4317 5000",
+          "websiteurl": "https://www.centralpuerto.com",
+          "address": "Avenida Tomas Alva Edison 2701,Bs As,Arg",
+          "membershiplevel": 2,
+          "industry": "Renewable Energy Company",
+          "imageurl": "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/bauwgs6jwau6tehsmdvc"
+      },
+      {
+          "name": "Pampa Energía S.A.",
+          "phonenumber": "+54 (11) 4344 6000",
+          "websiteurl": "http://www.pampaenergia.com/",
+          "address": "Maipu 1, Buenos Aires, C1425DS Argentina",
+          "membershiplevel": 3,
+          "industry": "Utilities Company",
+          "imageurl": "https://play-lh.googleusercontent.com/xMCpcGe-i3oE3AmjaYoD7GNE6Ea6pipcdmHmjC8HsGBVUe0BOf2oSMUmC6zZhJcCBA=s256-rw"
+      },
+      {
+          "name": "Vitopel S.A.",
+          "phonenumber": "+54 (35) 2447 8780",
+          "websiteurl": "http://www.vitopelargentina.com/",
+          "address": "Ruta Nacional, nº 9, Km 783 Villa del Totoral, Arg",
+          "membershiplevel": 1,
+          "industry": "Chemicals Company",
+          "imageurl": "https://media.glassdoor.com/sqll/2486468/vitopel-do-brasil-squarelogo-1553582286709.png"
+      },
+      {
+          "name": "Despegar.com Corp.",
+          "phonenumber": "+54 (11) 4894 3500",
+          "websiteurl": "http://www.despegar.com.ar/",
+          "address": "Manso 1069 Floor 5, Buenos Aires,Arg",
+          "membershiplevel": 1,
+          "industry": "Internet Software And Services Company",
+          "imageurl": "https://media.glassdoor.com/sqll/656503/despegar-com-squarelogo-1576172927596.png"
+      },
+      {
+          "name": "Accenture",
+          "phonenumber": "+1 (312) 842-5012",
+          "websiteurl": "https://www.accenture.com/",
+          "address": "Parque Patricios. CABA, Buenos Aires,",
+          "membershiplevel": 4,
+          "industry": "Business Counsulting",
+          "imageurl": "https://cdn.join.com/5b741e1ed6ed89002375215b/accenture-logo-l.jpg"
+      }
   ]
-  
+}

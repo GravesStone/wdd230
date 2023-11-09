@@ -1,72 +1,208 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Member Directory</title>
   <style>
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 2fr)); /* Change to 2fr */
-      gap: 20px;
+    /* Reset some default styles */
+    body, h1, h2, p {
+      margin: 0;
+      padding: 0;
     }
 
-    .card {
-      border: 1px solid #ddd;
-      padding: 10px;
+    body {
+      font-family: "Arial", sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+    }
+
+    header {
+      background-color: #0077b6;
+      color: #fff;
       text-align: center;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
-    img {
-      max-width: 100%;
+    nav {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav li {
+      display: inline;
+      margin: 0 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #0077b6;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    /* Member card styles */
+    .member-card {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin: 20px;
+      display: inline-block;
+      width: calc(30% - 40px);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+
+    .list-item {
+      margin: 20px 0;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
     }
   </style>
 </head>
 <body>
-  <div class="grid-container" id="card-grid">
-    <!-- Cards will be added here -->
-  </div>
-
+  <header>
+    <h1>Chamber of Commerce</h1>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Members</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  
+  <main>
+    <h2>Member Directory</h2>
+    <div id="directory-content">
+      <!-- Directory content will be added dynamically using JavaScript -->
+    </div>
+    <button onclick="toggleView('grid')">Grid View</button>
+    <button onclick="toggleView('list')">List View</button>
+  </main>
+  
+  <footer>
+    <p>&copy; 2023 Chamber of Commerce</p>
+  </footer>
+  
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const gridContainer = document.getElementById("card-grid");
+    // Member data (for demonstration purposes)
+    const membersData = [
+      {
+        "name": "Company 1",
+        "address": "123 Main St, City",
+        "phone": "555-123-4567",
+        "website": "http://www.company1.com",
+        "image": "company1.png",
+        "membershipLevel": "Gold",
+        "otherInfo": "Some additional info about Company 1"
+      },
+      {
+        "name": "Company 2",
+        "address": "456 Oak St, Town",
+        "phone": "555-987-6543",
+        "website": "http://www.company2.com",
+        "image": "company2.png",
+        "membershipLevel": "Silver",
+        "otherInfo": "Some additional info about Company 2"
+      },
+      // Add more member data here
+    ];
 
-      // Sample JSON data (replace with your own data)
-      const jsonData = [
-        {
-          "title": "Card 1",
-          "description": "This is the first card. It contains some information about the first item.",
-          "image": "image1.jpg"
-        },
-        {
-          "title": "Card 2",
-          "description": "This is the second card. It provides details about the second item.",
-          "image": "image2.jpg"
-        },
-        {
-          "title": "Card 3",
-          "description": "This is the third card. It describes the third item in the collection.",
-          "image": "image3.jpg"
-        }
-      ];
+    // Function to display members in grid view
+    function displayGridMembers(members) {
+      const directoryContent = document.getElementById("directory-content");
+      directoryContent.innerHTML = "";
 
-      jsonData.forEach((card) => {
-        const cardElement = document.createElement("div");
-        cardElement.className = "card";
+      members.forEach((member) => {
+        const memberCard = document.createElement("div");
+        memberCard.className = "member-card";
 
-        const title = document.createElement("h2");
-        title.textContent = card.title;
+        // Create member card content here
+        const cardContent = `
+          <h2>${member.name}</h2>
+          <p>Address: ${member.address}</p>
+          <p>Phone: ${member.phone}</p>
+          <p>Website: <a href="${member.website}" target="_blank">${member.website}</a></p>
+          <p>Membership Level: ${member.membershipLevel}</p>
+          <p>Other Info: ${member.otherInfo}</p>
+        `;
 
-        const description = document.createElement("p");
-        description.textContent = card.description;
-
-        const image = document.createElement("img");
-        image.src = card.image;
-
-        cardElement.appendChild(title);
-        cardElement.appendChild(description);
-        cardElement.appendChild(image);
-
-        gridContainer.appendChild(cardElement);
+        memberCard.innerHTML = cardContent;
+        directoryContent.appendChild(memberCard);
       });
-    });
+    }
+
+    // Function to display members in list view
+    function displayListMembers(members) {
+      const directoryContent = document.getElementById("directory-content");
+      directoryContent.innerHTML = "<ul>";
+
+      members.forEach((member) => {
+        const listItem = document.createElement("li");
+        listItem.className = "list-item";
+        listItem.innerHTML = `
+          <h2>${member.name}</h2>
+          <p>Address: ${member.address}</p>
+          <p>Phone: ${member.phone}</p>
+          <p>Website: <a href="${member.website}" target="_blank">${member.website}</a></p>
+          <p>Membership Level: ${member.membershipLevel}</p>
+          <p>Other Info: ${member.otherInfo}</p>
+        `;
+        directoryContent.appendChild(listItem);
+      });
+
+      directoryContent.innerHTML += "</ul>";
+    }
+
+    // Function to toggle between grid and list view
+    function toggleView(view) {
+      if (view === "grid") {
+        displayGridMembers(membersData);
+      } else if (view === "list") {
+        displayListMembers(membersData);
+      }
+    }
+
+    // Initially display members in grid view
+    toggleView("grid");
   </script>
 </body>
 </html>

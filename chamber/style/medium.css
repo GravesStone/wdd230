@@ -204,3 +204,22 @@ textarea {
 .thanks-div h1 {
     margin: 1.5em auto;
 }
+/*===Discovery page=====*/
+
+
+
+.grid .company {
+    margin: 1rem;
+    width: 235px;
+    max-height: 350px;
+    margin: 1rem;
+    display: grid;
+    justify-items: center;
+
+
+}
+
+iframe {
+    max-width: 480px;
+    margin: 1rem auto;
+}

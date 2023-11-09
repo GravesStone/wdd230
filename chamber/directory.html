@@ -39,18 +39,13 @@
         </nav>
         <div class="btn"> <button id="hamburger-btn"><span>&#9776;</span><span>x</span></button></div>
     </header>   
-    <main>
-        <div id="main-discovery">
-            <div class="menu">
-                <h2>Business Directory</h2>
-                <div>
-                    <img src="./images/grid-icon.png" id="grid-icon" alt="grid icon">
-                    <img src="./images/list-icon.png" id="list" alt="list icon">
-                </div>
+    <main class="directory">
+                <h2>Member Directory</h2>
+            <div id="directory-content">
+            <!-- Directory content will be added dynamically using JavaScript -->
             </div>
-            <div id="companies" class="grid">
-            </div>
-        </div>
+            <button onclick="toggleView('grid')">Grid View</button>
+            <button onclick="toggleView('list')">List View</button>
     </main>
 
     <footer>
@@ -81,7 +76,7 @@
         </div>
     </footer>
     <script src="scripts/hamburger.js"></script>
-    
+    <script src="/chamber/scripts/directory.js"></script>
     <script src="../chamber/scripts/transition.js"></script>
 </body>
 

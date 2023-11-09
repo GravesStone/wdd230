@@ -730,3 +730,45 @@ th {
     color: var(--constrast-backgr-main);
     text-align: left;
 }
+/*------- Discovery --------*/
+
+  .directory {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+
+
+  /* Member card styles */
+  .member-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+    display: inline-block;
+    width: calc(30% - 40px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+
+  .list-item {
+    margin: 20px 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+
+  @media (max-width: 768px) {
+    main {
+      padding: 10px;
+    }
+    .member-card {
+      width: 100%;
+      margin: 10px 0;
+    }
+  }

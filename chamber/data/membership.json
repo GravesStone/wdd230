@@ -1,0 +1,20 @@
+[
+    {
+      "name": "Company 1",
+      "address": "123 Main St, City",
+      "phone": "555-123-4567",
+      "website": "http://www.company1.com",
+      "image": "company1.png",
+      "membershipLevel": "Gold",
+      "otherInfo": "Some additional info about Company 1"
+    },
+    {
+      "name": "Company 2",
+      "address": "456 Oak St, Town",
+      "phone": "555-987-6543",
+      "website": "http://www.company2.com",
+      "image": "company2.png",
+      "membershipLevel": "Silver",
+      "otherInfo": "Some additional info about Company 2"
+    }
+  ]

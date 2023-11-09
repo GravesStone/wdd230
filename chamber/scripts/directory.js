@@ -1,63 +1,74 @@
-if (title == "Directory") {
+const baseURL = "https://gravesstone.github.io/wdd230/"; // Replace with your actual GitHub Pages URL
+const linksURL = `${baseURL}chamber\data\membership.json`;
 
-  displayComp = document.getElementById("companies")
-
-  const displayCompanies = (data) => {
-      // Fetch the Data 
-      fetch(data)
-          .then(function (response) {
-              // Convert to a Json object
-              return response.json();
-          })
-          .then(function (jsonObject) {
-
-              // Displays the Data in the HTML 
-              outputInHtml(jsonObject)
-          });
-  }
-
-  const outputInHtml = (processedData) => {
-      companies = processedData.companies
-
-      html = companies.map(company =>
-          `
-      <div class="company">
-          <h2>${company.name}</h2>
-          <a href="${company.websiteurl}" target="_blank"><img src="${company.imageurl}" alt="${company.name}"></a>
-          <p>${company.industry}</p> 
-         <p>Visit <a href="${company.websiteurl}" target="_blank"> ${company.websiteurl}</p></a>
-          <p>${company.phonenumber}</p>
-          </div>
-      `
-      ).join("")
-
-      displayComp.innerHTML += html
-  }
-
-  displayCompanies(data)
-
-
-  const gridbutton = document.querySelector("#grid-icon");
-  const listbutton = document.querySelector("#list");
-  const displayCompany = document.querySelector("#companies");
-
-  // The following code could be written cleaner. How? We may have to simplfiy our HTMl and think about a default view.
-  listbutton.style.display = "block";
-  gridbutton.style.display = "none";
-  gridbutton.addEventListener("click", () => {
-      // example using arrow function
-      displayCompany.classList.add("grid");
-      displayCompany.classList.remove("list");
-      gridbutton.style.display = "none";
-      listbutton.style.display = "block";
-  });
-
-  listbutton.addEventListener("click", showList); // example using defined function
-
-  function showList() {
-      displayCompany.classList.add("list");
-      displayCompany.classList.remove("grid");
-      listbutton.style.display = "none";
-      gridbutton.style.display = "block";
+// Function to load member data from JSON asynchronously
+async function loadMemberData() {
+  try {
+    const response = await fetch(linksURL);
+    const data = await response.json();
+    return data.members;
+  } catch (error) {
+    console.error(error);
+    return [];
   }
 }
+
+// Function to display members in grid view
+function displayGridMembers(members) {
+  const directoryContent = document.getElementById("directory-content");
+  directoryContent.innerHTML = "";
+
+  members.forEach((member) => {
+    const memberCard = document.createElement("div");
+    memberCard.className = "member-card";
+
+    // Create member card content here
+    const cardContent = `
+      <h2>${member.name}</h2>
+      <p>Address: ${member.address}</p>
+      <p>Phone: ${member.phone}</p>
+      <p>Website: <a href="${member.website}" target="_blank">${member.website}</a></p>
+      <p>Membership Level: ${member.membershipLevel}</p>
+      <p>Other Info: ${member.otherInfo}</p>
+    `;
+
+    memberCard.innerHTML = cardContent;
+    directoryContent.appendChild(memberCard);
+  });
+}
+
+// Function to display members in list view
+function displayListMembers(members) {
+  const directoryContent = document.getElementById("directory-content");
+  directoryContent.innerHTML = "<ul>";
+
+  members.forEach((member) => {
+    const listItem = document.createElement("li");
+    listItem.className = "list-item";
+    listItem.innerHTML = `
+      <h2>${member.name}</h2>
+      <p>Address: ${member.address}</p>
+      <p>Phone: ${member.phone}</p>
+      <p>Website: <a href="${member.website}" target="_blank">${member.website}</a></p>
+      <p>Membership Level: ${member.membershipLevel}</p>
+      <p>Other Info: ${member.otherInfo}</p>
+    `;
+    directoryContent.appendChild(listItem);
+  });
+
+  directoryContent.innerHTML += "</ul>";
+}
+
+// Function to toggle between grid and list view
+async function toggleView(view) {
+  const membersData = await loadMemberData();
+
+  if (view === "grid") {
+    displayGridMembers(membersData);
+  } else if (view === "list") {
+    displayListMembers(membersData);
+  }
+}
+
+// Initially display members in grid view
+toggleView("grid");

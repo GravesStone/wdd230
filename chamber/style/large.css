@@ -196,18 +196,3 @@ form input {
     width: 85%;
 }
 /*====== Directory ======*/
-.grid {
-    max-width: 1200px;
-
-}
-
-.list .company {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-
-}
-
-.company p:nth-child(3) {
-    display: block;
-}

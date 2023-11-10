@@ -196,12 +196,3 @@ form input {
     width: 85%;
 }
 /*====== Directory ======*/
-@media (min-width: 768px) {
-    .directory {
-      max-width: 800px;
-      margin: 20px auto;
-    }
-    .member-card, .list-item {
-      width: calc(50% - 40px);
-    }
-  }

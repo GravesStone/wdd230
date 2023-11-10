@@ -250,8 +250,3 @@ iframe {
     margin: 1rem auto;
 }
 /*====== Directory Section====*/
-@media (min-width: 576px) and (max-width: 767px) {
-    main {
-      max-width: 600px;
-    }
-  }

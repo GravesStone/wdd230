@@ -735,51 +735,65 @@ th {
 
 
 .directory {
+    display: block;
     margin: 20px;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-  }
+    
+}
 
-.directory h2 {
+
+  h2 {
     font-size: 24px;
     margin-bottom: 20px;
     color: #333;
   }
 
   /* Member card styles */
-  .member-card, .list-item {
+  .member-card {
     background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin: 20px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin: 20px;
+      display: inline-block;
+      width: calc(30% - 40px);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+
+    
   }
-
-  .member-card h2, .list-item h2 {
-    color: #0077b6;
+  .list-item {
+    margin: 1rem auto;
+    border: 2px solid var(--constrast-backgr-main);
+    border-radius: .5rem;
+    padding: 0.5rem;
+    text-align: center;
+    color: var(--backgr-main);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 1000px;
   }
-
-  .member-card p, .list-item p {
-    color: #555;
-  }
-
-
-
-
-  /* Mobile Screens */
-  @media (max-width: 575px) {
-    nav li {
-      display: block;
-      margin: 10px 0;
-    }
-    .directory {
-      padding: 10px;
-    }
-    .member-card, .list-item {
+  @media only screen and (max-width: 600px) {
+    .member-card {
       width: 100%;
-      margin: 10px 0;
     }
   }
+  
+  /* Medium screen */
+  @media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .member-card {
+      width: calc(50% - 40px);
+    }
+  }
+  
+  /* Large screen */
+  @media only screen and (min-width: 1025px) {
+    .member-card {
+      width: calc(30% - 40px);
+    }
+  }
+
+
+

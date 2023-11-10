@@ -742,7 +742,7 @@ th {
     border-radius: 5px;
   }
 
-  h2 {
+.directory h2 {
     font-size: 24px;
     margin-bottom: 20px;
     color: #333;
@@ -766,22 +766,8 @@ th {
     color: #555;
   }
 
-@media (min-width: 768px) {
-    .directory {
-      max-width: 800px;
-      margin: 20px auto;
-    }
-    .member-card, .list-item {
-      width: calc(50% - 40px);
-    }
-  }
 
-  /* Medium Screens */
-  @media (min-width: 576px) and (max-width: 767px) {
-    main {
-      max-width: 600px;
-    }
-  }
+
 
   /* Mobile Screens */
   @media (max-width: 575px) {

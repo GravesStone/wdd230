@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Members Directory</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    #directory-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card, .list-item {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 15px;
+      overflow: hidden;
+      width: 300px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .card:hover, .list-item:hover {
+      transform: scale(1.05);
+    }
+
+    .card img, .list-item img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .card p, .list-item p {
+      margin: 10px;
+    }
+
+    .list-item {
+      width: 100%;
+      transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .list-item:hover {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    select, button {
+      margin: 10px;
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Members Directory</h1>
+  </header>
+
+  <label for="view-toggle">View:</label>
+  <select id="view-toggle" onchange="toggleView()">
+    <option value="grid">Grid</option>
+    <option value="list">List</option>
+  </select>
+
+  <div id="directory-content"></div>
+
+  <button onclick="toggleView('grid')">Grid View</button>
+  <button onclick="toggleView('list')">List View</button>
+
+  <script>
+    async function getMembers() {
+      const response = await fetch('data/members.json');
+      const data = await response.json();
+      displayMembers(data.members);
+    }
+
+    function displayMembers(members) {
+      const container = document.getElementById('directory-content');
+      container.innerHTML = '';
+
+      const view = document.getElementById('view-toggle').value;
+
+      members.forEach(member => {
+        if (view === 'grid') {
+          const card = document.createElement('div');
+          card.className = 'card';
+          card.innerHTML = `
+            <img src="${member.image}" alt="${member.name} image">
+            <div>
+              <h2>${member.name}</h2>
+              <p>${member.address}</p>
+              <p>Phone: ${member.phone}</p>
+              <p>Website: <a href="${member.website}" target="_blank">${member.website}</a></p>
+              <p>Membership Level: ${member.membershipLevel}</p>
+              <p>${member.otherInfo}</p>
+            </div>
+          `;
+          container.appendChild(card);
+        } else if (view === 'list') {
+          const listItem = document.createElement('div');
+          listItem.className = 'list-item';
+          listItem.innerHTML = `
+            <h2>${member.name}</h2>
+            <img src="${member.image}" alt="${member.name} image">
+            <div>
+              <p>${member.address}</p>
+              <p>Phone: ${member.phone}</p>
+              <p>Website: <a href="${member.website}" target="_blank">${member.website}</a></p>
+              <p>Membership Level: ${member.membershipLevel}</p>
+              <p>${member.otherInfo}</p>
+            </div>
+          `;
+          container.appendChild(listItem);
+        }
+      });
+    }
+
+    function toggleView(selectedView) {
+      // Update the selected view
+      document.getElementById('view-toggle').value = selectedView;
+      
+      // Display members based on the selected view
+      displayMembers();
+    }
+
+    // Call the async function to fetch members data
+    getMembers();
+  </script>
+
+</body>
+</html>

@@ -1,20 +1,67 @@
-[
+{
+  "members": [
     {
-      "name": "Company 1",
-      "address": "123 Main St, City",
-      "phone": "555-123-4567",
-      "website": "http://www.company1.com",
-      "image": "company1.png",
+      "name": "Company A",
+      "address": "123 Main St, City, Country",
+      "phone": "+1 123-456-7890",
+      "website": "http://www.companyA.com",
+      "image": "companyA.jpg",
       "membershipLevel": "Gold",
-      "otherInfo": "Some additional info about Company 1"
+      "otherInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
     {
-      "name": "Company 2",
-      "address": "456 Oak St, Town",
-      "phone": "555-987-6543",
-      "website": "http://www.company2.com",
-      "image": "company2.png",
+      "name": "Company B",
+      "address": "456 Oak St, City, Country",
+      "phone": "+1 987-654-3210",
+      "website": "http://www.companyB.com",
+      "image": "companyB.jpg",
       "membershipLevel": "Silver",
-      "otherInfo": "Some additional info about Company 2"
+      "otherInfo": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      "name": "Company C",
+      "address": "789 Pine St, City, Country",
+      "phone": "+1 555-123-4567",
+      "website": "http://www.companyC.com",
+      "image": "companyC.jpg",
+      "membershipLevel": "Bronze",
+      "otherInfo": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
+    },
+    {
+      "name": "Company D",
+      "address": "101 Maple St, City, Country",
+      "phone": "+1 777-888-9999",
+      "website": "http://www.companyD.com",
+      "image": "companyD.jpg",
+      "membershipLevel": "Gold",
+      "otherInfo": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+      "name": "Company E",
+      "address": "202 Birch St, City, Country",
+      "phone": "+1 333-444-5555",
+      "website": "http://www.companyE.com",
+      "image": "companyE.jpg",
+      "membershipLevel": "Silver",
+      "otherInfo": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+      "name": "Company F",
+      "address": "303 Cedar St, City, Country",
+      "phone": "+1 999-888-7777",
+      "website": "http://www.companyF.com",
+      "image": "companyF.jpg",
+      "membershipLevel": "Bronze",
+      "otherInfo": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+    },
+    {
+      "name": "Company G",
+      "address": "404 Elm St, City, Country",
+      "phone": "+1 444-555-6666",
+      "website": "http://www.companyG.com",
+      "image": "companyG.jpg",
+      "membershipLevel": "Gold",
+      "otherInfo": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
     }
   ]
+}

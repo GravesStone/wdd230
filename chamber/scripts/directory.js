@@ -1,4 +1,4 @@
-const baseURL = "https://gravesstone.github.io/wdd230/"; // Replace with your actual GitHub Pages URL
+const baseURL = "https://gravesstone.github.io/wdd230/chamber/"; // Replace with your actual GitHub Pages URL
 const linksURL = `${baseURL}chamber/data/membership.json`;
 
 // Function to load member data from JSON asynchronously

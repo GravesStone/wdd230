@@ -774,6 +774,7 @@ th {
     justify-content: space-evenly;
     align-items: center;
     max-width: 1000px;
+    width: 100%;
   }
   @media only screen and (max-width: 600px) {
     .member-card {
@@ -782,18 +783,6 @@ th {
   }
   
   /* Medium screen */
-  @media only screen and (min-width: 601px) and (max-width: 1024px) {
-    .member-card {
-      width: calc(50% - 40px);
-    }
-  }
-  
-  /* Large screen */
-  @media only screen and (min-width: 1025px) {
-    .member-card {
-      width: calc(30% - 40px);
-    }
-  }
 
 
 

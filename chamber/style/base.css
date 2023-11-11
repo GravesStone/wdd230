@@ -782,6 +782,24 @@ th {
     border-radius: 5px; /* Add rounded corners if desired */
     margin-bottom: 10px; /* Add some space below the image */
   }
+  .btng{
+    display: inline-block;
+      padding: 15px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      border-radius: 50px;
+      background-color: var(--backgr-main);
+      color: var(--constrast-backgr-main);
+      border: 2px solid #0A0C0B;
+      transition: background-color 0.3s, color 0.3s;
+  }
+  .btng:hover{
+    background-color: var(--constrast-backgr-main);
+    color: var(--backgr-main);
+  }
   @media only screen and (max-width: 700px) {
     .member-card {
       width: 100%;

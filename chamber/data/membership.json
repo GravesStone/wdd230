@@ -46,7 +46,7 @@
       "otherInfo": "Now, the road to business success has come into focus, revealing the true potential of Al-fueled technologies and human-centricity."
     },
     {
-      "name": "Company F",
+      "name": "Ayala Corporation",
       "address": "31/F, Tower One and Exchange Plaza, Ayala Triangle, Ayala Avenue, Makati City",
       "phone": "(632) 7908-3111",
       "website": "http://www.companyF.com",
@@ -55,13 +55,13 @@
       "otherInfo": "Developing businesses that transform industries, challenging the status quo, and bringing innovations here in the Philippines and abroad that contribute to the nation’s social and economic agenda."
     },
     {
-      "name": "Company G",
-      "address": "404 Elm St, City, Country",
-      "phone": "+1 444-555-6666",
-      "website": "http://www.companyG.com",
+      "name": "Robinsons land corporation",
+      "address": "Level 2, Galleria Corporate Center, EDSA, corner Ortigas Avenue, Quezon City, 1110 Metro Manila",
+      "phone": "(02) 8397 1888",
+      "website": "https://www.robinsonsland.com/",
       "image": "companyG.jpg",
       "membershipLevel": "Gold",
-      "otherInfo": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+      "otherInfo": "Robinsons Land Corporation (“RLC”), incorporated in 1980, is the real estate arm of JG Summit. It is one of the leading real estate and property developers in the Philippines"
     }
   ]
 }

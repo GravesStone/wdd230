@@ -1,20 +1,20 @@
 {
   "members": [
     {
-      "name": "Company A",
-      "address": "123 Main St, City, Country",
-      "phone": "+1 123-456-7890",
-      "website": "http://www.companyA.com",
-      "image": "companyA.jpg",
+      "name": "Hexagon Group of companies",
+      "address": "Hexagon Corporate Center, 1471 Quezon Ave, Brgy, Quezon City, 1104",
+      "phone": "(02) 8351-0164",
+      "website": "https://www.hexagon.com.ph/",
+      "image": "chamber/images/hexagon.webp",
       "membershipLevel": "Gold",
-      "otherInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      "otherInfo": "The business units under SGSHI are mainly in the import and distribution business covering various industries such as Agriculture, Automotives, Healthcare, Industrial and Information Technology. Hexagon has a strong local presence, not just in Metro Manila, but also in fast developing areas in the Philippines. We also operate in select Southeast Asia countries such as Singapore, Malaysia and Indonesia."
     },
     {
-      "name": "Company B",
-      "address": "456 Oak St, City, Country",
-      "phone": "+1 987-654-3210",
-      "website": "http://www.companyB.com",
-      "image": "companyB.jpg",
+      "name": "Accenture ph",
+      "address": "Three Cyberpod Centris - North Tower EDSA Eton Centris, Barangay Pinahan, EDSA and Corner, Quezon Ave, Quezon City, 1100 Metro Manila",
+      "phone": "25805888",
+      "website": "https://www.accenture.com/ph-en",
+      "image": "chamber/images/accenture.webp",
       "membershipLevel": "Silver",
       "otherInfo": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },

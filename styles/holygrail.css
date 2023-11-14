@@ -200,12 +200,16 @@ li {
   width: 20%;
   padding: 50px;
   margin: 5px;
-  background: #f0f0f0;
+  background:#8A3914;
+  color: #fff;
   border: 1px solid #ccc;
   border-radius: 5px;
   text-align: center;
   border:3px solid #000;
   box-shadow: 5px 10px #808080;
+}
+.card2 h3{
+  font-style: italic;
 }
 iframe{
   height: 200px;

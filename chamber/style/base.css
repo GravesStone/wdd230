@@ -778,7 +778,7 @@ th {
     gap: 2px;
   }
   .member-image {
-    max-width: 100%; /* Ensure the image doesn't exceed its container width */
+    max-width: 50%; /* Ensure the image doesn't exceed its container width */
     height: auto; /* Maintain aspect ratio */
     border-radius: 2px; /* Add rounded corners if desired */
     margin-bottom: 5px; /* Add some space below the image */
@@ -809,6 +809,17 @@ th {
         width: 50%;
         height: 50%;
     }
+    .member-card {
+        background-color: #fff;
+          border: 1px solid #ccc;
+          padding: 0;
+          margin: 0;
+          display: inline-block;
+          width: calc(30% - 40px);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          border-radius: 5px;
+        display: inline;
+      }
   }
   
   /* Medium screen */

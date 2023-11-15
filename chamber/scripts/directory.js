@@ -48,7 +48,7 @@ function displayListMembers(members) {
     listItem.className = "list-item";
     listItem.innerHTML = `
       <h2>${member.name}</h2>
-      <img src="${member.image}" alt="${member.name} Image" class="member-image">
+      <img src="${member.image}" alt="${member.name} Image" class="member-image" width="100" height="100">
       <p>Address: ${member.address}</p>
       <p>Phone: ${member.phone}</p>
       <p>Website: <a href="${member.website}" target="_blank">${member.website}</a></p>

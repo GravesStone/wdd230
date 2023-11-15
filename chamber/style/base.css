@@ -779,8 +779,8 @@ th {
   .member-image {
     max-width: 100%; /* Ensure the image doesn't exceed its container width */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 5px; /* Add rounded corners if desired */
-    margin-bottom: 10px; /* Add some space below the image */
+    border-radius: 2px; /* Add rounded corners if desired */
+    margin-bottom: 5px; /* Add some space below the image */
   }
   .btng{
     display: inline-block;

@@ -5,7 +5,7 @@
       "address": "Hexagon Corporate Center, 1471 Quezon Ave, Brgy, Quezon City, 1104",
       "phone": "(02) 8351-0164",
       "website": "https://www.hexagon.com.ph/",
-      "image": "chamber/images/hexagon.webp",
+      "image": "https://raw.githubusercontent.com/GravesStone/wdd230/main/chamber/images/hexagon.webp",
       "membershipLevel": "Gold",
       "otherInfo": "The business units under SGSHI are mainly in the import and distribution business. "
     },
@@ -14,7 +14,7 @@
       "address": "Three Cyberpod Centris - North Tower EDSA Eton Centris, Barangay Pinahan, EDSA and Corner, Quezon Ave, Quezon City, 1100 Metro Manila",
       "phone": "25805888",
       "website": "https://www.accenture.com/ph-en",
-      "image": "chamber/images/accenture.webp",
+      "image": "https://raw.githubusercontent.com/GravesStone/wdd230/main/chamber/images/accenture.webp",
       "membershipLevel": "Silver",
       "otherInfo": "We help our clients become the next and best versions of themselves."
     },
@@ -23,7 +23,7 @@
       "address": "G/F SM Cyber Two Bldg., EDSA Buendia, Makati, 1226 Metro Manila",
       "phone": "09177775555",
       "website": "https://vxi-family.com/",
-      "image": "chamber/images/vxi.webp",
+      "image": "https://raw.githubusercontent.com/GravesStone/wdd230/main/chamber/images/vxi.webp",
       "membershipLevel": "Bronze",
       "otherInfo": "Our founders believed that a unique blend of Technology and Customer Service will ultimately achieve Excellent Consumer Management."
     },
@@ -32,7 +32,7 @@
       "address": "2nd Floor, Unimart, Capitol Commons, Shaw Boulevard, corner Meralco Ave, Pasig, 1600 Metro Manila",
       "phone": "0284770771",
       "website": "https://www.acehardware.ph/",
-      "image": "https://raw.githubusercontent.com/GravesStone/wdd230/main/chamber/images/Ace.webp",
+      "image": "https://raw.githubusercontent.com/GravesStone/wdd230/main/chamber/images/Ace.webpz`",
       "membershipLevel": "Gold",
       "otherInfo": "ACE Hardware lives up to its reputation of being the Helpful Hardware. As part of its new “WE CAN HELP” campaign"
     },
@@ -41,7 +41,7 @@
       "address": "2/F New Annex SM City Fairview, Quezon City, Metro",
       "phone": "(02) 8857 3222",
       "website": "https://www.teleperformance.com/en-us/locations/philippines-site/philippines/",
-      "image": "./chamber/images/teleperformance.webp",
+      "image": "https://raw.githubusercontent.com/GravesStone/wdd230/main/chamber/images/teleperformance.webp",
       "membershipLevel": "Silver",
       "otherInfo": "Now, the road to business success has come into focus, revealing the true potential of Al-fueled technologies and human-centricity."
     },
@@ -50,7 +50,7 @@
       "address": "31/F, Tower One and Exchange Plaza, Ayala Triangle, Ayala Avenue, Makati City",
       "phone": "(632) 7908-3111",
       "website": "http://www.companyF.com",
-      "image": "chamber/images/ayala.webp",
+      "image": "https://raw.githubusercontent.com/GravesStone/wdd230/main/chamber/images/ayala.webp",
       "membershipLevel": "Gold",
       "otherInfo": "Developing businesses that transform industries, challenging the status quo, and bringing innovations here in the Philippines and abroad that contribute to the nation’s social and economic agenda."
     },
@@ -59,7 +59,7 @@
       "address": "Level 2, Galleria Corporate Center, EDSA, corner Ortigas Avenue, Quezon City, 1110 Metro Manila",
       "phone": "(02) 8397 1888",
       "website": "https://www.robinsonsland.com/",
-      "image": "chamber/images/RLC.webp",
+      "image": "https://raw.githubusercontent.com/GravesStone/wdd230/main/chamber/images/RLC.webp",
       "membershipLevel": "Gold",
       "otherInfo": "Robinsons Land Corporation (“RLC”), incorporated in 1980, is the real estate arm of JG Summit. It is one of the leading real estate and property developers in the Philippines"
     }

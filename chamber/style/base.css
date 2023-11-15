@@ -775,6 +775,7 @@ th {
     align-items: center;
     max-width: 1000px;
     width: 100%;
+    gap: 2px;
   }
   .member-image {
     max-width: 100%; /* Ensure the image doesn't exceed its container width */
@@ -803,6 +804,10 @@ th {
   @media only screen and (max-width: 700px) {
     .member-card {
       width: 100%;
+    }
+    .member-image{
+        width: 50%;
+        height: 50%;
     }
   }
   

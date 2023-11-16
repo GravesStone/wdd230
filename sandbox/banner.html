@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <style>
+        /* Add your existing styles here */
+
+        #chamberBanner {
+            display: none;
+            background-color: #007BFF;
+            color: #FFFFFF;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        #closeBanner {
+            cursor: pointer;
+            color: #FFFFFF;
+            float: right;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Your existing website content -->
+
+<!-- Chamber of Commerce Meet and Greet Banner -->
+<div id="chamberBanner">
+    <p>Join us at the Chamber of Commerce Meet and Greet on Wednesday at 7:00 p.m.!</p>
+    <span id="closeBanner">❌ Close</span>
+</div>
+
+<script>
+    // Check if the current day is Monday, Tuesday, or Wednesday
+    var today = new Date().getDay();
+    if (today >= 1 && today <= 3) {
+        // Show the banner on eligible days
+        document.getElementById('chamberBanner').style.display = 'block';
+    }
+
+    // Add event listener to close the banner and save the state in localStorage
+    document.getElementById('closeBanner').addEventListener('click', function() {
+        document.getElementById('chamberBanner').style.display = 'none';
+        localStorage.setItem('chamberBannerClosed', 'true');
+    });
+
+    // Check if the banner was closed previously, and hide it if closed
+    if (localStorage.getItem('chamberBannerClosed') === 'true') {
+        document.getElementById('chamberBanner').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>

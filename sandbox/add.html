@@ -1,208 +1,129 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Member Directory</title>
-  <style>
-    /* Reset some default styles */
-    body, h1, h2, p {
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
 
-    body {
-      font-family: "Arial", sans-serif;
-      background-color: #f7f7f7;
-      margin: 0;
-    }
+        #current-weather, #forecast {
+            margin-bottom: 20px;
+        }
 
-    header {
-      background-color: #0077b6;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
+        .forecast-day {
+            margin-bottom: 10px;
+        }
 
-    nav {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 10px;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    nav li {
-      display: inline;
-      margin: 0 10px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #0077b6;
-    }
-
-    main {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      border-radius: 5px;
-    }
-
-    h2 {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-
-    /* Member card styles */
-    .member-card {
-      background-color: #fff;
-      border: 1px solid #ccc;
-      padding: 20px;
-      margin: 20px;
-      display: inline-block;
-      width: calc(30% - 40px);
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      border-radius: 5px;
-    }
-
-    .list-item {
-      margin: 20px 0;
-      background-color: #fff;
-      border: 1px solid #ccc;
-      padding: 20px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      border-radius: 5px;
-    }
-
-    /* Footer styles */
-    footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 10px;
-    }
-  </style>
+        .forecast-icon {
+            width: 50px; /* Adjust the size of the icon as needed */
+            height: 50px;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Chamber of Commerce</h1>
-  </header>
-  
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">Members</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-  
-  <main>
-    <h2>Member Directory</h2>
-    <div id="directory-content">
-      <!-- Directory content will be added dynamically using JavaScript -->
+    <div id="current-weather">
+        <h2>Current Weather</h2>
+        <p id="description"></p>
+        <p id="city"></p>
+        <p id="temperature"></p>
+        <p id="windChill"></p>
+        <p id="humidity"></p>
+        <img id="weather-icon" alt="Weather Icon">
     </div>
-    <button onclick="toggleView('grid')">Grid View</button>
-    <button onclick="toggleView('list')">List View</button>
-  </main>
-  
-  <footer>
-    <p>&copy; 2023 Chamber of Commerce</p>
-  </footer>
-  
-  <script>
-    // Member data (for demonstration purposes)
-    const membersData = [
-      {
-        "name": "Company 1",
-        "address": "123 Main St, City",
-        "phone": "555-123-4567",
-        "website": "http://www.company1.com",
-        "image": "company1.png",
-        "membershipLevel": "Gold",
-        "otherInfo": "Some additional info about Company 1"
-      },
-      {
-        "name": "Company 2",
-        "address": "456 Oak St, Town",
-        "phone": "555-987-6543",
-        "website": "http://www.company2.com",
-        "image": "company2.png",
-        "membershipLevel": "Silver",
-        "otherInfo": "Some additional info about Company 2"
-      },
-      // Add more member data here
-    ];
 
-    // Function to display members in grid view
-    function displayGridMembers(members) {
-      const directoryContent = document.getElementById("directory-content");
-      directoryContent.innerHTML = "";
+    <div id="forecast">
+        <h2>3-Day Forecast</h2>
+        <div class="forecast-day" id="monday">
+            <p></p>
+            <img class="forecast-icon" id="iconMonday" alt="Forecast Icon">
+        </div>
+        <div class="forecast-day" id="tuesday">
+            <p></p>
+            <img class="forecast-icon" id="iconTuesday" alt="Forecast Icon">
+        </div>
+        <div class="forecast-day" id="wednesday">
+            <p></p>
+            <img class="forecast-icon" id="iconWednesday" alt="Forecast Icon">
+        </div>
+        <!-- Add similar divs for Thursday, Friday, Saturday, Sunday -->
 
-      members.forEach((member) => {
-        const memberCard = document.createElement("div");
-        memberCard.className = "member-card";
+    </div>
 
-        // Create member card content here
-        const cardContent = `
-          <h2>${member.name}</h2>
-          <p>Address: ${member.address}</p>
-          <p>Phone: ${member.phone}</p>
-          <p>Website: <a href="${member.website}" target="_blank">${member.website}</a></p>
-          <p>Membership Level: ${member.membershipLevel}</p>
-          <p>Other Info: ${member.otherInfo}</p>
-        `;
+    <script>
+        async function getWeatherData() {
+            const apiKey = '15afb914adc211c491651741ae88beb9'; // Replace with your OpenWeatherMap API key
+            const city = 'Quezon City'; // Replace with the desired city name
+            const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-        memberCard.innerHTML = cardContent;
-        directoryContent.appendChild(memberCard);
-      });
-    }
+            try {
+                const response = await fetch(weatherUrl);
+                const data = await response.json();
+                const temperature = data.main.temp;
+                const windSpeed = data.wind.speed;
+                const humidity = data.main.humidity;
+                const iconCode = data.weather[0].icon;
 
-    // Function to display members in list view
-    function displayListMembers(members) {
-      const directoryContent = document.getElementById("directory-content");
-      directoryContent.innerHTML = "<ul>";
+                const windChillIndex = 5.74 + 0.6215 * temperature - 35.75 * Math.pow(windSpeed, 0.16) + 0.4275 * temperature * Math.pow(windSpeed, 0.16);
 
-      members.forEach((member) => {
-        const listItem = document.createElement("li");
-        listItem.className = "list-item";
-        listItem.innerHTML = `
-          <h2>${member.name}</h2>
-          <p>Address: ${member.address}</p>
-          <p>Phone: ${member.phone}</p>
-          <p>Website: <a href="${member.website}" target="_blank">${member.website}</a></p>
-          <p>Membership Level: ${member.membershipLevel}</p>
-          <p>Other Info: ${member.otherInfo}</p>
-        `;
-        directoryContent.appendChild(listItem);
-      });
+                document.getElementById('description').innerText = `Condition: ${data.weather[0].description}`;
+                document.getElementById('city').textContent = city;
+                document.getElementById('temperature').textContent = `${temperature} °C`;
+                document.getElementById('windChill').textContent = `Chill: ${windChillIndex.toFixed(2)} °C`;
+                document.getElementById('humidity').textContent = `Report: ${humidity}%`;
 
-      directoryContent.innerHTML += "</ul>";
-    }
+                const iconUrl = `http://openweathermap.org/img/wn/${iconCode}.png`;
+                document.getElementById('weather-icon').src = iconUrl;
+            } catch (error) {
+                console.error('Error fetching weather data: ', error);
+                document.getElementById('city').textContent = 'City: N/A';
+                document.getElementById('temperature').textContent = 'Temperature: N/A';
+                document.getElementById('windChill').textContent = 'Wind Chill: N/A';
+                document.getElementById('humidity').textContent = 'Humidity: N/A';
+                document.getElementById('weather-icon').src = ''; // Clear the icon
+            }
+        }
 
-    // Function to toggle between grid and list view
-    function toggleView(view) {
-      if (view === "grid") {
-        displayGridMembers(membersData);
-      } else if (view === "list") {
-        displayListMembers(membersData);
-      }
-    }
+        async function getWeatherForecast() {
+            const apiKey = '15afb914adc211c491651741ae88beb9'; // Replace with your OpenWeatherMap API key
+            const city = 'Quezon City'; // Replace with the desired city name
+            const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
 
-    // Initially display members in grid view
-    toggleView("grid");
-  </script>
+            try {
+                const response = await fetch(forecastUrl);
+                const data = await response.json();
+
+                const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+                const day1 = data.list[0];
+                const day2 = data.list[8];
+                const day3 = data.list[16];
+
+                document.getElementById('monday').textContent = `${daysOfWeek[new Date(day1.dt * 1000).getDay()]}: ${day1.main.temp} °C`;
+                const day1IconUrl = `http://openweathermap.org/img/wn/${day1.weather[0].icon}.png`;
+                document.getElementById('iconMonday').src = day1IconUrl;
+
+                document.getElementById('tuesday').textContent = `${daysOfWeek[new Date(day2.dt * 1000).getDay()]}: ${day2.main.temp} °C`;
+                const day2IconUrl = `http://openweathermap.org/img/wn/${day2.weather[0].icon}.png`;
+                document.getElementById('iconTuesday').src = day2IconUrl;
+
+                document.getElementById('wednesday').textContent = `${daysOfWeek[new Date(day3.dt * 1000).getDay()]}: ${day3.main.temp} °C`;
+                const day3IconUrl = `http://openweathermap.org/img/wn/${day3.weather[0].icon}.png`;
+                document.getElementById('iconWednesday').src = day3IconUrl;
+
+                // Add similar updates for Thursday, Friday, Saturday, Sunday
+
+            } catch (error) {
+                console.error('Error fetching weather forecast: ', error);
+            }
+        }
+
+        // Call the functions to fetch weather data and forecast when the page loads
+        getWeatherData();
+        getWeatherForecast();
+    </script>
 </body>
 </html>

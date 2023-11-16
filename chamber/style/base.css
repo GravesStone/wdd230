@@ -170,6 +170,20 @@ p, h1, h3, h4 {
 .diamond-shack {
    color: var(--constrast-backgr-main);
 }
+/* styles.css */
+.banner {
+    display: none;
+    padding: 10px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+#closeBannerBtn {
+    background-color: #ddd;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
 
 
 /* Hero */
@@ -296,6 +310,18 @@ p, h1, h3, h4 {
     font-size: 1.5em;
     justify-content: space-evenly;
     align-items: center;
+}
+#current-weather, #forecast {
+    margin-bottom: 20px;
+}
+
+.forecast-day {
+    margin-bottom: 10px;
+}
+
+.forecast-icon {
+    width: 50px; /* Adjust the size of the icon as needed */
+    height: 50px;
 }
 
 #weather-info {

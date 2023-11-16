@@ -44,11 +44,12 @@
         <div class="btn"> <button id="hamburger-btn"><span>&#9776;</span><span>x</span></button></div>
     </header>   
     <main>
+        
        <!--Hero Section-->
         <section class="hero-section">
             <picture>
                 <source media="(min-width: 64em)" srcset="./images/large.webp">
-                <source media="(min-width: 32em)" srcset="./images/medium.webp">
+                    <source media="(min-width: 32em)" srcset="./images/medium.webp">
                 <img src="./images/small.jpg" alt="Hero Image">
             </picture>
             <div class="hero-content">
@@ -68,15 +69,22 @@
         </section>
         <!--Weather-->
         <section class="weather-section">
-            <div id="weather-info">
+            <div id="current-weather">
                 <h3>Weather Today</h3>
                 <img id="weather-icon" src="./images/weather.png" alt="Weather Icon">
+                <p id="description">Condition: Loading...</p>
                 <p><span id="city">Quezon City</span></p>
                 <p>Current Temperature: <span id="temperature">Loading...</span></p>
                 <p>Wind <span id="windChill">Loading...</span></p>
                 <p>Humidity <span id="humidity">Loading...</span></p>
+                    <div id="forecast">
+                        <h3>Weather  Forecast 3 days</h3>
+                            <p id="day1"></p>
+                                <p id="day2"></p>
+                        <p id="day3"></p>
+                    </div>
+                </div>
                 
-            </div>
         </section>
         <!--Unleash Section-->
         <section class="unleash">
@@ -85,14 +93,19 @@
         </section>
         <!--Companies-section-->
         <section id="spotlights">
-            <div>
-                <h3>Companies</h3>
-            </div>
+                <div id="chamberBanner" class="banner">
+                    <p>Don't miss the Chamber of Commerce meet and greet on Wednesday at 7:00 p.m.!</p>
+                    <button id="closeBannerBtn" onclick="closeBanner()">❌</button>
+                    <h3>Companies</h3>
+                </div>
+                
+          
         </section>
         <!--Empower-section-->
         <section class="empower">
             <div>
                 <h3>Empower Your Journey</h3>
+                <br>
                 <p>Explore the process of becoming a part of the Chamber of Commerce and understand the advantages it can bring to your organization!</p>
             </div>
         </section>
@@ -129,6 +142,7 @@
     <script src="scripts/hamburger.js"></script>
     <script src="../chamber/scripts/windchill.js"></script>
     <script src="../chamber/scripts/transition.js"></script>
+    <script src="../scripts/banner.js"></script>
 </body>
 
 </html>

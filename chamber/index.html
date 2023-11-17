@@ -42,6 +42,13 @@
             </ul>
         </nav>
         <div class="btn"> <button id="hamburger-btn"><span>&#9776;</span><span>x</span></button></div>
+            <div class="current-date">
+                <p><span id="messagev">Welcome, Thank you for visiting Us!<span class="visits"></span></span></p>
+            </div>
+            <div id="chamberBanner" class="banner">
+                <p>Don't miss the Chamber of Commerce meet and greet on Wednesday at 7:00 p.m.!</p>
+                <button id="closeBannerBtn" onclick="closeBanner()">❌ Close</button>
+            </div>
     </header>   
     <main>
         
@@ -93,12 +100,7 @@
         </section>
         <!--Companies-section-->
         <section id="spotlights">
-                <div id="chamberBanner" class="banner">
-                    <p>Don't miss the Chamber of Commerce meet and greet on Wednesday at 7:00 p.m.!</p>
-                    <button id="closeBannerBtn" onclick="closeBanner()">❌</button>
-                    <h3>Companies</h3>
-                </div>
-                
+            
           
         </section>
         <!--Empower-section-->
@@ -142,7 +144,7 @@
     <script src="scripts/hamburger.js"></script>
     <script src="../chamber/scripts/windchill.js"></script>
     <script src="../chamber/scripts/transition.js"></script>
-    <script src="../scripts/banner.js"></script>
+    <script src="../scripts/banner.js" defer></script>
 </body>
 
 </html>

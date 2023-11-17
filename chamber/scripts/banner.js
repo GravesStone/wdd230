@@ -1,14 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Check if today is Monday, Tuesday, or Wednesday
+    // Check if it's Monday, Tuesday, or Wednesday
     var today = new Date().getDay();
-
+    
     if (today >= 1 && today <= 3) {
         // Show the banner
-        document.getElementById("chamberBanner").style.display = "block";
+        showBanner();
     }
 });
 
+function showBanner() {
+    var banner = document.getElementById("chamberBanner");
+    banner.style.display = "block";
+}
+
 function closeBanner() {
-    // Hide the banner when the close button is clicked
-    document.getElementById("chamberBanner").style.display = "none";
+    var banner = document.getElementById("chamberBanner");
+    banner.style.display = "none";
 }

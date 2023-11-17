@@ -3,127 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Forecast</title>
+    <title>Your Website</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
+        .banner {
+            display: none;
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
         }
 
-        #current-weather, #forecast {
-            margin-bottom: 20px;
-        }
-
-        .forecast-day {
-            margin-bottom: 10px;
-        }
-
-        .forecast-icon {
-            width: 50px; /* Adjust the size of the icon as needed */
-            height: 50px;
+        #closeBanner {
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <div id="current-weather">
-        <h2>Current Weather</h2>
-        <p id="description"></p>
-        <p id="city"></p>
-        <p id="temperature"></p>
-        <p id="windChill"></p>
-        <p id="humidity"></p>
-        <img id="weather-icon" alt="Weather Icon">
-    </div>
+    <!-- Your existing website content goes here -->
 
-    <div id="forecast">
-        <h2>3-Day Forecast</h2>
-        <div class="forecast-day" id="monday">
-            <p></p>
-            <img class="forecast-icon" id="iconMonday" alt="Forecast Icon">
-        </div>
-        <div class="forecast-day" id="tuesday">
-            <p></p>
-            <img class="forecast-icon" id="iconTuesday" alt="Forecast Icon">
-        </div>
-        <div class="forecast-day" id="wednesday">
-            <p></p>
-            <img class="forecast-icon" id="iconWednesday" alt="Forecast Icon">
-        </div>
-        <!-- Add similar divs for Thursday, Friday, Saturday, Sunday -->
-
+    <!-- Banner Section -->
+    <div id="chamberBanner" class="banner">
+        <p>Join us at the Chamber of Commerce meet and greet on Wednesday at 7:00 p.m.</p>
+        <button id="closeBanner">Close</button>
     </div>
 
     <script>
-        async function getWeatherData() {
-            const apiKey = '15afb914adc211c491651741ae88beb9'; // Replace with your OpenWeatherMap API key
-            const city = 'Quezon City'; // Replace with the desired city name
-            const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+        document.addEventListener("DOMContentLoaded", function () {
+            // Check if the current day is Monday, Tuesday, or Wednesday
+            var today = new Date().getDay();
+            if (today >= 1 && today <= 3) {
+                // Show the banner
+                document.getElementById("chamberBanner").style.display = "block";
 
-            try {
-                const response = await fetch(weatherUrl);
-                const data = await response.json();
-                const temperature = data.main.temp;
-                const windSpeed = data.wind.speed;
-                const humidity = data.main.humidity;
-                const iconCode = data.weather[0].icon;
-
-                const windChillIndex = 5.74 + 0.6215 * temperature - 35.75 * Math.pow(windSpeed, 0.16) + 0.4275 * temperature * Math.pow(windSpeed, 0.16);
-
-                document.getElementById('description').innerText = `Condition: ${data.weather[0].description}`;
-                document.getElementById('city').textContent = city;
-                document.getElementById('temperature').textContent = `${temperature} °C`;
-                document.getElementById('windChill').textContent = `Chill: ${windChillIndex.toFixed(2)} °C`;
-                document.getElementById('humidity').textContent = `Report: ${humidity}%`;
-
-                const iconUrl = `http://openweathermap.org/img/wn/${iconCode}.png`;
-                document.getElementById('weather-icon').src = iconUrl;
-            } catch (error) {
-                console.error('Error fetching weather data: ', error);
-                document.getElementById('city').textContent = 'City: N/A';
-                document.getElementById('temperature').textContent = 'Temperature: N/A';
-                document.getElementById('windChill').textContent = 'Wind Chill: N/A';
-                document.getElementById('humidity').textContent = 'Humidity: N/A';
-                document.getElementById('weather-icon').src = ''; // Clear the icon
+                // Add click event to close the banner
+                document.getElementById("closeBanner").addEventListener("click", function () {
+                    // Hide the banner when the close button is clicked
+                    document.getElementById("chamberBanner").style.display = "none";
+                });
             }
-        }
-
-        async function getWeatherForecast() {
-            const apiKey = '15afb914adc211c491651741ae88beb9'; // Replace with your OpenWeatherMap API key
-            const city = 'Quezon City'; // Replace with the desired city name
-            const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
-
-            try {
-                const response = await fetch(forecastUrl);
-                const data = await response.json();
-
-                const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-
-                const day1 = data.list[0];
-                const day2 = data.list[8];
-                const day3 = data.list[16];
-
-                document.getElementById('monday').textContent = `${daysOfWeek[new Date(day1.dt * 1000).getDay()]}: ${day1.main.temp} °C`;
-                const day1IconUrl = `http://openweathermap.org/img/wn/${day1.weather[0].icon}.png`;
-                document.getElementById('iconMonday').src = day1IconUrl;
-
-                document.getElementById('tuesday').textContent = `${daysOfWeek[new Date(day2.dt * 1000).getDay()]}: ${day2.main.temp} °C`;
-                const day2IconUrl = `http://openweathermap.org/img/wn/${day2.weather[0].icon}.png`;
-                document.getElementById('iconTuesday').src = day2IconUrl;
-
-                document.getElementById('wednesday').textContent = `${daysOfWeek[new Date(day3.dt * 1000).getDay()]}: ${day3.main.temp} °C`;
-                const day3IconUrl = `http://openweathermap.org/img/wn/${day3.weather[0].icon}.png`;
-                document.getElementById('iconWednesday').src = day3IconUrl;
-
-                // Add similar updates for Thursday, Friday, Saturday, Sunday
-
-            } catch (error) {
-                console.error('Error fetching weather forecast: ', error);
-            }
-        }
-
-        // Call the functions to fetch weather data and forecast when the page loads
-        getWeatherData();
-        getWeatherForecast();
+        });
     </script>
 </body>
 </html>

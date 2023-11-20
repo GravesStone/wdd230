@@ -1,4 +1,6 @@
-async function getWeatherData() {
+// mainModule.js
+
+export async function getWeatherData() {
     const apiKey = '15afb914adc211c491651741ae88beb9'; // Replace with your OpenWeatherMap API key
     const city = 'Quezon City'; // Replace with the desired city name
     const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -31,7 +33,7 @@ async function getWeatherData() {
     }
 }
 
-async function getWeatherForecast() {
+export async function getWeatherForecast() {
     const apiKey = '15afb914adc211c491651741ae88beb9'; // Replace with your OpenWeatherMap API key
     const city = 'Quezon City'; // Replace with the desired city name
     const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
@@ -55,6 +57,70 @@ async function getWeatherForecast() {
     }
 }
 
-// Call the functions to fetch weather data and forecast when the page loads
+export function toggleMenu() {
+    const btn = document.getElementById("hamburger-btn");
+    const primaryNav = document.getElementById("primary-nav");
+
+    primaryNav.classList.toggle("open");
+    btn.classList.toggle("open");
+}
+
+export function setCopyrightYear() {
+    const dateobj = new Date();
+    const year = dateobj.getFullYear();
+    document.getElementById("copyright").innerHTML = "&copy;" + year;
+}
+
+export function displayLastUpdate() {
+    const update = "Last update: ";
+    const lastModified = new Date(document.lastModified);
+    document.getElementById("lastModified").innerHTML = update + lastModified;
+}
+
+document.getElementById("hamburger-btn").addEventListener("click", toggleMenu);
+
+document.addEventListener('DOMContentLoaded', function () {
+    const modeButton = document.querySelector('#mode');
+    const main = document.querySelector('main');
+    const paragraphs = main.querySelectorAll('p,h1,h3,h4');
+
+    modeButton.addEventListener('click', () => {
+        if (modeButton.textContent.includes('🕶️')) {
+            main.style.background = '#000';
+            main.style.color = '#fff';
+            modeButton.textContent = '🔆';
+            paragraphs.forEach(paragraph => {
+                paragraph.style.color = 'white';
+            });
+        } else {
+            main.style.background = '#eee';
+            main.style.color = '#000';
+            modeButton.textContent = '🕶️';
+            paragraphs.forEach(paragraph => {
+                paragraph.style.color = 'black';
+            });
+        }
+    });
+
+    var linkButton = document.getElementById('linkbtn');
+
+    // Add a click event listener to the button
+    linkButton.addEventListener('click', function () {
+        // Specify the link URL you want to navigate to
+        var linkUrl = 'https://gravesstone.github.io/wdd230/chamber/join.html';
+
+        // Navigate to the link URL
+        window.location.href = linkUrl;
+    });
+
+    // Set the current year
+    const realdate = new Date();
+    document.querySelector("#year").innerHTML = realdate.getFullYear();
+});
+
+// Call functions
 getWeatherData();
-getWeatherForecast();
+getWeatherForecast(); // Make sure to replace this with your actual getWeatherForecast code
+toggleMenu();
+setCopyrightYear();
+displayLastUpdate();

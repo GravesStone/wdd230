@@ -38,6 +38,10 @@
             </ul>
         </nav>
         <div class="btn"> <button id="hamburger-btn"><span>&#9776;</span><span>x</span></button></div>
+        <div id="invitation" class="banner">
+            <span class="close" onclick="closeBanner()">❌ Close</span>
+            <p>Join us for the Chamber of Commerce meet and greet on Wednesday at 7:00 p.m.</p>
+        </div>
     </header>   
     
     <main class="directory">
@@ -77,9 +81,16 @@
                 <strong id="lastModified"> </strong>
         </div>
     </footer>
-    <script src="scripts/hamburger.js"></script>
+    <script type="module" src="./scripts/base.js"></script>
+    <script type="module">
+        // Call functions from mainModule.js
+        toggleMenu();
+        setCopyrightYear();
+        displayLastUpdate();
+    </script>
+
     <script src="scripts/directory.js"></script>
-    <script src="../chamber/scripts/transition.js"></script>
+
 </body>
 
 </html>

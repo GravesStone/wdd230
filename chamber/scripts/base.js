@@ -118,6 +118,21 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector("#year").innerHTML = realdate.getFullYear();
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    var today = new Date();
+    var dayOfWeek = today.getDay(); // 0 for Sunday, 1 for Monday, etc.
+
+    // Show the banner only on Mondays, Tuesdays, and Wednesdays
+    if (dayOfWeek >= 1 && dayOfWeek <= 3) {
+        document.getElementById('invitation').style.display = 'block';
+    }
+
+    // Function to close the banner
+    window.closeBanner = function () {
+        document.getElementById('invitation').style.display = 'none';
+    };
+});
+
 // Call functions
 getWeatherData();
 getWeatherForecast(); // Make sure to replace this with your actual getWeatherForecast code

@@ -1,64 +1,50 @@
-const baseURL = "https://gravesstone.github.io/wdd230/"; // Replace with your actual GitHub Pages URL
-const linksURL = `${baseURL}chamber/data/members.json`;
+const membersModule = (function () {
+  const baseURL = "https://gravesstone.github.io/wdd230/"; // Replace with your actual GitHub Pages URL
+  const linksURL = `${baseURL}chamber/data/members.json`;
 
-// Function to load member data from JSON asynchronously
-async function loadMemberData() {
-  try {
-    const response = await fetch(linksURL);
-    const data = await response.json();
-    return data.members;
-  } catch (error) {
-    console.error(error);
-    return [];
+  async function loadMemberData() {
+    try {
+      const response = await fetch(linksURL);
+      const data = await response.json();
+      return data.members;
+    } catch (error) {
+      console.error(error);
+      return [];
+    }
   }
-}
 
-// Function to display members in grid view
-function displayGridMembers(members) {
-  const directoryContent = document.getElementById("directory-content");
-  directoryContent.innerHTML = "";
+  function displayGridMembers(members) {
+    const directoryContent = document.getElementById("spotlight");
+    directoryContent.innerHTML = "";
 
-  members.forEach((member) => {
-    const memberCard = document.createElement("div");
-    memberCard.className = "member-card";
+    const firstThreeMembers = members.slice(0, 3);
 
-    // Create member card content here
-    const cardContent = `
-      <h2>${member.name}</h2>
-      <img src="${member.image}" alt="${member.name} Image" class="member-image">
-      <p>Address: ${member.address}</p>
-      <p>Phone: ${member.phone}</p>
-      <p>Website: <a href="${member.website}" target="_blank">${member.website}</a></p>
-      <p>Membership Level: ${member.membershipLevel}</p>
-      <p>Other Info: ${member.otherInfo}</p>
-    `;
+    firstThreeMembers.forEach((member) => {
+      const memberCard = document.createElement("div");
+      memberCard.className = "card";
 
-    memberCard.innerHTML = cardContent;
-    directoryContent.appendChild(memberCard);
-  });
-}
+      const cardContent = `
+        <h2>${member.name}</h2>
+        <img src="${member.image}" alt="${member.name} Image" class="member-image">
+        <p>Address: ${member.address}</p>
+        <p>Website: <a href="${member.website}" target="_blank">${member.website}</a></p>
+      `;
 
-// Function to display members in list view
-function displayListMembers(members) {
-  const directoryContent = document.getElementById("directory-content");
-  directoryContent.innerHTML = "<ul>";
+      memberCard.innerHTML = cardContent;
+      directoryContent.appendChild(memberCard);
+    });
+  }
 
-  members.forEach((member) => {
-    const listItem = document.createElement("li");
-    listItem.className = "list-item";
-    listItem.innerHTML = `
-      <h2>${member.name}</h2>
-      <img src="${member.image}" alt="${member.name} Image" class="member-image" width="100" height="100">
-      <p>Address: ${member.address}</p>
-      <p>Phone: ${member.phone}</p>
-      <p>Website: <a href="${member.website}" target="_blank">${member.website}</a></p>
-      <p>Membership Level: ${member.membershipLevel}</p>
-      <p>Other Info: ${member.otherInfo}</p>
-    `;
-    directoryContent.appendChild(listItem);
-  });
+  async function init() {
+    try {
+      const members = await loadMemberData();
+      displayGridMembers(members);
+    } catch (error) {
+      console.error("Error loading member data:", error);
+    }
+  }
 
-  directoryContent.innerHTML += "</ul>";
-}
-
-// Function to toggle between grid and list view
+  return {
+    init: init,
+  };
+})();

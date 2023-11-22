@@ -173,9 +173,15 @@
                 <strong id="lastModified"> </strong>
         </div>
     </footer>
-    <script src="scripts/hamburger.js"></script>
+    <script type="module" src="./scripts/base.js"></script>
+    <script type="module">
+        // Call functions from base.js
+
+        toggleMenu();
+        setCopyrightYear();
+        displayLastUpdate();
+    </script>
     
-    <script src="../chamber/scripts/transition.js"></script>
 </body>
 
 </html>

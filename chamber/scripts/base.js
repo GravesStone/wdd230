@@ -134,6 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Call functions
+membersModule.init();
 getWeatherData();
 getWeatherForecast(); // Make sure to replace this with your actual getWeatherForecast code
 toggleMenu();

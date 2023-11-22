@@ -425,12 +425,12 @@ p, h1, h3, h4 {
     color: var(--constrast-backgr-main);
 }
 section,
-#spotlights {
+#spotlight {
     background-color: var(--backgr-main);
     border: 2px solid #0A0C0B;
     border-radius: 60%;
     margin: .3em .6em;
-    color: white;
+    color: var(--constrast-backgr-main);
     text-align: center;
     align-items: center;
     padding: 0em .5em;
@@ -443,9 +443,25 @@ section,
     border: solid 2px var(--constrast-backgr-main);
     color: #000;
 }
-
-
-
+#spotlights {
+    grid-row: 5/7;
+    padding: 0;
+}
+#spotlight a{
+    color: #000;
+      text-decoration: none;
+      transition: color 0.3s ease; /* Smooth transition effect */
+}
+#spotlight a:hover {
+    color: var(--color-white);
+    font-weight: bold;
+  }
+section img,
+#spotlight img {
+    width: 100%;
+    max-width: 80px;
+    max-height: 80px;
+}
 .spotlight p {
     font-size: 11px;
 }

@@ -137,4 +137,4 @@ getWeatherData();
 getWeatherForecast(); // Make sure to replace this with your actual getWeatherForecast code
 toggleMenu();
 setCopyrightYear();
-
+displayLastUpdate();

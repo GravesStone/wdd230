@@ -85,17 +85,17 @@ document.addEventListener('DOMContentLoaded', function () {
     const paragraphs = main.querySelectorAll('p,h1,h3,h4');
 
     modeButton.addEventListener('click', () => {
-        if (modeButton.textContent.includes('🕶️')) {
+        if (modeButton.textContent.includes('Darkmode🌑')) {
             main.style.background = '#000';
             main.style.color = '#fff';
-            modeButton.textContent = '🔆';
+            modeButton.textContent = 'Lightmode🔆';
             paragraphs.forEach(paragraph => {
                 paragraph.style.color = 'white';
             });
         } else {
             main.style.background = '#eee';
             main.style.color = '#000';
-            modeButton.textContent = '🕶️';
+            modeButton.textContent = 'Darkmode🌑';
             paragraphs.forEach(paragraph => {
                 paragraph.style.color = 'black';
             });
@@ -112,26 +112,24 @@ document.addEventListener('DOMContentLoaded', function () {
         // Navigate to the link URL
         window.location.href = linkUrl;
     });
+});
 
     // Set the current year
-    const realdate = new Date();
-    document.querySelector("#year").innerHTML = realdate.getFullYear();
-});
 
-document.addEventListener('DOMContentLoaded', function () {
-    var today = new Date();
-    var dayOfWeek = today.getDay(); // 0 for Sunday, 1 for Monday, etc.
+    document.addEventListener('DOMContentLoaded', function () {
+        var today = new Date();
+        var dayOfWeek = today.getDay();
 
-    // Show the banner only on Mondays, Tuesdays, and Wednesdays
-    if (dayOfWeek >= 1 && dayOfWeek <= 3) {
-        document.getElementById('invitation').style.display = 'block';
-    }
+        // Show the banner only on Mondays, Tuesdays, and Wednesdays
+        if (dayOfWeek >= 1 && dayOfWeek <= 3) {
+            document.getElementById('invitation').style.display = 'block';
+        }
 
-    // Function to close the banner
-    window.closeBanner = function () {
-        document.getElementById('invitation').style.display = 'none';
-    };
-});
+        // Function to close the banner
+        window.closeBanner = function () {
+            document.getElementById('invitation').style.display = 'none';
+        };
+    });
 
 // Call functions
 membersModule.init();
@@ -139,4 +137,4 @@ getWeatherData();
 getWeatherForecast(); // Make sure to replace this with your actual getWeatherForecast code
 toggleMenu();
 setCopyrightYear();
-displayLastUpdate();
+

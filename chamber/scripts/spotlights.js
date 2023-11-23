@@ -27,7 +27,7 @@ const membersModule = (function () {
         <h2>${member.name}</h2>
         <img src="${member.image}" alt="${member.name} Image" class="member-image">
         <p>Address: ${member.address}</p>
-        <p>Website: <a href="${member.website}" target="_blank">${member.website}</a></p>
+        
       `;
 
       memberCard.innerHTML = cardContent;

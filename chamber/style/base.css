@@ -16,6 +16,8 @@ body {
     font-family:           'Raleway', sans-serif;
     padding:               0px;
     transition: background-color 0.5s, color 0.5s;
+     font-size: 16px; /* Set a base font size for the body */
+    line-height: 1.5;
 }
 
 /* ================ Header ================================= */
@@ -114,49 +116,32 @@ span {
 }
 
 .banner {
-    display: block;
+    display: none;
     padding: 10px;
     text-align: center;
     grid-column: 1/3;
     grid-column: 1/5;
     grid-row: 4/4;
-    display: flex;
     justify-content: center;
     text-align: center;
     align-items: center;
     background-color: var(--constrast-backgr-main);
     color: var(--backgr-main);
+    gap: 2px;
     z-index: 1;
 }
 
-#closeBannerBtn {
+.close {
+    cursor: pointer;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
     cursor: pointer;
 }
 
 
-i,
-button {
-    cursor: pointer;
-}
 
-#chamberBanner p {
-    padding-left: .5em;
-    font-size: .7em;
 
-}
-
-#chamberBanner i {
-    width: 30px;
-    height: 20px;
-    align-self: center;
-    margin-right: .5em;
-
-}
-.btn {
-    display: flex;
-    justify-content: center;
-
-}
 
 header button {
     background: transparent;
@@ -336,11 +321,12 @@ p, h1, h3, h4 {
 .shimmering-button {
     cursor: pointer;
     display: inline-block;
-    padding: 10px 20px;
+    padding: 12px 24px;
+    text-align: center;
     background-color: var(--backgr-subheadings); /* Background color of the button */
     color: #fff; /* Text color */
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     position: relative;
     overflow: hidden;
     transition: background-color 0.3s ease-in-out;
@@ -931,6 +917,21 @@ th {
           border-radius: 5px;
         display: inline;
       }
+      .button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+        .hero-content{
+            width: 200px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color: var(--constrast-backgr-main);
+        }
+    .banner{
+        display: flex;
+        width: 100%;
+    }
   }
   
   /* Medium screen */

@@ -48,3 +48,4 @@ const membersModule = (function () {
     init: init,
   };
 })();
+membersModule.init();

@@ -19,7 +19,7 @@ export function setCopyrightYear() {
 export function displayLastUpdate() {
     const update = "Last update: ";
     const lastModified = new Date(document.lastModified);
-    document.getElementById("lastModified").innerHTML = update + lastModified;
+    document.getElementById("lastmodified").innerHTML = update + lastModified;
 }
 
 document.getElementById("hamburger-btn").addEventListener("click", toggleMenu);

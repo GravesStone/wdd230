@@ -4,52 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        .banner {
-            display: none;
-            padding: 10px;
-            background-color: #f2f2f2;
-            color: #333;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1;
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f4;
         }
 
-        .close {
-            float: right;
-            font-size: 20px;
-            font-weight: bold;
-            cursor: pointer;
+        .card-container {
+            display: flex;
+        }
+
+        .card {
+            position: relative;
+            width: 200px;
+            margin: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.1);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s; /* Add transition for the image zoom effect */
+        }
+
+        .card:hover img {
+            transform: scale(1.2); /* Adjust the scale factor for the zoom effect */
+        }
+
+        .card-content {
+            padding: 15px;
+            text-align: center;
+        }
+
+        h3 {
+            margin: 0;
+        }
+
+        p {
+            margin: 10px 0;
+            color: #666;
         }
     </style>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var today = new Date();
-            var dayOfWeek = today.getDay(); // 0 for Sunday, 1 for Monday, etc.
-
-            // Show the banner only on Mondays, Tuesdays, and Wednesdays
-            if (dayOfWeek >= 1 && dayOfWeek <= 3) {
-                document.getElementById('chamberBanner').style.display = 'block';
-            }
-
-            // Function to close the banner
-            window.closeBanner = function () {
-                document.getElementById('chamberBanner').style.display = 'none';
-            };
-        });
-    </script>
-    <title>Your Website</title>
+    <title>Hover Zoom Cards</title>
 </head>
 <body>
 
-<!-- Your website content goes here -->
+    <div class="card-container">
+        <div class="card">
+            <img src="your-image1.jpg" alt="Card Image 1">
+            <div class="card-content">
+                <h3>Card Title 1</h3>
+                <p>Card Description 1</p>
+            </div>
+        </div>
 
-<div id="chamberBanner" class="banner">
-    <p>Join us for the Chamber of Commerce meet and greet on Wednesday at 7:00 p.m.</p>
-    <span class="close" onclick="closeBanner()">❌</span>
-</div>
+        <div class="card">
+            <img src="your-image2.jpg" alt="Card Image 2">
+            <div class="card-content">
+                <h3>Card Title 2</h3>
+                <p>Card Description 2</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="your-image3.jpg" alt="Card Image 3">
+            <div class="card-content">
+                <h3>Card Title 3</h3>
+                <p>Card Description 3</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="your-image4.jpg" alt="Card Image 4">
+            <div class="card-content">
+                <h3>Card Title 4</h3>
+                <p>Card Description 4</p>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>

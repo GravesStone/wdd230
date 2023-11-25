@@ -27,7 +27,7 @@ document.getElementById("hamburger-btn").addEventListener("click", toggleMenu);
 document.addEventListener('DOMContentLoaded', function () {
     const modeButton = document.querySelector('#mode');
     const main = document.querySelector('main');
-    const paragraphs = main.querySelectorAll('p,h1,h3,h4');
+    const paragraphs = main.querySelectorAll('p,h1,h3,h4,h2');
 
     modeButton.addEventListener('click', () => {
         if (modeButton.textContent.includes('Darkmode🌑')) {

@@ -360,7 +360,7 @@ p, h1, h3, h4 {
       left: 100%;
     }
   }
-.weather {
+.weather-section {
     display: flex;
     font-size: 1.5em;
     justify-content: space-evenly;
@@ -379,7 +379,7 @@ p, h1, h3, h4 {
     height: 50px;
 }
 
-#weather-info {
+#current-weather {
     animation: spin 1s linear infinite, textAnimation 2s ease-in-out forwards;
 }
 
@@ -799,7 +799,6 @@ th {
 .main-thanks{
     display: block;
     color: var(--backgr-main);
-    margin: 2em auto;
 }
 
 .thanks-div p:first-child {
@@ -846,7 +845,6 @@ th {
 
   /* Member card styles */
   .member-card {
-    background-color: #fff;
       border: 1px solid #ccc;
       padding: 20px;
       margin: 20px;
@@ -854,8 +852,11 @@ th {
       width: calc(30% - 40px);
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       border-radius: 5px;
-
+      transition: transform 0.3s;
     
+  }
+  .member-card:hover {
+    transform: scale(1.1);
   }
   .list-item {
     margin: 1rem auto;
@@ -871,12 +872,18 @@ th {
     width: 100%;
     gap: 2px;
   }
+  
   .member-image {
     max-width: 50%; /* Ensure the image doesn't exceed its container width */
     height: auto; /* Maintain aspect ratio */
     border-radius: 2px; /* Add rounded corners if desired */
+    background-color: var(--color-white);
     margin-bottom: 5px; /* Add some space below the image */
-  }
+    transition: transform 0.3s;
+}
+.member-image:hover{
+    transform: scale(1.2);
+}
   .btng{
     display: inline-block;
       padding: 15px 30px;
@@ -887,7 +894,7 @@ th {
       cursor: pointer;
       border-radius: 50px;
       background-color: var(--backgr-main);
-      color: var(--constrast-backgr-main);
+      
       border: 2px solid #0A0C0B;
       transition: background-color 0.3s, color 0.3s;
   }
@@ -904,7 +911,6 @@ th {
         height: 50%;
     }
     .member-card {
-        background-color: #fff;
           border: 1px solid #ccc;
           padding: 0;
           margin: 0;

@@ -24,7 +24,7 @@ function displayGridMembers(members) {
 
     // Create member card content here
     const cardContent = `
-      <h2>${member.name}</h2>
+      <h3>${member.name}</h3>
       <img src="${member.image}" alt="${member.name} Image" class="member-image">
       <p>Address: ${member.address}</p>
       <p>Phone: ${member.phone}</p>

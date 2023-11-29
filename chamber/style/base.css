@@ -67,17 +67,7 @@ header {
 
 
 
-nav {
-    display: block;
-    background-color: #000;
-    font-size: .8em;
-    background-color: var(--constrast-backgr-subh);
-    justify-content: center;
-    align-items: center;
-    grid-row: 2/3;
-    grid-column: 1/5;
 
-}
 .current-date {
     display: inline-flex;
     grid-row: 3/3;
@@ -150,6 +140,17 @@ header button {
 }
 
 
+nav {
+    display: block;
+    background-color: #000;
+    font-size: .8em;
+    background-color: var(--constrast-backgr-subh);
+    justify-content: center;
+    align-items: center;
+    grid-row: 2/3;
+    grid-column: 1/5;
+
+}
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -169,7 +170,7 @@ nav ul li a:hover {
     background-color: var(--constrast-backgr-main);
     color: white;
     transition: .5s;
-}
+} 
 
 nav ul {
     display: none;
@@ -184,8 +185,6 @@ nav ul.open {
 }
 #hambuger-btn a{
     display: grid;
-    
-
 }
 #hamburger-btn span:nth-child(1) {
     display: block;
@@ -379,30 +378,8 @@ p, h1, h3, h4 {
     height: 50px;
 }
 
-#current-weather {
-    animation: spin 1s linear infinite, textAnimation 2s ease-in-out forwards;
-}
 
 
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes textAnimation {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 .unleash{
     color: var(--constrast-backgr-main);
 }

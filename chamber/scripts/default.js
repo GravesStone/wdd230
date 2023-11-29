@@ -2,14 +2,6 @@
 
 
 
-export function toggleMenu() {
-    const btn = document.getElementById("hamburger-btn");
-    const primaryNav = document.getElementById("primary-nav");
-
-    primaryNav.classList.toggle("open");
-    btn.classList.toggle("open");
-}
-
 export function setCopyrightYear() {
     const dateobj = new Date();
     const year = dateobj.getFullYear();
@@ -22,7 +14,6 @@ export function displayLastUpdate() {
     document.getElementById("lastmodified").innerHTML = update + lastModified;
 }
 
-document.getElementById("hamburger-btn").addEventListener("click", toggleMenu);
 
 document.addEventListener('DOMContentLoaded', function () {
     const modeButton = document.querySelector('#mode');
@@ -69,6 +60,6 @@ document.addEventListener('DOMContentLoaded', function () {
 // Call functions
 
  // Make sure to replace this with your actual getWeatherForecast code
-toggleMenu();
+
 setCopyrightYear();
 displayLastUpdate();

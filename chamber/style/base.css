@@ -648,10 +648,10 @@ img[data-src] {
 
 .form-join {
     align-self: center;
-    margin: 3rem auto;
+ 
     font-weight: bold;
 
-    max-width: 30%;
+    max-width: 100%;
 }
 
 form input {
@@ -929,10 +929,17 @@ th {
         text-align: center;
         display: block;
     }
+    .membership-div table {
+        border: 0;
+    }
 
+    .membership-div th, .membership-div td {
+        border: 0;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .membership-div img{ 
+        display: none;
   }
-  
-  /* Medium screen */
-
-
-
+}

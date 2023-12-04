@@ -230,7 +230,7 @@ li {
 .card {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(2fr, 1fr)); /* Set 2 columns */
-  width: 70%;
+  width: 100%;
   padding: 30px;
   margin: 10px;
   background: #f0f0f0;
@@ -240,6 +240,12 @@ li {
   border:3px solid #000;
   box-shadow: 5px 10px #808080;
   font-size: 20px;
+  background-image: url('');
+            /* Specify background properties */
+  background-size: cover; /* or contain, or specific dimensions */
+  background-position: center center; /* or other position values */
+  background-repeat: no-repeat; /* or repeat-x, repeat-y, repeat */
+  background-attachment: fixed; /* or scroll */
 }
 .card h3{
     text-align: center;
@@ -262,11 +268,7 @@ li {
 .card2 h3{
   font-style: italic;
 }
-iframe{
-  height: 200px;
-  width: 98%;
-  align-items: stretch;
-}
+/*====== Weather alert=======*/
 
 footer {
   background:   #8A3914;

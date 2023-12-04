@@ -38,6 +38,7 @@
   <div id="weather-alert">
     <span class="close-btn" onclick="closeAlert()"></span>
     <p id="alert-message"></p>
+</div>
 </header>
 
     <main>
@@ -61,27 +62,71 @@
       <div class="card-container">
         <div id="links-container" class="card">
           <div class="card-header">Scooters</div>
-           
+          <picture> 
+            <img class="discover-img" src="./images/scooter.webp" alt="scooter" loading="lazy" height="300" width="500">
+        </picture>
+        <div>
+        <p>The Scooter is a city-oriented scooter and may not be well-suited for beach environments. For sandy terrains, consider vehicles with off-road capabilities or fat tires designed for better traction on uneven surfaces.</p>
+        <p>Capacity : 2 Persons</p>
+        <a href="rental.html">see more deatails</a>
+      </div>
+      </div>
+      <section class="card2">
+        <div id="current-weather">
+            <h3>Weather Today</h3>
+             <div id="current-weather">
+              <img id="weather-image" src="" alt="Weather Image">
+              <p>Temperature: <span id="temperature">loading...</span>°C</p>
+              <p>Condition: <span id="condition">loading...</span></p>
+              <p>Humidity: <span id="humidity">loading...</span>%</p>
+            </div>
+    </section>
+</section>
+
+    <section>
+      <div class="card-container">
+        <div id="links-container" class="card">
+          <div class="card-header">ATV's</div>
+          <picture> 
+            <img class="discover-img" src="./images/atvs.webp" alt="scooter" loading="lazy" height="300" width="500">
+        </picture>
+        <div>
+        <p>ATVs are ideal for beach exploration, offering an exciting and versatile means of navigating sandy terrains. Their off-road capabilities make them popular for recreational riding and accessing remote beach areas.</p>
+        <p>Capacity: 4 person</p>
+        <a href="rental.html">see more deatails</a>
+      </div>
+      </div>
+      <section class="card2">
+          <div id="one-day-forecast">
+            <h2>One Day Forecast</h2>
+            <p class="forecast-label">Temperature:°C <span id="forecast-temperature"></span></p>
+            <p class="forecast-label">Condition: <span id="forecast-condition"></span></p>
+            <img id="forecast-image" src="" alt="Forecast Image">
+        </div>
+    </section>
+    </section>
+    <section>
+      <div class="card-container">
+        <div id="links-container" class="card">
+          <div class="card-header">Jeeps</div>
+          <picture> 
+            <img class="discover-img" src="./images/jeep.webp" alt="scooter" loading="lazy" height="300" width="500">
+        </picture>
+        <div>
+        <p>The Jeep Wrangler is perfect for beach outings with its 4x4 capability, open-air design, and rugged styling. It effortlessly navigates sandy terrain, offers towing capacity for beach gear, and adds a touch of adventure to coastal experiences.</p>
+        <p>Capacity: 4 person</p>
+        <p>Another features: 4 door manuel with A/C </p>
+        <a href="rental.html">see more deatails</a>
+      </div>
       </div>
     </section>
-    <section class="card2">
-              <div id="current-weather">
-                  <h3>Weather Today</h3>
-                   <div id="current-weather">
-                    <p>Temperature: <span id="temperature">loading...</span>°C</p>
-                    <p>Condition: <span id="condition">loading...</span></p>
-                    <p>Humidity: <span id="humidity">loading...</span>%</p>
-        <img id="weather-image" src="" alt="Weather Image">
-    </div>
-    <div id="one-day-forecast"></div>
-                  
-    </section>
-  </section>
+
+
     </main>
     <footer>
           
       <div class="footer-sub">
-          <p><span id="copyright"></span> Quezon City Chamber of Commerce| Mark Augustine Estimada  | wdd230 Project | 
+          <p><span id="copyright"></span> Scoots| Mark Augustine Estimada  | wdd230 Project | 
               <p id="lastmodified"> </p>
       </div>
   </footer>

@@ -240,12 +240,16 @@ li {
   border:3px solid #000;
   box-shadow: 5px 10px #808080;
   font-size: 20px;
-  background-image: url("https://raw.githubusercontent.com/GravesStone/wdd230/main/scoots/images/bg-scooters.webp");
-            /* Specify background properties */
-  background-size: cover; /* or contain, or specific dimensions */
-  background-position: center center; /* or other position values */
-  background-repeat: no-repeat; /* or repeat-x, repeat-y, repeat */
-  background-attachment: fixed; /* or scroll */
+}
+.discover-img{
+
+    width: 100%;
+    align-self: center;
+    filter: blur(0em);
+    transition: filter 0.1s;
+    margin: .3em auto;
+    border-radius: 0.2em;
+    transition: .8s all ease-in-out;
 }
 .card h3{
     text-align: center;

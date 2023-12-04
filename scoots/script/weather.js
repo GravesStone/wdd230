@@ -2,7 +2,7 @@ async function getWeatherData() {
     const apiKey = '15afb914adc211c491651741ae88beb9';
     const city = 'Cozumel';
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
+    
     try {
         const response = await fetch(apiUrl);
         const data = await response.json();
@@ -24,8 +24,16 @@ async function getWeatherData() {
             document.getElementById('alert-message').innerText = alertData.message;
         }
 
-        // Fetch and display one day forecast if needed
-        // You can use a similar approach as above
+        // Fetch and display one day forecast
+        const forecastData = await getOneDayForecast(city);
+        if (forecastData) {
+            document.getElementById('forecast-temperature').innerText = forecastData.main.temp;
+            document.getElementById('forecast-condition').innerText = forecastData.weather[0].description;
+
+            // Set forecast image based on the weather condition
+            const forecastImage = document.getElementById('forecast-image');
+            forecastImage.src = getWeatherImage(forecastData.weather[0].icon);
+        }
 
     } catch (error) {
         console.error('Error fetching weather data:', error);
@@ -42,6 +50,32 @@ async function getWeatherAlerts(city) {
         return data.alert; // Assuming the API returns an 'alert' field
     } catch (error) {
         console.error('Error fetching weather alerts:', error);
+        return null;
+    }
+}
+
+// Hypothetical function to get one day forecast
+async function getOneDayForecast(city) {
+    const apiKey = '15afb914adc211c491651741ae88beb9';
+    const forecastApiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
+
+    try {
+        const response = await fetch(forecastApiUrl);
+        const data = await response.json();
+
+        // Assuming the API returns a list of forecasts and we want the next day's forecast
+        const tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+
+        const nextDayForecast = data.list.find(forecast => {
+            const forecastDate = new Date(forecast.dt_txt);
+            return forecastDate.getDate() === tomorrow.getDate();
+        });
+
+        return nextDayForecast;
+
+    } catch (error) {
+        console.error('Error fetching forecast data:', error);
         return null;
     }
 }

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"     content="width=device-width, initial-scale=1.0">
+    <meta name="author"       content="Mark augustine estimada">
+    <meta name="description"  content="">
+    <title>Scoots</title>
+    <link rel="icon" type="image/x-icon" href="./images/scoots.webp">
+    <link rel="stylesheet" href="./style/base.css">
+    <link rel="stylesheet" href="styles/holygrail.css">
+    <link rel="stylesheet" href="./style/larger.css">
+   
+  </head>
+ 
+  <body>
+    <!--Header-->
+    <header> 
+        <div class="container">
+            <img class="logo" src="./images/scoots.webp" alt="Profile Picture" loading="lazy">
+        
+            <div class="menu-toggle" id="menu-toggle">
+              <div class="bar"></div> 
+                <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+    <!--Navigation-->
+
+    <nav>
+      <ul class="menu" id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="./lesson03/chamber-site-plan.html">Rental</a></li>
+          <li><a href="./chamber/index.html" target="_blank">Reservations</a></li>
+          <li><a href="https://www.byui.edu/" target="_blank">Contact</a></li>
+
+  </nav>
+
+
+    <main>
+    
+    
+
+        <div class="container">
+          <h1>Rental Services</h1>
+      
+          <section>
+            <h2>Rental Pricing Information</h2>
+      
+            <table>
+              <thead>
+                <tr>
+                  <th>Image</th>
+                  <th>Type</th>
+                  <th>Max Persons</th>
+                  <th>Reservation - Half Day</th>
+                  <th>Reservation - Full Day</th>
+                  <th>Walk-In - Half Day</th>
+                  <th>Walk-In - Full Day</th>
+                </tr>
+              </thead>
+              <tbody id="tableBody">
+                <!-- Data will be populated dynamically using JavaScript -->
+              </tbody>
+            </table>
+          </section>
+        </div>
+</main>
+    <footer>
+        <div class="footer-properties">
+            <p>
+                <span id="copyright">2023</span>
+                <span>| Mark Augustine Estimada</span>
+                <span>| Philippines</span>
+            </p>
+        </div>
+        <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/getdates.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="./scripts/links.js"></script>
+    <script src="scripts/functionburger.js"></script>
+  </body>
+</html>

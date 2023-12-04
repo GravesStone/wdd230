@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+  </style>
+  <title>Rental Pricing</title>
+</head>
+<body>
+
+  <h2>Rental Pricing Information</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Type</th>
+        <th>Max Persons</th>
+        <th>Reservation - Half Day</th>
+        <th>Reservation - Full Day</th>
+        <th>Walk-In - Half Day</th>
+        <th>Walk-In - Full Day</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody">
+      <!-- Data will be populated dynamically using JavaScript -->
+    </tbody>
+  </table>
+
+  <script>
+    const tableBody = document.getElementById('tableBody');
+
+    // Function to create an image element
+    function createImage(src, alt) {
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = alt;
+      return img;
+    }
+
+    // Loop through the vehicles and populate the table
+    rentalData.vehicles.forEach(vehicle => {
+      const row = tableBody.insertRow();
+      const { type, maxPersons, pricing, image } = vehicle;
+
+      // Insert the image cell
+      const imageCell = row.insertCell();
+      imageCell.appendChild(createImage(image, type));
+
+      // Insert other data cells
+      row.insertCell().textContent = type;
+      row.insertCell().textContent = maxPersons;
+      row.insertCell().textContent = pricing.reservation.halfDay;
+      row.insertCell().textContent = pricing.reservation.fullDay;
+      row.insertCell().textContent = pricing.walkIn.halfDay;
+      row.insertCell().textContent = pricing.walkIn.fullDay;
+    });
+  </script>
+
+</body>
+</html>

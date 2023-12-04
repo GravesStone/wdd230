@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"     content="width=device-width, initial-scale=1.0">
+    <meta name="author"       content="Mark augustine estimada">
+    <meta name="description"  content="">
+    <title>Scoots</title>
+    <link rel="icon" type="image/x-icon" href="./images/scoots.webp">
+    <link rel="stylesheet" href="./style/base.css">
+    <link rel="stylesheet" href="styles/holygrail.css">
+    <link rel="stylesheet" href="./style/larger.css">
+   
+  </head>
+ 
+  <body>
+    <!--Header-->
+    <header> 
+        <div class="container">
+            <img class="logo" src="./images/scoots.webp" alt="Profile Picture" loading="lazy">
+        
+            <div class="menu-toggle" id="menu-toggle">
+              <div class="bar"></div> 
+                <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+    <!--Navigation-->
+
+    <nav>
+      <ul class="menu" id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="./lesson03/chamber-site-plan.html">Rental</a></li>
+          <li><a href="./chamber/index.html" target="_blank">Reservations</a></li>
+          <li><a href="https://www.byui.edu/" target="_blank">Contact</a></li>
+
+  </nav>
+  <div id="weather-alert">
+    <span class="close-btn" onclick="closeAlert()"></span>
+    <p id="alert-message"></p>
+
+    <main>
+      <section class="hero">
+        <picture>
+            <!-- Source for large screens (min-width: 800px) -->
+            <source media="(min-width: 60em)" srcset="./images/larger.webp">
+            <source media="(min-width:34em)" srcset="./images/medium.webp">
+
+            <!-- Default source for small screens -->
+            <img src="./images/small.jpg" alt="Hero Image">
+        </picture>
+        <div class="hero-content">
+            <h2>How would a thrilling scooter adventure enhance your next travel experience?</h2>
+            <br><a class="hero-button" href="https://gravesstone.github.io/wdd230/chamber/join.html">Explore Now !</a>
+          </div>
+    </section>
+    
+
+    <section>
+      <div class="card-container">
+        <div id="links-container" class="card">
+          <div class="card-header">Try this</div>
+           
+      </div>
+             <section class="card2">
+              <div id="current-weather">
+                  <h3>Weather Today</h3>
+                   <div id="current-weather">
+                    <p>Temperature: <span id="temperature">loading...</span>°C</p>
+                    <p>Condition: <span id="condition">loading...</span></p>
+                    <p>Humidity: <span id="humidity">loading...</span>%</p>
+        <img id="weather-image" src="" alt="Weather Image">
+    </div>
+    <div id="one-day-forecast"></div>
+                  
+    </section>
+  </section>
+    </main>
+    <footer>
+          
+      <div class="footer-sub">
+          <p><span id="copyright"></span> Quezon City Chamber of Commerce| Mark Augustine Estimada  | wdd230 Project | 
+              <p id="lastmodified"> </p>
+      </div>
+  </footer>
+    <script src="scripts/getdates.js"></script>
+    <script src="./script/weather.js"></script>
+    <script src="./scripts/links.js"></script>
+    <script src=""></script>
+  </body>
+</html>

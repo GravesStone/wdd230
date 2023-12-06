@@ -1,6 +1,6 @@
 async function loadRentalData() {
   const baseURL = "https://gravesstone.github.io/wdd230/"; // Replace with your actual GitHub Pages URL
-  const rentalURL = `${baseURL}chamber/data/rental.json`;
+  const rentalURL = `${baseURL}scoots/data/rental.json`;
 
   try {
     const response = await fetch(rentalURL);

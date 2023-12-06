@@ -13,7 +13,7 @@
           "full_day": "$35"
         }
       },
-      "image": "/path/to/honda_metro_image.jpg"
+      "image": "https://raw.githubusercontent.com/GravesStone/wdd230/main/scoots/images/honda-metro-scooter.webp"
     },
     {
       "type": "Honda Dio Scooter",
@@ -43,7 +43,7 @@
           "full_day": "$55"
         }
       },
-      "image": "/path/to/honda_pcx150_image.jpg"
+      "image": "https://raw.githubusercontent.com/GravesStone/wdd230/main/scoots/images/honda-pcx150.webp"
     },
     {
       "type": "Honda Pioneer ATV",
@@ -58,7 +58,7 @@
           "full_day": "$80"
         }
       },
-      "image": "/path/to/honda_pioneer_image.jpg"
+      "image": "https://raw.githubusercontent.com/GravesStone/wdd230/main/scoots/images/honda-atvs.webp"
     },
     {
       "type": "Jeep Wrangler - 4 door with a/c",
@@ -88,7 +88,7 @@
           "full_day": "$90"
         }
       },
-      "image": "/path/to/jeep_wrangler_2door_image.jpg"
+      "image": "https://raw.githubusercontent.com/GravesStone/wdd230/main/scoots/images/jeep.webp"
     }
   ]
 }

@@ -329,7 +329,9 @@ th, td {
   padding: 8px;
   text-align: center;
 }
-
+td img{
+  width: 70%;
+}
 th {
   background-color: #f2f2f2;
 }

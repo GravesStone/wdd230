@@ -73,7 +73,7 @@
           "full_day": "$125"
         }
       },
-      "image": "/path/to/jeep_wrangler_4door_image.jpg"
+      "image": "https://raw.githubusercontent.com/GravesStone/wdd230/main/scoots/images/jeep-wrangler-4.webp"
     },
     {
       "type": "Jeep Wrangler - 2 door",

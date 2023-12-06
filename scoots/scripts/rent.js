@@ -21,13 +21,14 @@ async function loadRentalData() {
     rentalData.forEach(vehicle => {
       const row = document.createElement('tr');
       row.innerHTML = `
+        <td><img src="${vehicle.image}" alt="${vehicle.type}" width="50"></td>
         <td>${vehicle.type}</td>
         <td>${vehicle.max_persons}</td>
         <td>${vehicle.pricing.reservation.half_day}</td>
         <td>${vehicle.pricing.reservation.full_day}</td>
         <td>${vehicle.pricing.walk_in.half_day}</td>
         <td>${vehicle.pricing.walk_in.full_day}</td>
-        <td><img src="${vehicle.image}" alt="${vehicle.type}" width="50"></td>
+        
       `;
       rentalTableBody.appendChild(row);
     });

@@ -39,39 +39,81 @@
 
 
     <main>
-      <section class="hero">
-        <picture>
-            <!-- Source for large screens (min-width: 800px) -->
-            <source media="(min-width: 60em)" srcset="./images/larger.webp">
-            <source media="(min-width:34em)" srcset="">
 
-            <!-- Default source for small screens -->
-            <img src="./images/small.jpg" alt="Hero Image">
-        </picture>
-        <div class="hero-content">
-            <h2>How would a thrilling scooter adventure enhance your next travel experience?</h2>
-            <br><a class="hero-button" href="https://gravesstone.github.io/wdd230/chamber/join.html">Explore Now !</a>
-          </div>
-    </section>
-    
-
-    <section>
-      <div class="card-container">
-        <div id="links-container" class="card">
-          <div class="card-header">Rental Information</div>
-            
-             </div>
-          <div class="card2">
-            <div>
-              <h3>Weather Information</h3>
-                <img id="weather-icon" alt="Weather Icon" src="" style="width: 100px; height: 100px;">
-                  <p id="description">Condition: Loading...</p>
-                    <p id="temperature">Temperature: Loading...</p>
-              <br>
-              <!-- Card 2 Content -->
-
+      <div class="container-reserve">
+        <div class="rental-list">
+          <h2>Rental Services and Agreements</h2>
+          <ul>
+            <li><strong>Reservation Confirmation:</strong> A $50 security deposit is required to confirm reservations.</li>
+            <li><strong>Driver Requirements:</strong> A valid driver's license is required at the time of rental.</li>
+            <li><strong>Age Restriction:</strong> No one under the age of 12 years is allowed to ride on the scooters.</li>
+            <li><strong>Fuel Charge:</strong> Fuel charge is not included in the rental fee.</li>
+            <li><strong>Mileage Policy:</strong> Unlimited mileage is provided.</li>
+            <li><strong>Insurance Coverage:</strong> Liability insurance is included in the rental package. Damage insurance is available for purchase.</li>
+            <li><strong>Delivery Service:</strong> Free delivery to Cozumel hotels or Airbnbs for rentals of 2 days or more.</li>
+            <li><strong>Payment Options:</strong> Payment accepted via Google Pay, Apple Pay, cash, credit card, debit card, or Venmo.</li>
+            <li><strong>Return Policy:</strong> Rentals may be returned to either physical location.</li>
+          </ul>
+        </div>
+      
+    <form>
+      <div class="form-group">
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
       </div>
-  </section>
+
+      <div class="form-group">
+        <label for="period">Rental Period:</label>
+        <input type="text" id="period" name="period" required>
+      </div>
+
+      <div class="form-group">
+        <label for="rentalType">Rental Type:</label>
+        <select id="rentalType" name="rentalType" required>
+          <option value="car">Car</option>
+          <option value="bike">Bike</option>
+          <!-- Add more options as needed -->
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="number">Number:</label>
+        <input type="text" id="number" name="number" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="stateCountry">Home State or Country:</label>
+        <input type="text" id="stateCountry" name="stateCountry" required>
+      </div>
+
+      <div class="form-group">
+        <label for="cruiseLine">Cruise Line (if applicable):</label>
+        <input type="text" id="cruiseLine" name="cruiseLine">
+      </div>
+
+      <div class="form-group">
+        <label for="accommodations">Special Accommodations/Comments:</label>
+        <textarea id="accommodations" name="accommodations" rows="4"></textarea>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
     </main>
     <footer>
         <div class="footer-properties">

@@ -12,6 +12,9 @@
       transform: translate(-50%, -50%);
       
     }
+    .hidden{
+            display: none;
+    }
     
     nav {
       display: flex;

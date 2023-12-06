@@ -28,7 +28,7 @@
           "full_day": "$45"
         }
       },
-      "image": "/path/to/honda_dio_image.jpg"
+      "image": "https://raw.githubusercontent.com/GravesStone/wdd230/main/scoots/images/honda-dio%20-scooter.webp"
     },
     {
       "type": "Honda PCX150 Scooter",

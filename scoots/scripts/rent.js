@@ -22,11 +22,12 @@ async function loadRentalData() {
       const row = document.createElement('tr');
       row.innerHTML = `
         <td>${vehicle.type}</td>
-        <td>${vehicle.maxPersons}</td>
-        <td>${vehicle.reservation.halfDay}</td>
-        <td>${vehicle.reservation.fullDay}</td>
-        <td>${vehicle.walkIn.halfDay}</td>
-        <td>${vehicle.walkIn.fullDay}</td>
+        <td>${vehicle.max_persons}</td>
+        <td>${vehicle.pricing.reservation.half_day}</td>
+        <td>${vehicle.pricing.reservation.full_day}</td>
+        <td>${vehicle.pricing.walk_in.half_day}</td>
+        <td>${vehicle.pricing.walk_in.full_day}</td>
+        <td><img src="${vehicle.image}" alt="${vehicle.type}" width="50"></td>
       `;
       rentalTableBody.appendChild(row);
     });

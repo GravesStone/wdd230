@@ -1,81 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 20px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Basic styling for the container */
+        .image-container {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+        }
 
-    th, td {
-      border: 1px solid #ddd;
-      padding: 8px;
-      text-align: left;
-    }
+        /* Styling for the image */
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s ease-in-out;
+        }
 
-    th {
-      background-color: #f2f2f2;
-    }
+        /* Overlay for the hover effect */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
 
-    h2 {
-      margin-bottom: 10px;
-    }
-  </style>
-  <title>Rental Pricing</title>
+        /* Hover effect - show overlay and scale the image */
+        .image-container:hover .overlay {
+            opacity: 1;
+        }
+
+        .image-container:hover img {
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
 
-  <h2>Rental Pricing Information</h2>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Image</th>
-        <th>Type</th>
-        <th>Max Persons</th>
-        <th>Reservation - Half Day</th>
-        <th>Reservation - Full Day</th>
-        <th>Walk-In - Half Day</th>
-        <th>Walk-In - Full Day</th>
-      </tr>
-    </thead>
-    <tbody id="tableBody">
-      <!-- Data will be populated dynamically using JavaScript -->
-    </tbody>
-  </table>
-
-  <script>
-    const tableBody = document.getElementById('tableBody');
-
-    // Function to create an image element
-    function createImage(src, alt) {
-      const img = document.createElement('img');
-      img.src = src;
-      img.alt = alt;
-      return img;
-    }
-
-    // Loop through the vehicles and populate the table
-    rentalData.vehicles.forEach(vehicle => {
-      const row = tableBody.insertRow();
-      const { type, maxPersons, pricing, image } = vehicle;
-
-      // Insert the image cell
-      const imageCell = row.insertCell();
-      imageCell.appendChild(createImage(image, type));
-
-      // Insert other data cells
-      row.insertCell().textContent = type;
-      row.insertCell().textContent = maxPersons;
-      row.insertCell().textContent = pricing.reservation.halfDay;
-      row.insertCell().textContent = pricing.reservation.fullDay;
-      row.insertCell().textContent = pricing.walkIn.halfDay;
-      row.insertCell().textContent = pricing.walkIn.fullDay;
-    });
-  </script>
+<div class="image-container">
+    <img src="your-image.jpg" alt="Image">
+    <div class="overlay">
+        <p>Your Fancy Text</p>
+    </div>
+</div>
 
 </body>
 </html>

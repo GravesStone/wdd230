@@ -331,6 +331,11 @@ th, td {
 }
 td img{
   width: 70%;
+  transition: transform 0.3s ease;
+}
+
+td img:hover{
+  transform: scale(1.1);
 }
 th {
   background-color: #f2f2f2;

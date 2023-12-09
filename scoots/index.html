@@ -34,7 +34,7 @@
           <li><a href="rental.html">Rental</a></li>
           <li><a href="reserve.html" target="_blank">Reservations</a></li>
           <li><a href="contact.html" target="_blank">Contact</a></li>
-
+      </ul>
   </nav>
   <div id="weather-alert">
     <span class="close-btn" onclick="closeAlert()"></span>
@@ -57,10 +57,27 @@
             <br><a class="hero-button" href="./reserve.html">Reserve now! </a>
           </div>
     </section>
-    
-
-    <section>
-      <div class="card-container">
+    <div class="info-stats">
+      <section class="card2">
+        <div id="current-weather">
+            <h3>Weather Today</h3>
+            <div id="current-weather">
+              <img id="weather-image" src="" alt="Weather Image">
+              <p>Temperature: <span id="temperature">loading...</span>°C</p>
+              <p>Condition: <span id="condition">loading...</span></p>
+              <p>Humidity: <span id="humidity">loading...</span>%</p>
+            </div>
+    </section>
+    <section class="card2">
+      <div id="one-day-forecast">
+        <h3>One Day Forecast</h3>
+        <img id="forecast-image" src="" alt="Forecast Image">
+        <p class="forecast-label">Temperature:°C <span id="forecast-temperature"></span></p>
+        <p class="forecast-label">Condition: <span id="forecast-condition"></span></p>
+    </div>
+  </section>
+</div>
+    <div class="card-container">
         <div id="links-container" class="card">
           <div class="card-header">Scooters</div>
           <picture> 
@@ -70,20 +87,12 @@
         <p>The Scooter is a city-oriented scooter and may not be well-suited for beach environments. For sandy terrains, consider vehicles with off-road capabilities or fat tires designed for better traction on uneven surfaces.</p>
         <p>Capacity : 2 Persons</p>
         <a href="rental.html">see more details</a>
+        </div>
       </div>
-      </div>
+    </div>
+      <BR>
       <!--Card2 -->
-      <section class="card2">
-        <div id="current-weather">
-            <h3>Weather Today</h3>
-             <div id="current-weather">
-              <img id="weather-image" src="" alt="Weather Image">
-              <p>Temperature: <span id="temperature">loading...</span>°C</p>
-              <p>Condition: <span id="condition">loading...</span></p>
-              <p>Humidity: <span id="humidity">loading...</span>%</p>
-            </div>
-    </section>
-</section>
+     
 
     <section>
       <div class="card-container">
@@ -98,15 +107,8 @@
         <a href="rental.html">see more details</a>
       </div>
       </div>
-      <section class="card2">
-          <div id="one-day-forecast">
-            <h3>One Day Forecast</h3>
-            <p class="forecast-label">Temperature:°C <span id="forecast-temperature"></span></p>
-            <p class="forecast-label">Condition: <span id="forecast-condition"></span></p>
-            <img id="forecast-image" src="" alt="Forecast Image">
-        </div>
-    </section>
-    </section>
+     <Br>
+
     <section>
       <div class="card-container">
         <div id="links-container" class="card">
@@ -123,7 +125,7 @@
       </div>
     </section>
 
-
+    
     </main>
     <footer>
           

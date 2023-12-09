@@ -99,6 +99,7 @@ header {
 
   .hero-button:hover {
     background-color: var(--header-background-color); /* New background color on hover */
+    color: #000;
   }
 
   .hero-button:hover::before {
@@ -116,7 +117,10 @@ header {
   }
 
 
+.info-stats{
+  display: flex;
 
+}
 
 
 
@@ -217,6 +221,7 @@ li {
 }
 .card-container {
   display: flex;
+  
   justify-content: center; /* Horizontally center items within the container */
   align-items: center; /* Vertically center items within the container */
   font-size: 20px;
@@ -232,10 +237,9 @@ li {
 }
 .card {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(2fr, 1fr)); /* Set 2 columns */
+
   width: 100%;
-  padding: 30px;
-  margin: 10px;
+ 
   background: #f0f0f0;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -263,7 +267,7 @@ li {
 }
 
 .card2 {
-  width: 20%;
+  width: 100%;
   padding: 10px;
   margin: 20px;
   background:var(--maya-blue);
@@ -332,15 +336,17 @@ th, td {
   padding: 8px;
   text-align: center;
 }
-td img{
+
+td img {
   width: 70%;
   transition: transform 0.3s ease;
 }
 
-td img:hover{
+td img:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
+
 th {
   background-color: #f2f2f2;
 }
@@ -348,6 +354,7 @@ th {
 h1, h2 {
   margin-bottom: 10px;
 }
+
 /*======== Reserve=======*/
  .container-reserve {
       display: flex;
@@ -431,7 +438,7 @@ h1, h2 {
 @media screen and (max-width: 768px) {
  main {
     display: grid;
-    grid-template-columns: 1fr ;
+    grid-template-columns: 1fr;
   }
   
   .menu-toggle {
@@ -463,6 +470,11 @@ h1, h2 {
   width: 310px;
   top: 50%;
   left: 50%;
+  font-size: 3rem;
+}
+.hero h2 {
+  font-size: 30px;
+  margin: 0;
 }
 
 /*Mobile View*/
@@ -470,17 +482,39 @@ h1, h2 {
 .card-container {
   display: inline; /* On mobile, allow cards to take the full width of the container */
   max-width: none; /* Remove the maximum width for full-width cards */
- 
+  gap:5px;
 }
 .card {
-  display: grid;
+  display: block;
   grid-template-columns:1fr; 
   font-size: 1rem;
+  padding: 0;
+  margin: 0;
 }
+.card-img {
+        width: 100%; /* Make the image fill the width of the container */
+        height: auto; /* Maintain the aspect ratio */
+      }
 .card2{
+
   text-align: center;
-  width: 72%;
-  padding: 30px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+/*=====Table Section=====*/
+th, td, tr {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+td img {
+  width: 100%;
+}
+tr .mobile-row {
+  margin-bottom: 10px; /* Adjust spacing between duplicated rows */
+}
 }
 
 
@@ -495,8 +529,10 @@ h4 {
 
 p {
   font-size: 1rem; /* Adjust the font size for mobile */
+  padding: 10px;
+  margin: 10px;
 }
-
-
+a{
+  font-size: 1rem; /* Adjust the font size for mobile */
+  padding: 10px;
 }
-

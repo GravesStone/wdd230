@@ -15,6 +15,14 @@
     .hidden{
             display: none;
     }
+    .card-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Horizontally center items within the container */
+      align-items: center; /* Vertically center items within the container */
+      font-size: 20px;
+      
+    }
     
     nav {
       display: flex;

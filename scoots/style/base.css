@@ -5,16 +5,14 @@
     --header-background-color:#E59965;
     --font-main:#363635;
     --davary-gray:#4D4D4D;
-
+    --color-green: #008000;
 }
 /*=============Fonts properties default==============*/
 h1 {
     font-size: 2.5rem;
   }
   
-  p {
-    font-size: 1.5rem;
-  }
+
 body {
   font-family: 'Belanosima', sans-serif;
   text-align:         center;
@@ -300,7 +298,7 @@ footer {
 }
 footer p {
   color: #000;
-  font-size: 1.5rem;
+  font-size:1em;
 }
 
 
@@ -308,9 +306,7 @@ footer p {
   text-decoration: none;
 }
 
-h2 {
-  font-size: 2.5em;
-}
+
 .card a:hover {
   color: black;
 }
@@ -433,9 +429,52 @@ h1, h2 {
       font-weight: bold;
       color: #007BFF;
     }
+  /*====== Result =====*/
+  .receipt-container {
+    max-width: 600px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .result-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+  }
+
+  .result-table th, .result-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+
+  .result-table th {
+    background-color: var(--maya-blue);
+    color: #000;
+  }
+
+  /* Adjust the width of the value cells */
+  .result-table td {
+    max-width: 300px; /* Adjust the value as needed */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  #print-icon {
+    cursor: pointer;
+    color: #007bff;
+    margin-top: 20px;
+    float: right;
+}
+  #header-reciept{
+    font-size: 20px;
+    color: var(--color-green);
+  }
 
 /*Navigation Mobile View*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
  main {
     display: grid;
     grid-template-columns: 1fr;
@@ -518,10 +557,6 @@ tr .mobile-row {
 }
 
 
-h2 {
-  font-size: 1rem; /* Adjust the font size for mobile */
-  
-}
 h4 {
   font-size: 1rem; /* Adjust the font size for mobile */
   color: #fff;
@@ -529,8 +564,7 @@ h4 {
 
 p {
   font-size: 1rem; /* Adjust the font size for mobile */
-  padding: 10px;
-  margin: 10px;
+ 
 }
 a{
   font-size: 1rem; /* Adjust the font size for mobile */

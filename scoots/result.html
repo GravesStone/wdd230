@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="./style/base.css">
     <link rel="stylesheet" href="styles/holygrail.css">
     <link rel="stylesheet" href="./style/larger.css">
-   
-  </head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
  
   <body>
     <!--Header-->
@@ -39,90 +38,63 @@
 
 
     <main>
-
-      <div class="container-reserve">
-        <div class="rental-list">
-          <h2>Rental Services and Agreements</h2>
-          <ul>
-            <li><strong>Reservation Confirmation:</strong> A $50 security deposit is required to confirm reservations.</li>
-            <li><strong>Driver Requirements:</strong> A valid driver's license is required at the time of rental.</li>
-            <li><strong>Age Restriction:</strong> No one under the age of 12 years is allowed to ride on the scooters.</li>
-            <li><strong>Fuel Charge:</strong> Fuel charge is not included in the rental fee.</li>
-            <li><strong>Mileage Policy:</strong> Unlimited mileage is provided.</li>
-            <li><strong>Insurance Coverage:</strong> Liability insurance is included in the rental package. Damage insurance is available for purchase.</li>
-            <li><strong>Delivery Service:</strong> Free delivery to Cozumel hotels or Airbnbs for rentals of 2 days or more.</li>
-            <li><strong>Payment Options:</strong> Payment accepted via Google Pay, Apple Pay, cash, credit card, debit card, or Venmo.</li>
-            <li><strong>Return Policy:</strong> Rentals may be returned to either physical location.</li>
-          </ul>
-        </div>
-      
-    <form>
-      <div class="form-group">
-        <label for="date">Date:</label>
-        <input type="date" id="date" name="date" required>
+      <div class="receipt-container">  
+        <!-- Print as PDF Icon -->
+        <div id="print-icon" onclick="printPage()">
+          <span class="material-symbols-outlined">print</span>
       </div>
-
-      <div class="form-group">
-        <label for="period">Rental Period:</label>
-        <input type="text" id="period" name="period" required>
-      </div>
-
-      <div class="form-group">
-        <label for="rentalType">Rental Type:</label>
-        <select id="rentalType" name="rentalType" required>
-          <option value="car">Honda Metro Scooter</option>
-          <option value="bike">Honda Dio Scooter</option>
-          <option value="bike">Honda PCX150 Scooter</option>
-          <option value="bike">Honda Pioneer ATV</option>
-          <option value="bike">Jeep Wrangler - 4 door with a/c</option>
-          <option value="bike">Jeep Wrangler - 2 door</option>
-
-          <!-- Add more options as needed -->
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="number">Number:</label>
-        <input type="text" id="number" name="number" required>
-      </div>
-
-      <div class="form-group">
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required>
-      </div>
-
-      <div class="form-group">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-      </div>
-
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-
-      <div class="form-group">
-        <label for="stateCountry">Home State or Country:</label>
-        <input type="text" id="stateCountry" name="stateCountry" required>
-      </div>
-
-      <div class="form-group">
-        <label for="cruiseLine">Cruise Line (if applicable):</label>
-        <input type="text" id="cruiseLine" name="cruiseLine">
-      </div>
-
-      <div class="form-group">
-        <label for="accommodations">Special Accommodations/Comments:</label>
-        <textarea id="accommodations" name="accommodations" rows="4"></textarea>
-      </div>
-      <div class="form-group">
-        <label for="cruiseLine">Drop off location</label>
-        <input type="text" id="cruiseLine" name="cruiseLine">
-      </div>
-
-      <button type="submit">Submit</button>
-    </form>
-  </div>
+        <h2>Rental Form Receipt</h2>
+        <p id="header-reciept"> Your rental reservations is complete </p>
+        <table class="result-table">
+          <tr>
+            <th colspan="2">Details</th>
+          </tr>
+          <tr>
+            <td>Date</td>
+            <td><span id="resultDate"></span></td>
+          </tr>
+          <tr>
+            <td>Rental Period</td>
+            <td><span id="resultPeriod"></span></td>
+          </tr>
+          <tr>
+            <td>Rental Type</td>
+            <td><span id="resultRentalType"></span></td>
+          </tr>
+          <tr>
+            <td>Number</td>
+            <td><span id="resultNumber"></span></td>
+          </tr>
+          <tr>
+            <td>Phone Number</td>
+            <td><span id="resultPhone"></span></td>
+          </tr>
+          <tr>
+            <td>Name</td>
+            <td><span id="resultName"></span></td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td><span id="resultEmail"></span></td>
+          </tr>
+          <tr>
+            <td>Home State or Country</td>
+            <td><span id="resultStateCountry"></span></td>
+          </tr>
+          <tr>
+            <td>Cruise Line (if applicable)</td>
+            <td><span id="resultCruiseLine"></span></td>
+          </tr>
+          <tr>
+            <td>Special Accommodations/Comments</td>
+            <td><span id="resultAccommodations"></span></td>
+          </tr>
+          <tr>
+            <td>Drop off location</td>
+            <td><span id="resultDropOffLocation"></span></td>
+          </tr>
+        </table>
+        <p id="footer-reciept">©Scoots 2023 | Thank you! have a great day! | Please present the rental receipt in the shop</p>
     </main>
     <footer>
         <div class="footer-properties">
@@ -134,9 +106,7 @@
         </div>
         <p id="lastModified"></p>
     </footer>
-    <script src="scripts/getdates.js"></script>
-    <script src="scripts/weather.js"></script>
-    <script src="./scripts/links.js"></script>
-    <script src="scripts/functionburger.js"></script>
+    <script src="scripts/result.js"></script>
+    
   </body>
 </html>

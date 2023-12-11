@@ -16,7 +16,7 @@
 
     footer {
         grid-template-rows: 1fr 0.1fr;
-        font-size: 0.8em;
+        
     }
 
 
@@ -62,7 +62,7 @@
     }
 
     .footer-sub {
-        font-size: .75em;
+  
         align-items: center;
 
     }

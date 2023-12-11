@@ -3,101 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <!-- Replace with your own Google Maps API key -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
+    <title>Print Example</title>
+
+    <!-- Include Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
     <style>
-        /* Add your own CSS styling here */
+        /* Optional: Add some styling for better presentation */
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            margin: 20px;
         }
 
-        #map {
-            height: 400px;
-            width: 100%;
+        h1 {
+            color: #333;
         }
 
-        form {
-            max-width: 600px;
-            margin: 20px auto;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 16px;
-            box-sizing: border-box;
-        }
-
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 4px;
+        #print-icon {
             cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #45a049;
+            color: #007bff;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
 
-    <h1>Contact Us</h1>
+    <!-- Content to be printed -->
+    <h1>Your content goes here</h1>
 
-    <!-- Replace with your actual contact information -->
-    <p>Main Location: Your Main Address, Cozumel</p>
-    <p>Secondary Location: Your Secondary Address, Cozumel</p>
+    <!-- Print icon -->
+    <div id="print-icon" onclick="printPage()">
+        <i class="fas fa-print"></i> Print
+    </div>
 
-    <!-- Replace with your actual Google Maps coordinates -->
-    <div id="map"></div>
+    <!-- Your other HTML content -->
+
     <script>
-        function initMap() {
-            // Replace with your own latitude and longitude values
-            const mainLocation = { lat: 20.505, lng: -86.945 };
-            const secondaryLocation = { lat: 20.512, lng: -86.950 };
-
-            const map = new google.maps.Map(document.getElementById('map'), {
-                center: mainLocation,
-                zoom: 13
-            });
-
-            const marker1 = new google.maps.Marker({
-                position: mainLocation,
-                map: map,
-                title: 'Main Location'
-            });
-
-            const marker2 = new google.maps.Marker({
-                position: secondaryLocation,
-                map: map,
-                title: 'Secondary Location'
-            });
+        function printPage() {
+            // Open the print dialog
+            window.print();
         }
     </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Example</title>
 
-    <!-- Contact Form -->
-    <form action="#" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+    <!-- Include Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <style>
+        /* Optional: Add some styling for better presentation */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        h1 {
+            color: #333;
+        }
 
-        <label for="comment">Comment:</label>
-        <textarea id="comment" name="comment" rows="4" required></textarea>
+        #print-icon {
+            cursor: pointer;
+            color: #007bff;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
 
-        <button type="submit">Submit</button>
-    </form>
+    <!-- Content to be printed -->
+    <h1>Your content goes here</h1>
 
+    <!-- Print icon -->
+    <div id="print-icon" onclick="printPage()">
+        <i class="fas fa-print"></i> Print
+    </div>
+
+    <!-- Your other HTML content -->
+
+    <script>
+        function printPage() {
+            // Open the print dialog
+            window.print();
+        }
+    </script>
 </body>
 </html>

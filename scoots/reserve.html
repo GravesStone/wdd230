@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./style/base.css">
     <link rel="stylesheet" href="styles/holygrail.css">
     <link rel="stylesheet" href="./style/larger.css">
-   
+    
   </head>
  
   <body>
@@ -56,88 +56,87 @@
           </ul>
         </div>
       
-    <form>
-      <div class="form-group">
-        <label for="date">Date:</label>
-        <input type="date" id="date" name="date" required>
-      </div>
-
-      <div class="form-group">
-        <label for="period">Rental Period:</label>
-        <input type="text" id="period" name="period" required>
-      </div>
-
-      <div class="form-group">
-        <label for="rentalType">Rental Type:</label>
-        <select id="rentalType" name="rentalType" required>
-          <option value="car">Select</option>
-          <option value="car">Honda Metro Scooter</option>
-          <option value="bike">Honda Dio Scooter</option>
-          <option value="bike">Honda PCX150 Scooter</option>
-          <option value="bike">Honda Pioneer ATV</option>
-          <option value="bike">Jeep Wrangler - 4 door with a/c</option>
-          <option value="bike">Jeep Wrangler - 2 door</option>
-
-          <!-- Add more options as needed -->
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="number">Number:</label>
-        <input type="text" id="number" name="number" required>
-      </div>
-
-      <div class="form-group">
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required>
-      </div>
-
-      <div class="form-group">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-      </div>
-
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-
-      <div class="form-group">
-        <label for="stateCountry">Home State or Country:</label>
-        <input type="text" id="stateCountry" name="stateCountry" required>
-      </div>
-
-      <div class="form-group">
-        <label for="cruiseLine">Cruise Line (if applicable):</label>
-        <input type="text" id="cruiseLine" name="cruiseLine">
-      </div>
-
-      <div class="form-group">
-        <label for="accommodations">Special Accommodations/Comments:</label>
-        <textarea id="accommodations" name="accommodations" rows="4"></textarea>
-      </div>
-      <div class="form-group">
-        <label for="cruiseLine">Drop off location</label>
-        <input type="text" id="cruiseLine" name="cruiseLine">
-      </div>
-
-      <button type="submit">Submit</button>
-    </form>
-  </div>
+        <div id="form-container">
+          <form id="myForm">
+            <div class="form-group">
+              <label for="date">Date:</label>
+              <input type="date" id="date" name="date" required>
+            </div>
+      
+            <div class="form-group">
+              <label for="period">Rental Period:</label>
+              <input type="text" id="period" name="period" required>
+            </div>
+      
+            <div class="form-group">
+              <label for="rentalType">Rental Type:</label>
+              <select id="rentalType" name="rentalType" required>
+                <option value="car">Select</option>
+                <option value="Honda Metro Scooter">Honda Metro Scooter</option>
+                <option value="Honda Dio Scooter">Honda Dio Scooter</option>
+                <option value="Honda PCX150 Scooter">Honda PCX150 Scooter</option>
+                <option value="Honda Pioneer ATV">Honda Pioneer ATV</option>
+                <option value="Jeep Wrangler - 4 door with a/c">Jeep Wrangler - 4 door with a/c</option>
+                <option value="Jeep Wrangler - 2 door">Jeep Wrangler - 2 door</option>
+              </select>
+            </div>
+      
+            <div class="form-group">
+              <label for="number">Number:</label>
+              <input type="text" id="number" name="number" required>
+            </div>
+      
+            <div class="form-group">
+              <label for="phone">Phone Number:</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+      
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+      
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+      
+            <div class="form-group">
+              <label for="stateCountry">Home State or Country:</label>
+              <input type="text" id="stateCountry" name="stateCountry" required>
+            </div>
+      
+            <div class="form-group">
+              <label for="cruiseLine">Cruise Line (if applicable):</label>
+              <input type="text" id="cruiseLine" name="cruiseLine">
+            </div>
+      
+            <div class="form-group">
+              <label for="accommodations">Special Accommodations/Comments:</label>
+              <textarea id="accommodations" name="accommodations" rows="4"></textarea>
+            </div>
+      
+            <div class="form-group">
+              <label for="dropOffLocation">Drop off location:</label>
+              <input type="text" id="dropOffLocation" name="dropOffLocation">
+            </div>
+      
+            <button type="submit">Submit</button>
+          </form>
+      
+          <!-- Hidden anchor link -->
+          <a id="resultLink" href="result.html" style="display: none;"></a>
+        </div>
     </main>
     <footer>
-        <div class="footer-properties">
-            <p>
-                <span id="copyright">2023</span>
-                <span>| Mark Augustine Estimada</span>
-                <span>| Philippines</span>
-            </p>
-        </div>
-        <p id="lastModified"></p>
+          
+      <div class="footer-sub">
+          <p><span id="copyright"></span> Scoots | Mark Augustine Estimada  | wdd230 Project | 
+              <p id="lastmodified"> </p>
+      </div>
     </footer>
-    <script src="scripts/getdates.js"></script>
-    <script src="scripts/weather.js"></script>
-    <script src="./scripts/links.js"></script>
-    <script src="scripts/functionburger.js"></script>
+    <script type="module" src="scripts/default.js"></script>
+    <script src="scripts/reserve.js"></script>
+    <script src="scripts/result.js"></script>
   </body>
 </html>

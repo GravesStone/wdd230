@@ -266,8 +266,7 @@ li {
 
 .card2 {
   width: 100%;
-  padding: 10px;
-  margin: 20px;
+ 
   background:var(--maya-blue);
   color: #000;
   border: 1px solid #ccc;
@@ -281,7 +280,10 @@ li {
   font-style: italic;
 }
 /*====== Weather Section=======*/
-
+.weather-sec{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
 
 footer {

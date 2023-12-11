@@ -8,7 +8,7 @@
     <title>Scoots</title>
     <link rel="icon" type="image/x-icon" href="./images/scoots.webp">
     <link rel="stylesheet" href="./style/base.css">
-    <link rel="stylesheet" href="styles/holygrail.css">
+    <link rel="stylesheet" href="./style/medium.css">
     <link rel="stylesheet" href="./style/larger.css">
     
   </head>
@@ -18,7 +18,7 @@
     <header> 
         <div class="container-main">
             <img class="logo" src="./images/scoots.webp" alt="Profile Picture" loading="lazy">
-        
+            <h1 class="hidden">Scoots</h1>
             <div class="menu-toggle" id="menu-toggle">
               <div class="bar"></div> 
                 <div class="bar"></div>
@@ -39,8 +39,8 @@
 
 
     <main>
-
-      <div class="container-reserve">
+   
+      <section class="form-details">
         <div class="rental-list">
           <h2>Rental Services and Agreements</h2>
           <ul>
@@ -55,9 +55,8 @@
             <li><strong>Return Policy:</strong> Rentals may be returned to either physical location.</li>
           </ul>
         </div>
-      
         <div id="form-container">
-          <form id="myForm">
+          <form class="form-properties">
             <div class="form-group">
               <label for="date">Date:</label>
               <input type="date" id="date" name="date" required>
@@ -123,10 +122,11 @@
       
             <button type="submit">Submit</button>
           </form>
-      
+          
           <!-- Hidden anchor link -->
           <a id="resultLink" href="result.html" style="display: none;"></a>
         </div>
+      </section>
     </main>
     <footer>
           

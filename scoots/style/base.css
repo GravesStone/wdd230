@@ -202,7 +202,7 @@ nav a:hover {
   transition: 0.5s;
 }
 main{
-  display: flex;
+  display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1rem;
   margin: 1rem;
@@ -352,14 +352,20 @@ h1, h2 {
 }
 
 /*======== Reserve=======*/
+  .details-container{
+    width: 100%;
+    max-width: 1200px; /* Optional: Set a max width for larger screens */
+    margin: 0 auto;    /* Center the container */
+    display: grid;
+    grid-template-columns: 1fr,1fr;
+  }
  .container-reserve {
-      display: flex;
-      max-width: 80%;
+      
+      width: 100%;
       margin: 10px auto;
-  
+      max-width: 1069px;
       padding: 30px;
-      left: 20px; /* adjust the value as needed */
-      top: 10px; /* adjust the value as needed */
+      
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
@@ -386,9 +392,10 @@ h1, h2 {
 
     input,
     select {
-      padding: 8px;
+      padding: 5px;
       border: 1px solid #ccc;
       border-radius: 4px;
+      margin: 10px;
     }
 
     button {
@@ -400,14 +407,15 @@ h1, h2 {
       cursor: pointer;
     }
     .rental-list {
-      text-align: center;
       position: relative;
+      width: 70%;
+      text-align: center;
       padding: 20px;
-      left: -10px; /* adjust the value as needed */
-      top: 120px; /* adjust the value as needed */
+      top: 60px;          /* Adjust the top property to move content vertically */
+      left: 20px;         /* Adjust the left property to move content horizontally */
       text-align: left;
-      font-family: 'Arial', sans-serif;
-      max-width:500px;
+      font-size: 20px;
+      max-width:600px;
       margin: 0 auto;
     }
 
@@ -429,6 +437,7 @@ h1, h2 {
       font-weight: bold;
       color: #007BFF;
     }
+
   /*====== Result =====*/
   .receipt-container {
     max-width: 600px;
@@ -472,7 +481,53 @@ h1, h2 {
     font-size: 20px;
     color: var(--color-green);
   }
+  .form-details{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  /*======== Contact=========*/
 
+  .map-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.map {
+    height: 400px;
+    flex: 1;
+    margin-right: 10px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+.form-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-button:hover {
+    background-color: #45a049;
+}
 /*Navigation Mobile View*/
 @media screen and (max-width: 600px) {
  main {
@@ -533,7 +588,7 @@ h1, h2 {
 .card-img {
         width: 100%; /* Make the image fill the width of the container */
         height: auto; /* Maintain the aspect ratio */
-      }
+}
 .card2{
 
   text-align: center;
@@ -554,9 +609,6 @@ td img {
 tr .mobile-row {
   margin-bottom: 10px; /* Adjust spacing between duplicated rows */
 }
-}
-
-
 h4 {
   font-size: 1rem; /* Adjust the font size for mobile */
   color: #fff;
@@ -570,3 +622,35 @@ a{
   font-size: 1rem; /* Adjust the font size for mobile */
   padding: 10px;
 }
+  /*=======Reserve=======*/
+  .form-details{
+    display: block;
+  }
+  .rental-list{
+    padding: 0;
+    margin: 0;
+    top:0;
+    left: 0;
+  }
+
+  .form-group {
+    width: 100%; /* Make form groups take full width */
+    margin-bottom: 10px; /* Add some spacing between form groups */
+  }
+
+  #form-container {
+    margin-top: 20px; /* Add some space between the form and the rental list */
+  }
+
+  #myForm {
+    max-width: 100%; /* Ensure the form takes full width */
+  }
+
+  #resultLink {
+    margin-top: 20px; /* Add space between the form and the result link */
+  }
+}
+
+
+
+  

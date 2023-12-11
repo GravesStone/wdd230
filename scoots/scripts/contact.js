@@ -1,6 +1,6 @@
 function initMap() {
     // Replace with your own latitude and longitude values
-    const mainLocation = { lat: 20.505, lng: -86.945 };
+    const mainLocation = { lat: 20.465673, lng: -86.976976 };
     const secondaryLocation = { lat: 20.512, lng: -86.950 };
 
     const map1 = new google.maps.Map(document.getElementById('map1'), {

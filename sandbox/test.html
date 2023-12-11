@@ -3,94 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Print Example</title>
+    <title>Contact Us</title>
 
-    <!-- Include Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
+    <!-- Replace 'YOUR_GOOGLE_MAPS_API_KEY' with your actual Google Maps API key -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap"></script>
+
     <style>
-        /* Optional: Add some styling for better presentation */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-
-        h1 {
-            color: #333;
-        }
-
-        #print-icon {
-            cursor: pointer;
-            color: #007bff;
-            margin-top: 20px;
+        #map {
+            height: 400px;
+            width: 100%;
         }
     </style>
+
+    <script>
+        function initMap() {
+            // Replace these coordinates with the actual coordinates of your locations
+            var location1 = { lat: 20.4861, lng: -86.9527 };
+            var location2 = { lat: 20.5014, lng: -86.9470 };
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: location1,
+                zoom: 14
+            });
+
+            var marker1 = new google.maps.Marker({
+                position: location1,
+                map: map,
+                title: 'Location 1'
+            });
+
+            var marker2 = new google.maps.Marker({
+                position: location2,
+                map: map,
+                title: 'Location 2'
+            });
+        }
+    </script>
 </head>
 <body>
 
-    <!-- Content to be printed -->
-    <h1>Your content goes here</h1>
+    <section>
+        <h1>Contact Us</h1>
 
-    <!-- Print icon -->
-    <div id="print-icon" onclick="printPage()">
-        <i class="fas fa-print"></i> Print
-    </div>
+        <!-- Essential Contact Information -->
+        <address>
+            <p><strong>Location 1:</strong> [Address 1]<br>
+               <strong>Location 2:</strong> [Address 2]<br>
+               <strong>Main Phone:</strong> [Main Phone Number]<br>
+               <strong>Email:</strong> <a href="mailto:[General Email Address]">[General Email Address]</a></p>
+        </address>
+    </section>
 
-    <!-- Your other HTML content -->
+    <section>
+        <!-- Embedded Google Map -->
+        <div id="map"></div>
+    </section>
 
-    <script>
-        function printPage() {
-            // Open the print dialog
-            window.print();
-        }
-    </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Print Example</title>
+    <section>
+        <!-- Basic Contact Form -->
+        <form action="/submit_form" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
 
-    <!-- Include Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
-    <style>
-        /* Optional: Add some styling for better presentation */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
 
-        h1 {
-            color: #333;
-        }
+            <label for="comment">Comment:</label><br>
+            <textarea id="comment" name="comment" rows="4" required></textarea><br>
 
-        #print-icon {
-            cursor: pointer;
-            color: #007bff;
-            margin-top: 20px;
-        }
-    </style>
-</head>
-<body>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
 
-    <!-- Content to be printed -->
-    <h1>Your content goes here</h1>
-
-    <!-- Print icon -->
-    <div id="print-icon" onclick="printPage()">
-        <i class="fas fa-print"></i> Print
-    </div>
-
-    <!-- Your other HTML content -->
-
-    <script>
-        function printPage() {
-            // Open the print dialog
-            window.print();
-        }
-    </script>
 </body>
 </html>

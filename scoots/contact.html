@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="./styles/base.css">
     <link rel="stylesheet" href="./styles/medium.css">
     <link rel="stylesheet" href="./styles/larger.css">
-    <link rel="stylesheet" href="./styles/normalize.css">
-  </head>
+   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    
  
   <body>
     <!--Header-->
@@ -40,23 +40,21 @@
       <h1>Contact Us</h1>
 
       <!-- Replace with your actual contact information -->
-      <div class="map-container">
-          <div class="map" id="map1"></div>
-          <div class="map" id="map2"></div>
-      </div>
-  
-      <p>Main Location: Your Main Address, Cozumel</p>
-      <p>Secondary Location: Your Secondary Address, Cozumel</p>
+      <div id="map1"></div>
 
-      <form action="#" method="post">
+    <!-- Map 2 -->
+    <div id="map2"></div>
+
+    <!-- Contact Form -->
+    <form id="contactForm">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
-
+        
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
 
         <label for="comment">Comment:</label>
-        <textarea id="comment" name="comment" rows="4" required></textarea>
+        <textarea id="comment" name="comment" required></textarea>
 
         <button type="submit">Submit</button>
     </form>
@@ -72,7 +70,8 @@
     <script type="module" src="./scripts/default.js"></script>
     <script src="./scripts/contact.js"></script>
     <script src="./scripts/hamburger.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap"></script>
-
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY"></script>
+  </head>
   </body>
 </html>

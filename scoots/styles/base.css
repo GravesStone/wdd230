@@ -489,16 +489,9 @@ h1, h2 {
   }
   /*======== Contact=========*/
 
-  .map-container {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-.map {
-    height: 400px;
-    flex: 1;
-    margin-right: 10px;
+  #map1, #map2 {
+    height: 300px;
+    width: 100%;
 }
 
 .contact-form {

@@ -1,27 +1,24 @@
-function initMap() {
-    // Replace with your own latitude and longitude values
-    const mainLocation = { lat: 20.465673, lng: -86.976976 };
-    const secondaryLocation = { lat: 20.512, lng: -86.950 };
+        var map1 = L.map('map1').setView([20.5034, -86.9470], 13); // Replace with your coordinates
+        var map2 = L.map('map2').setView([20.4820, -86.9626], 13); // Replace with your coordinates
 
-    const map1 = new google.maps.Map(document.getElementById('map1'), {
-        center: mainLocation,
-        zoom: 13
-    });
+        // Add Google Maps as a base layer to Leaflet maps
+        L.tileLayer('https://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+            maxZoom: 20,
+            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+        }).addTo(map1);
 
-    const marker1 = new google.maps.Marker({
-        position: mainLocation,
-        map: map1,
-        title: 'Main Location'
-    });
+        L.tileLayer('https://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+            maxZoom: 20,
+            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+        }).addTo(map2);
 
-    const map2 = new google.maps.Map(document.getElementById('map2'), {
-        center: secondaryLocation,
-        zoom: 13
-    });
+        // Add markers to the maps
+        var marker1 = L.marker([20.5034, -86.9470]).addTo(map1);
+        var marker2 = L.marker([20.4820, -86.9626]).addTo(map2);
 
-    const marker2 = new google.maps.Marker({
-        position: secondaryLocation,
-        map: map2,
-        title: 'Secondary Location'
-    });
-}
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            // Process the form data as needed
+            // You can use JavaScript to send the data to a server or perform other actions
+        });

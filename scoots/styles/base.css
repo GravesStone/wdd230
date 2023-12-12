@@ -292,7 +292,7 @@ footer {
   text-align:     center;
   color:        #000;
   padding: 10px;
-  position: relative;
+
   display:        flex;
   text-align:     center;
   flex-direction: column;
@@ -489,9 +489,26 @@ h1, h2 {
   }
   /*======== Contact=========*/
 
-  #map1, #map2 {
-    height: 300px;
+  .iframe {
     width: 100%;
+  }
+  .contact-main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-height: 1000px;
+  }
+
+
+/* Style the form for better presentation */
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Additional styling as needed */
+.contact-section h2 {
+  grid-column: span 2; /* Make the heading span both columns */
 }
 
 .contact-form {
@@ -643,6 +660,13 @@ a{
 
   #resultLink {
     margin-top: 20px; /* Add space between the form and the result link */
+  }
+  .contact-main{
+    display:block;
+    
+  }
+  iframe{
+    display: block;
   }
 }
 

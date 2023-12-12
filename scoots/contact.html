@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="./styles/base.css">
     <link rel="stylesheet" href="./styles/medium.css">
     <link rel="stylesheet" href="./styles/larger.css">
-   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    
+ 
+
  
   <body>
     <!--Header-->
@@ -36,29 +36,34 @@
           <li><a href="contact.html" target="_blank">Contact</a></li>
       </ul>
   </nav>
-    <main>
-      <h1>Contact Us</h1>
+    <main class="contact-main">
+      <section class="contact-section">
+      <h2>Contact Us</h2>
 
       <!-- Replace with your actual contact information -->
-      <div id="map1"></div>
-
-    <!-- Map 2 -->
-    <div id="map2"></div>
-
-    <!-- Contact Form -->
-    <form id="contactForm">
+      <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12941.449655248762!2d-86.98060226608825!3d20.465820927030418!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e5713e098226d%3A0x50cca0b25fcfc90f!2sCenote%20El%20Aerolito!5e0!3m2!1sen!2sph!4v1702351882146!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1868.498318122289!2d-86.95671321649517!3d20.506364146813837!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1702351938990!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      </section>
+      <section class="form-container">
+      <p>Main Location: near at Cenote El Aerolito </p>
+      <p>Secondary Location: Av. Rafael E. Melgar street front of the empire tatoo</p>
+      <br><h2>Have questions or need assistance? Reach out to us!</h2>
+      <p>Thank you for considering <i>Scoots</i> for your scooter needs. If you have any questions, require more information, or would like assistance in choosing the perfect scooter for your lifestyle, our dedicated team is here to help.</p>
+      <form action="#" method="post">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
-        
+
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
 
         <label for="comment">Comment:</label>
-        <textarea id="comment" name="comment" required></textarea>
+        <textarea id="comment" name="comment" rows="4" required></textarea>
 
         <button type="submit">Submit</button>
     </form>
-
+    </section>
     </main>
 <footer>
           
@@ -70,8 +75,6 @@
     <script type="module" src="./scripts/default.js"></script>
     <script src="./scripts/contact.js"></script>
     <script src="./scripts/hamburger.js"></script>
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY"></script>
-  </head>
+  
   </body>
 </html>

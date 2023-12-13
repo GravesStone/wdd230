@@ -43,7 +43,9 @@
     margin: 20px;
     padding: 20px;
    }
-    
+  .contact-main{
+    max-height: 1000px;
+  }
     
    
   }

@@ -489,13 +489,14 @@ h1, h2 {
   }
   /*======== Contact=========*/
 
-  .iframe {
+  iframe {
     width: 100%;
   }
   .contact-main{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    max-height: 1000px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    grid-gap: 20px;
   }
 
 
@@ -540,6 +541,8 @@ h1, h2 {
 .form-button:hover {
     background-color: #45a049;
 }
+
+
 /*Navigation Mobile View*/
 @media screen and (max-width: 600px) {
  main {
@@ -662,11 +665,21 @@ a{
     margin-top: 20px; /* Add space between the form and the result link */
   }
   .contact-main{
-    display:block;
-    
+    display:grid;
+    grid-template-columns: 1fr;
+    margin-top: 0;
   }
-  iframe{
+
+  /*====== Contact section ====*/
+  .map-container{
     display: block;
+    padding: 0;
+
+  }
+  .form-container{
+    display: block;
+    margin:0;
+
   }
 }
 
